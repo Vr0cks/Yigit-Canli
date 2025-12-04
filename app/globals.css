@@ -76,3 +76,22 @@ body {
 /* Link Reset */
 a { color: inherit; text-decoration: none; }
 button { background: transparent; border: none; cursor: pointer; }
+@media print {
+  /* Yazdırırken gizlenecekler */
+  header, footer, button, .chatbot-container, .theme-toggle {
+    display: none !important;
+  }
+
+  /* Yazdırırken arka planı beyaz yap, yazıları siyah */
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* Linklerin yanına URL'sini açıkça yaz (kağıtta tıklayamazlar :) ) */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8rem;
+    color: #555;
+  }
+}

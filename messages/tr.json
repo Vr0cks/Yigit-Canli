@@ -6,7 +6,8 @@
       "education": "THK Üniversitesi YBS Öğrencisi",
       "description": "Süslü kelimelere gerek yok. Karmaşık sorunları alıyor, temiz kodla çözüyor ve arkamda teknik borç değil, tıkır tıkır çalışan sistemler bırakıyorum.",
       "cta_projects": "Neler Yaptım?",
-      "cta_resume": "CV İndir"
+      "cta_resume": "CV İndir",
+      "cta_contact": "İletişim"
     },
     "developer_card": {
       "role_val": "Full Stack Developer",
@@ -48,6 +49,18 @@
       "united": "Fenerbahçe taraftarları için etkinlik takibi, üyelik yönetimi ve topluluk etkileşimi sağlayan modern web platformu."
     }
   },
+  "Contact": {
+    "title": "İletişime Geç",
+    "description": "Projeler veya iş birliği için bana yazabilirsin.",
+    "email_label": "E-POSTA",
+    "email_placeholder": "senin@mailin.com",
+    "message_label": "MESAJIN",
+    "message_placeholder": "Merhaba, seninle bir proje hakkında görüşmek istiyorum...", 
+    "submit": "Gönder",
+    "submitting": "Gönderiliyor...",
+    "success": "Mesaj İletildi! 🎉",
+    "error": "Bir hata oluştu!"
+  },
   "Chatbot": {
     "welcome": "Selamlar! Ben dijital asistan 'Terminal'. Başlamak için 'yardım' yazabilir veya bana soru sorabilirsiniz.",
     "fallback": "Üzgünüm, bu komutu tanıyamadım. Lütfen 'yardım' yazarak komut listesini gör.",
@@ -83,7 +96,7 @@
         "response": "Şşşt. Sistemde arka bir kapı var. Tarayıcıda '/secret' yolunu dene. Ama şifreyi benden duymadın: 'hell yeah'."
       }
     ]
-  }, 
+  },
   "SecretHint": {
     "message": "👀 Psst! Çok sessiz buralar. Chatbot'a 'secret' yazmayı denesene?",
     "button": "Tamam"

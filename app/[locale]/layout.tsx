@@ -5,13 +5,30 @@ import "@/app/globals.css";
 import { Providers } from '../providers'; // Yeni ekledik
 import Header from '@/components/Header'; // Yeni ekledik
 import SecretHint from '@/components/SecretHint';
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: '--font-jetbrains' });
 
-export const metadata = {
-  title: "Yiğit Canlı | Software Engineer",
-  description: "Bridging business logic with scalable code.",
+export const metadata: Metadata = {
+  title: "Yiğit Canlı | Software Developer",
+  description: "YBS Öğrencisi & Full Stack Geliştirici. Minimalist portfolyo.",
+  openGraph: {
+    title: "Yiğit Canlı | Software Developer",
+    description: "Karmaşık sorunlar, temiz kodlar.",
+    url: "https://my-portfolio-ochre-ten-83.vercel.app", // 
+    siteName: "Yiğit Canlı Portfolio",
+    images: [
+      {
+        url: "/og-image.png", // public klasörüne attığın dosyanın adı
+        width: 1200,
+        height: 630,
+        alt: "Yiğit Canlı Portfolio Open Graph Image",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
 };
 
 type Props = {
@@ -30,11 +47,12 @@ export default async function LocaleLayout({
   } catch (error) {
     messages = {};
   }
+  
 
   return (
     // 'suppressHydrationWarning' next-themes için gereklidir
     <html lang={locale} className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
-      <body className="antialiased min-h-screen selection:bg-blue-500/30">
+      <body className="antialiased min-h-screen selection:bg-emerald-500 selection:text-white">
         
         {/* Providers, tüm uygulamayı sarar ve temayı yönetir */}
         <Providers>
@@ -46,6 +64,7 @@ export default async function LocaleLayout({
                  backgroundSize: '50px 50px' 
                }} 
           />
+          
           
           <NextIntlClientProvider messages={messages} locale={locale}>
             {/* Header: Dil ve Tema Kontrolü */}

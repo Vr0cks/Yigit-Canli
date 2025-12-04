@@ -6,7 +6,8 @@
       "education": "MIS-Student an der THK Universität",
       "description": "Keine Phrasen, nur Code. Ich löse Probleme mit sauberer Architektur – funktionierende Systeme statt technischer Schulden.",
       "cta_projects": "Meine Projekte",
-      "cta_resume": "Lebenslauf laden"
+      "cta_resume": "Lebenslauf laden",
+      "cta_contact": "Kontakt"
     },
     "developer_card": {
       "role_val": "Full Stack Developer",
@@ -47,6 +48,18 @@
       "vrocks": "Vintage-Ästhetik trifft moderne Technik. Schnell, nostalgisch, aber leistungsstark unter der Haube.",
       "united": "Eine moderne Webplattform für Fenerbahçe-Fans, die Event-Tracking, Mitgliedermanagement und Community-Interaktion bietet."
     }
+  },
+  "Contact": {
+    "title": "Kontaktieren",
+    "description": "Schreiben Sie mir für Projekte oder Zusammenarbeit.",
+    "email_label": "E-MAIL",
+    "email_placeholder": "ihre@email.com",
+    "message_label": "NACHRICHT",
+    "message_placeholder": "Hallo, ich möchte über ein Projekt sprechen...",
+    "submit": "Senden",
+    "submitting": "Senden...",
+    "success": "Nachricht gesendet! 🎉",
+    "error": "Es ist ein Fehler aufgetreten!"
   },
   "Chatbot": {
     "welcome": "Hallo! Ich bin 'Terminal'. Tippen Sie 'hilfe', um zu beginnen.",

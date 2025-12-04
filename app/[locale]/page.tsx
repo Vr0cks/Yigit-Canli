@@ -2,11 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users } from 'lucide-react';
+import { useState } from 'react'; // Eklendi: State kontrolü için
+import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send } from 'lucide-react';
 import Link from 'next/link';
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Chatbot from '@/components/Chatbot';
+import ContactModal from '@/components/contact-modal'; // Eklendi: Modal bileşeni
 
 const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => (
   <motion.div 
@@ -22,6 +24,8 @@ const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNo
 
 export default function Home() {
   const t = useTranslations('HomePage');
+  // Modal'ın açık/kapalı durumunu kontrol eden state
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
     <main className="flex flex-col gap-16 pb-20">
@@ -55,14 +59,9 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-xl md:text-2xl text-[var(--muted)] font-medium"
             >
-              {/* Üst satır: Sadece Unvan */}
               {t('hero.role')} 
-              
-              {/* Mobil için alt satıra geç, Masaüstü için yanına boşluk koy */}
               <br className="block md:hidden" />
               <span className="hidden md:inline"> | </span> 
-              
-              {/* Alt satır (veya yan taraf): Okul Bilgisi */}
               <span className="text-[var(--foreground)]"> {t('hero.education')}</span>
             </motion.h2>
           </div>
@@ -98,6 +97,15 @@ export default function Home() {
             >
               <Download size={18} /> {t('hero.cta_resume')}
             </a>
+
+            {/* --- YENİ İLETİŞİM BUTONU --- */}
+            <button 
+              onClick={() => setIsContactOpen(true)}
+               className="flex items-center gap-2 px-6 py-3 border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 text-zinc-900 dark:text-zinc-100 font-semibold rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all cursor-pointer backdrop-blur-sm"
+              >
+              <Mail size={18} /> 
+               İletişim
+             </button>
           </motion.div>
         </div>
 
@@ -208,7 +216,7 @@ export default function Home() {
         </h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* PROJECT 1 - VR0CKS */}
+          {/* PROJECT 1 */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.8}>
             <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
               <Globe size={180} />
@@ -251,7 +259,7 @@ export default function Home() {
             </div>
           </Card>
 
-          {/* PROJECT 2 - UNITED FENERBAHÇE (GÜNCELLENDİ) */}
+          {/* PROJECT 2 */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.9}>
              <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
               <Users size={180} />
@@ -259,7 +267,6 @@ export default function Home() {
 
             <div>
               <div className="flex justify-between items-start mb-6">
-                {/* İkon: Users, Renk: Lacivert/Mavi */}
                 <div className="p-3 bg-blue-800/10 rounded-lg text-blue-700 dark:text-blue-400 border border-blue-800/20">
                   <Users size={24} />
                 </div>
@@ -328,7 +335,7 @@ export default function Home() {
         </Card>
       </section>
 
-     {/* 5. FOOTER (GÜNCELLENDİ: Gerçek Linkler) */}
+      {/* 4. FOOTER */}
       <footer className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-[var(--card-border)] mt-12 mb-10">
         <div className="flex flex-col">
           <span className="font-bold text-[var(--foreground)] text-lg">Yiğit Canlı</span>
@@ -360,6 +367,10 @@ export default function Home() {
         </div>
       </footer>
 
+      {/* --- GİZLİ MODAL --- */}
+      {/* Sadece isContactOpen true olduğunda açılır */}
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      
       <Chatbot/> 
       
     </main>

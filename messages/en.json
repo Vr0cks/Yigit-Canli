@@ -6,7 +6,8 @@
       "education": "MIS Student at THK University",
       "description": "No buzzwords, just code. I solve complex problems with clean architectures and leave behind systems that actually work, not technical debt.",
       "cta_projects": "See My Work",
-      "cta_resume": "Download CV"
+      "cta_resume": "Download CV",
+      "cta_contact": "Contact"
     },
     "developer_card": {
       "role_val": "Full Stack Developer",
@@ -48,6 +49,18 @@
       "united": "A modern web platform for Fenerbahçe fans providing event tracking, membership management, and community interaction."
     }
   },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Feel free to reach out for projects or collaboration.",
+    "email_label": "EMAIL",
+    "email_placeholder": "your@email.com",
+    "message_label": "MESSAGE",
+    "message_placeholder": "Hi, I'd like to discuss a project with you...",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "success": "Message Sent! 🎉",
+    "error": "Something went wrong!"
+  },
   "Chatbot": {
     "welcome": "Hello! I'm 'Terminal', the digital assistant. Type 'help' to start or ask me anything.",
     "fallback": "Sorry, command not recognized. Please type 'help' to see available commands.",
@@ -72,7 +85,7 @@
       },
       {
         "keywords": ["hobby", "sports", "personal", "football", "gamer"],
-        "response": "Beyond code: 14 years of scouting, 8 years as a goalkeeper, and I play American Football. Being a team player isn't a cliché for me, it's a lifestyle."
+        "response": "Beyond code: 14 years of scouting, 8 years as a goalkeeper, and I play American Football. Teamplayer to be is for me not a cliché, it's a lifestyle."
       },
       {
         "keywords": ["help", "commands", "question"],
