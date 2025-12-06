@@ -91,7 +91,7 @@ export default function Home() {
             </a>
             
             <a 
-              href="/A.Yiğit Canlı Software Dev.pdf" 
+              href="/A.Yiğit Canlı Software Dev .pdf" 
               download="Yigit_Canli_Software_Dev_CV.pdf"
               className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] text-[var(--muted)] font-medium rounded-md hover:border-[var(--foreground)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
             >
