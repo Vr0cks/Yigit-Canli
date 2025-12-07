@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react'; // Eklendi: State kontrolü için
+import { useState } from 'react'; 
 import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send } from 'lucide-react';
 import Link from 'next/link';
+import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullanıyoruz
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Chatbot from '@/components/Chatbot';
-import ContactModal from '@/components/contact-modal'; // Eklendi: Modal bileşeni
+import ContactModal from '@/components/contact-modal'; 
 
 const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => (
   <motion.div 
@@ -24,6 +25,10 @@ const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNo
 
 export default function Home() {
   const t = useTranslations('HomePage');
+  
+  // 1. MEVCUT DİLİ ALIYORUZ (tr, en, de)
+  const locale = useLocale(); 
+
   // Modal'ın açık/kapalı durumunu kontrol eden state
   const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -90,22 +95,23 @@ export default function Home() {
               {t('hero.cta_projects')} <ArrowRight size={18} />
             </a>
             
+            {/* --- GÜNCELLENEN CV BUTONU --- */}
             <a 
-              href="/A.Yiğit Canlı Software Dev .pdf" 
-              download="Yigit_Canli_Software_Dev_CV.pdf"
+              href={`/cv-${locale}.pdf`} 
+              download={`Yigit_Canli_CV_${locale.toUpperCase()}.pdf`}
               className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] text-[var(--muted)] font-medium rounded-md hover:border-[var(--foreground)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
             >
               <Download size={18} /> {t('hero.cta_resume')}
             </a>
 
-            {/* --- YENİ İLETİŞİM BUTONU --- */}
+            {/* İLETİŞİM BUTONU */}
             <button 
-              onClick={() => setIsContactOpen(true)}
+               onClick={() => setIsContactOpen(true)}
                className="flex items-center gap-2 px-6 py-3 border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 text-zinc-900 dark:text-zinc-100 font-semibold rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all cursor-pointer backdrop-blur-sm"
-              >
-              <Mail size={18} /> 
-               İletişim
-             </button>
+            >
+               <Mail size={18} /> 
+               {t('hero.cta_contact')}
+              </button>
           </motion.div>
         </div>
 
