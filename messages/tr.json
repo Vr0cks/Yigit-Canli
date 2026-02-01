@@ -3,19 +3,19 @@
     "hero": {
       "status": "Projeye Açık",
       "role": "Yazılım Geliştiricisi",
-      "education": "THK Üniversitesi YBS Öğrencisi",
+      "education": "Kurucu @ vr0cks Software | Full-Stack Mühendis",
       "description": "Süslü kelimelere gerek yok. Karmaşık sorunları alıyor, temiz kodla çözüyor ve arkamda teknik borç değil, tıkır tıkır çalışan sistemler bırakıyorum.",
       "cta_projects": "Neler Yaptım?",
       "cta_resume": "CV İndir",
       "cta_contact": "İletişim"
     },
     "developer_card": {
-      "role_val": "Full Stack Developer",
-      "status_val": "Kodluyor..."
+      "role_val": "Founder & Lead Engineer",
+      "status_val": "SaaS Ürünleri Geliştiriyor 🚀"
     },
     "about": {
-      "title": "Geliştirici Yaklaşımı",
-      "text": "YBS öğrencisi olmamın bana kattığı en büyük olay: Büyük resmi görmek. Sadece kod yazmıyorum; işin mantığını kavrayıp, veritabanından kullanıcı arayüzüne kadar pürüzsüz akan süreçler tasarlıyorum.",
+      "title": "MÜHENDİSLİK + İŞ DÜNYASI",
+      "text": "Sadece kod yazmıyorum; ölçeklenebilir sistemler tasarlıyorum. Supabase & Next.js gibi modern teknolojilerle 'Büyük Resim' bakış açısını birleştirerek, iş mantığının teknik mükemmellikle buluşmasını sağlıyorum. Eski kod yok, sadece shipping.",
       "read_more": "Detaylar"
     },
     "hobbies": {
@@ -55,7 +55,7 @@
     "email_label": "E-POSTA",
     "email_placeholder": "senin@mailin.com",
     "message_label": "MESAJIN",
-    "message_placeholder": "Merhaba, seninle bir proje hakkında görüşmek istiyorum...", 
+    "message_placeholder": "Merhaba, seninle bir proje hakkında görüşmek istiyorum...",
     "submit": "Gönder",
     "submitting": "Gönderiliyor...",
     "success": "Mesaj İletildi! 🎉",
@@ -68,31 +68,70 @@
     "placeholder": "'yardım' yaz...",
     "data": [
       {
-        "keywords": ["merhaba", "selam", "hi", "hello", "merhabalar"],
+        "keywords": [
+          "merhaba",
+          "selam",
+          "hi",
+          "hello",
+          "merhabalar"
+        ],
         "response": "Selam! Ben Terminal. Yiğit şu an kodların başında. Ona iletmemi istediğin bir şey varsa buradayım. Başlamak için 'yardım' yazabilirsin."
       },
       {
-        "keywords": ["yetkinlik", "stack", "teknoloji", "tech", "dil"],
+        "keywords": [
+          "yetkinlik",
+          "stack",
+          "teknoloji",
+          "tech",
+          "dil"
+        ],
         "response": "Teknik tarafta Next.js 14, TypeScript ve Tailwind CSS favorilerim. Ama asıl olayım; temiz, okunabilir ve ölçeklenebilir mimariler kurmak."
       },
       {
-        "keywords": ["neden sen", "işe alım", "hr", "hire", "fark"],
+        "keywords": [
+          "neden sen",
+          "işe alım",
+          "hr",
+          "hire",
+          "fark"
+        ],
         "response": "Farkım şu: Ben sadece kod yazmam. MIS eğitimim sayesinde işin ticari ve analitik boyutunu da görürüm. Sadece 'çalışan' değil, 'kazandıran' sistemler geliştiririm."
       },
       {
-        "keywords": ["eğitim", "okul", "mis", "ybs"],
+        "keywords": [
+          "eğitim",
+          "okul",
+          "mis",
+          "ybs"
+        ],
         "response": "THK Üniversitesi'nde Yönetim Bilişim Sistemleri (YBS) okuyorum. Bu bölüm bana yazılımın teknik tarafı ile iş dünyasının ihtiyaçları arasında köprü kurmayı öğretti."
       },
       {
-        "keywords": ["hobi", "spor", "kişisel", "futbol", "gamer"],
+        "keywords": [
+          "hobi",
+          "spor",
+          "kişisel",
+          "futbol",
+          "gamer"
+        ],
         "response": "Kod dışında; 14 yıllık izcilik, 8 yıllık kalecilik geçmişim var ve Amerikan Futbolu oynuyorum. Takım oyuncusu olmak benim için bir klişe değil, yaşam tarzı."
       },
       {
-        "keywords": ["yardım", "help", "soru", "komut"],
+        "keywords": [
+          "yardım",
+          "help",
+          "soru",
+          "komut"
+        ],
         "response": "Şu konuları sorabilirsin: 'teknoloji', 'eğitim', 'hobi', 'neden sen' veya 'iletişim'."
       },
       {
-        "keywords": ["sır", "gizli", "secret", "easter egg"],
+        "keywords": [
+          "sır",
+          "gizli",
+          "secret",
+          "easter egg"
+        ],
         "response": "Şşşt. Sistemde arka bir kapı var. Tarayıcıda '/secret' yolunu dene. Ama şifreyi benden duymadın: 'hell yeah'."
       }
     ]
