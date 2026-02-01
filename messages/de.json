@@ -11,11 +11,11 @@
     },
     "developer_card": {
       "role_val": "Founder & Lead Developer",
-      "status_val": "Shipping SaaS Products 🚀"
+      "status_val": "Entwickelt SaaS-Produkte 🚀"
     },
     "about": {
-      "title": "BUSINESS TRIFFT TECHNOLOGIE",
-      "text": "Ich schreibe nicht nur Code; ich baue digitale Assets. Mit dem 'Big Picture'-Mindset von MIS und modernen Tech-Stacks wie Supabase & Next.js entwerfe ich skalierbare Systeme, in denen Geschäftslogik auf Entwicklungs-Exzellenz trifft. Kein Legacy-Code, nur Shipping.",
+      "title": "Wo Business auf Code trifft",
+      "text": "Ich schreibe nicht nur Code – ich baue digitale Produkte. Mit dem strategischen Denken aus dem Wirtschaftsinformatik-Studium und modernen Tech-Stacks wie Supabase und Next.js entwickle ich skalierbare Systeme, in denen Geschäftslogik auf technische Exzellenz trifft. Kein Legacy-Code, nur Shipping.",
       "read_more": "Mehr lesen"
     },
     "hobbies": {

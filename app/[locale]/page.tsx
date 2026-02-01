@@ -2,17 +2,17 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send } from 'lucide-react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullanıyoruz
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Chatbot from '@/components/Chatbot';
-import ContactModal from '@/components/contact-modal'; 
+import ContactModal from '@/components/contact-modal';
 
 const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
@@ -25,31 +25,31 @@ const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNo
 
 export default function Home() {
   const t = useTranslations('HomePage');
-  
+
   // 1. MEVCUT DİLİ ALIYORUZ (tr, en, de)
-  const locale = useLocale(); 
+  const locale = useLocale();
 
   // Modal'ın açık/kapalı durumunu kontrol eden state
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
     <main className="flex flex-col gap-16 pb-20">
-      
+
       {/* 1. HERO SECTION */}
       <section className="flex flex-col md:flex-row items-center gap-12 md:gap-20 min-h-[60vh] justify-center">
-        
+
         <div className="flex-1 space-y-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 text-xs font-mono tracking-wide"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-500 animate-pulse"/>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-500 animate-pulse" />
             {t('hero.status')}
           </motion.div>
 
           <div className="space-y-4">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -57,21 +57,21 @@ export default function Home() {
             >
               Yiğit Canlı<span className="text-primary">.</span>
             </motion.h1>
-            
-           <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-xl md:text-2xl text-[var(--muted)] font-medium"
             >
-              {t('hero.role')} 
+              {t('hero.role')}
               <br className="block md:hidden" />
-              <span className="hidden md:inline"> | </span> 
+              <span className="hidden md:inline"> | </span>
               <span className="text-[var(--foreground)]"> {t('hero.education')}</span>
             </motion.h2>
           </div>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -80,24 +80,24 @@ export default function Home() {
             {t('hero.description')}
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="flex flex-wrap gap-4"
           >
-            <a 
-              href="https://github.com/Vr0cks" 
-              target="_blank" 
+            <a
+              href="https://github.com/Vr0cks"
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-md hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-rose-600 text-white font-semibold rounded-md hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-red-500/20"
             >
               {t('hero.cta_projects')} <ArrowRight size={18} />
             </a>
-            
+
             {/* --- GÜNCELLENEN CV BUTONU --- */}
-            <a 
-              href={`/cv-${locale}.pdf`} 
+            <a
+              href={`/cv-${locale}.pdf`}
               download={`Yigit_Canli_CV_${locale.toUpperCase()}.pdf`}
               className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] text-[var(--muted)] font-medium rounded-md hover:border-[var(--foreground)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
             >
@@ -105,17 +105,17 @@ export default function Home() {
             </a>
 
             {/* İLETİŞİM BUTONU */}
-            <button 
-               onClick={() => setIsContactOpen(true)}
-               className="flex items-center gap-2 px-6 py-3 border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 text-zinc-900 dark:text-zinc-100 font-semibold rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all cursor-pointer backdrop-blur-sm"
+            <button
+              onClick={() => setIsContactOpen(true)}
+              className="flex items-center gap-2 px-6 py-3 border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 text-zinc-900 dark:text-zinc-100 font-semibold rounded-md hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all cursor-pointer backdrop-blur-sm"
             >
-               <Mail size={18} /> 
-               {t('hero.cta_contact')}
-              </button>
+              <Mail size={18} />
+              {t('hero.cta_contact')}
+            </button>
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
@@ -123,7 +123,7 @@ export default function Home() {
         >
           <div className="bento-card overflow-hidden shadow-2xl relative group h-full">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 blur-[50px] rounded-full pointer-events-none" />
-            
+
             <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--card-border)] bg-black/5 dark:bg-white/5 relative z-10">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-500" />
@@ -136,7 +136,7 @@ export default function Home() {
               </div>
               <div className="w-10" />
             </div>
-            
+
             <div className="p-6 font-mono text-sm leading-7 relative z-10">
               <div className="text-purple-700 dark:text-purple-800 font-bold">
                 const <span className="text-amber-600 dark:text-amber-700">portfolio</span> = <span className="text-[var(--card-fg)]">{`{`}</span>
@@ -151,8 +151,8 @@ export default function Home() {
                 <span className="text-blue-600 dark:text-blue-800">skills</span>: <span className="text-[var(--card-fg)]">[</span>
               </div>
               <div className="pl-10 text-emerald-600 dark:text-emerald-700 font-medium">
-                "Next.js", "React", "TypeScript",<br/>"PostgreSQL", "Tailwind"
-                
+                "Next.js", "React", "TypeScript",<br />"PostgreSQL", "Tailwind"
+
               </div>
               <div className="pl-6 text-[var(--card-fg)]">],</div>
               <div className="pl-6">
@@ -178,13 +178,13 @@ export default function Home() {
           </div>
           <div className="flex gap-2 mt-6">
             <Link href="/about" className="text-xs font-mono text-primary hover:underline underline-offset-4 flex items-center gap-1">
-              {t('about.read_more')} <ArrowRight size={12}/>
+              {t('about.read_more')} <ArrowRight size={12} />
             </Link>
           </div>
         </Card>
 
-        <SpotifyCard /> 
-        
+        <SpotifyCard />
+
         <Card className="md:col-span-1 relative overflow-hidden flex flex-col justify-between min-h-[280px]" delay={0.8}>
           <div className="absolute -right-6 -top-6 opacity-5 dark:opacity-[0.03] rotate-12 pointer-events-none">
             <Gamepad2 size={140} />
@@ -195,7 +195,7 @@ export default function Home() {
               <Coffee size={18} />
               <span className="text-xs font-mono font-bold tracking-wider">{t('hobbies.title').toUpperCase()}</span>
             </div>
-            
+
             <p className="text-[var(--card-fg)] font-bold text-xl mb-1">"Half-time Gamer"</p>
             <p className="text-[var(--muted)] text-xs font-medium mb-6">{t('hobbies.subtitle')}</p>
           </div>
@@ -218,10 +218,10 @@ export default function Home() {
       {/* 3. SELECTED PROJECTS */}
       <section id="projects" className="scroll-mt-24">
         <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-[var(--foreground)]">
-          <LayoutTemplate size={24} className="text-primary"/> 
+          <LayoutTemplate size={24} className="text-primary" />
           {t('projects.title')}
         </h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* PROJECT 1 */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.8}>
@@ -261,14 +261,14 @@ export default function Home() {
                 <ExternalLink size={14} /> {t('projects.live_demo')}
               </a>
               <a href="https://github.com/Vr0cks/vrocks-agency" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
-                <GitGraph size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]"/> {t('projects.architecture')}
+                <GitGraph size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.architecture')}
               </a>
             </div>
           </Card>
 
           {/* PROJECT 2 */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.9}>
-             <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
+            <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
               <Users size={180} />
             </div>
 
@@ -286,7 +286,7 @@ export default function Home() {
                 United Fenerbahçe
               </h4>
               <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 font-medium">
-                 {t('project_desc.united')}
+                {t('project_desc.united')}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
@@ -303,7 +303,7 @@ export default function Home() {
                 <ExternalLink size={14} /> {t('projects.live_demo')}
               </a>
               <a href="https://github.com/Vr0cks/United-Fenerbah-e-Fans-Association-Web-Platform" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
-                <Code2 size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]"/> {t('projects.review_code')}
+                <Code2 size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.review_code')}
               </a>
             </div>
           </Card>
@@ -317,7 +317,7 @@ export default function Home() {
           </div>
           <h4 className="text-lg font-bold text-[var(--card-fg)] mb-2">{t('philosophy.analyze.title')}</h4>
           <p className="text-[var(--muted)] text-sm leading-relaxed font-medium">
-             {t('philosophy.analyze.text')}
+            {t('philosophy.analyze.text')}
           </p>
         </Card>
 
@@ -327,7 +327,7 @@ export default function Home() {
           </div>
           <h4 className="text-lg font-bold text-[var(--card-fg)] mb-2">{t('philosophy.clean.title')}</h4>
           <p className="text-[var(--muted)] text-sm leading-relaxed font-medium">
-             {t('philosophy.clean.text')}
+            {t('philosophy.clean.text')}
           </p>
         </Card>
 
@@ -349,24 +349,24 @@ export default function Home() {
           <span className="text-sm text-[var(--muted)]">Software Developer</span>
         </div>
         <div className="flex gap-6 mt-4 md:mt-0 font-mono text-sm">
-          <a 
-            href="https://github.com/Vr0cks" 
-            target="_blank" 
+          <a
+            href="https://github.com/Vr0cks"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
           >
             GitHub
           </a>
-          <a 
-            href="https://www.linkedin.com/in/ahmet-yiğit-canlı/?locale=tr_TR" 
-            target="_blank" 
+          <a
+            href="https://www.linkedin.com/in/ahmet-yiğit-canlı/?locale=tr_TR"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
           >
             LinkedIn
           </a>
-          <a 
-            href="mailto:ahmetcanli1943@gmail.com" 
+          <a
+            href="mailto:ahmetcanli1943@gmail.com"
             className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
           >
             Email
@@ -377,9 +377,9 @@ export default function Home() {
       {/* --- GİZLİ MODAL --- */}
       {/* Sadece isContactOpen true olduğunda açılır */}
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-      
-      <Chatbot/> 
-      
+
+      <Chatbot />
+
     </main>
   );
 }

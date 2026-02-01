@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+
   /* --- LIGHT MODE (GÜNDÜZ) --- */
   /* Zemin Açık Gri, KARTLAR SİYAH */
   :root {
-    --background: #F0F2F5;       /* Sayfa Zemini: Açık Gri */
-    --foreground: #000000;       /* Sayfa Başlıkları: Siyah */
-    
-    --card-bg: #111111;          /* KART RENGİ: SİYAH (Reverse) */
-    --card-fg: #ffffff;          /* KART İÇİ YAZI: BEYAZ */
-    --card-border: #000000;      /* Kart Kenarlığı: Siyah */
-    
-    --muted: #9ca3af;            /* Kart içindeki sönük yazılar (Gri) */
-    --primary: #3b82f6;          
-    
+    --background: #F0F2F5;
+    /* Sayfa Zemini: Açık Gri */
+    --foreground: #000000;
+    /* Sayfa Başlıkları: Siyah */
+
+    --card-bg: #111111;
+    /* KART RENGİ: SİYAH (Reverse) */
+    --card-fg: #ffffff;
+    /* KART İÇİ YAZI: BEYAZ */
+    --card-border: #000000;
+    /* Kart Kenarlığı: Siyah */
+
+    --muted: #9ca3af;
+    /* Kart içindeki sönük yazılar (Gri) */
+    --primary: #e11d48;
+    /* Soul Red - Rose-600 */
+    --accent-from: #dc2626;
+    /* Red-600 */
+    --accent-to: #e11d48;
+    /* Rose-600 */
+
     --selection-bg: #bfdbfe;
     --selection-text: #1e3a8a;
   }
@@ -23,34 +35,49 @@
   /* --- DARK MODE (GECE) --- */
   /* Zemin Siyah, KARTLAR BEYAZ (Kırık Beyaz) */
   .dark {
-  --background: #050505;       /* Zemin: Derin Siyah */
-  --foreground: #ffffff;       /* Başlıklar (Footer vb): Beyaz */
-  
-  /* KART RENGİ (GÜNCELLENDİ): Daha açık bir beton rengi */
-  /* Eskiden #C0C2C5 idi, şimdi #E5E5E5 yapıyoruz ki siyah yazı net okunsun */
-  --card-bg: #E4E4E7;          /* Zinc-200 (Açık Beton) */
-  
-  --card-fg: #09090b;          /* Kart içi ANA yazılar: NEREDEYSE SİYAH */
-  --card-border: #3f3f46;      /* Kart Kenarlığı: Koyu Gri */
+    --background: #0a0a0a;
+    /* Zemin: Off-Black (Soft) */
+    --foreground: #e4e4e7;
+    /* Başlıklar: Zinc-200 (Soft White) */
 
-  /* ARA METİNLER (Description vb.) İÇİN KRİTİK AYAR: */
-  /* Kartın içi aydınlık olduğu için, ara metin KOYU olmalı */
-  --muted: #52525b;            /* Zinc-600 (Koyu Kurşun Kalem Rengi) */
-  
-  --primary: #2563EB;          /* Mavi aynı kalıyor */
-  
-  --selection-bg: #E0A458; 
-  --selection-text: #121212;
+    /* KART RENGİ (GÜNCELLENDİ): Daha açık bir beton rengi */
+    /* Eskiden #C0C2C5 idi, şimdi #E5E5E5 yapıyoruz ki siyah yazı net okunsun */
+    --card-bg: #E4E4E7;
+    /* Zinc-200 (Açık Beton) */
+
+    --card-fg: #09090b;
+    /* Kart içi ANA yazılar: NEREDEYSE SİYAH */
+    --card-border: #3f3f46;
+    /* Kart Kenarlığı: Koyu Gri */
+
+    /* ARA METİNLER (Description vb.) İÇİN KRİTİK AYAR: */
+    /* Kartın içi aydınlık olduğu için, ara metin KOYU olmalı */
+    --muted: #52525b;
+    /* Zinc-600 (Koyu Kurşun Kalem Rengi) */
+
+    --primary: #e11d48;
+    /* Soul Red - Rose-600 */
+
+    --accent-from: #dc2626;
+    /* Red-600 */
+    --accent-to: #e11d48;
+    /* Rose-600 */
+
+    --selection-bg: #E0A458;
+    --selection-text: #121212;
+  }
+
+  /* --- ÖNEMLİ EKLEME: Footer İçin İstisna --- */
+  /* Footer siyah zeminde durduğu için oradaki muted yazılar açık renk olmalı */
+  .dark footer .text-\[var\(--muted\)\] {
+    color: #a1a1aa !important;
+    /* Açık Gri */
+  }
 }
 
-/* --- ÖNEMLİ EKLEME: Footer İçin İstisna --- */
-/* Footer siyah zeminde durduğu için oradaki muted yazılar açık renk olmalı */
-.dark footer .text-\[var\(--muted\)\] {
-    color: #a1a1aa !important; /* Açık Gri */
+html {
+  scroll-behavior: smooth;
 }
-}
-
-html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--background);
@@ -69,16 +96,31 @@ body {
 
 /* Developer Card içindeki kod blokları için özel ayar */
 /* Kart siyahsa kodlar açık, kart beyazsa kodlar koyu olsun diye */
-.bento-card pre, .bento-card code {
-    font-family: 'JetBrains Mono', monospace;
+.bento-card pre,
+.bento-card code {
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* Link Reset */
-a { color: inherit; text-decoration: none; }
-button { background: transparent; border: none; cursor: pointer; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @media print {
+
   /* Yazdırırken gizlenecekler */
-  header, footer, button, .chatbot-container, .theme-toggle {
+  header,
+  footer,
+  button,
+  .chatbot-container,
+  .theme-toggle {
     display: none !important;
   }
 
