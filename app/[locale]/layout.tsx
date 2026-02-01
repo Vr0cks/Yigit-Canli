@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yiğit Canlı | Software Developer",
     description: "Karmaşık sorunlar, temiz kodlar.",
-    url: "https://yigit.vr0cks.com/en", // 
+    url: "https://yigit.vr0cks.com/en", //
     siteName: "Yiğit Canlı Portfolio",
     images: [
       {
