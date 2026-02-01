@@ -3,19 +3,19 @@
     "hero": {
       "status": "Projeye Açık",
       "role": "Yazılım Geliştiricisi",
-      "education": "Kurucu @ vr0cks Software | Full-Stack Mühendis",
+      "education": "Kurucu @ vr0cks Software | Lead Developer",
       "description": "Süslü kelimelere gerek yok. Karmaşık sorunları alıyor, temiz kodla çözüyor ve arkamda teknik borç değil, tıkır tıkır çalışan sistemler bırakıyorum.",
       "cta_projects": "Neler Yaptım?",
       "cta_resume": "CV İndir",
       "cta_contact": "İletişim"
     },
     "developer_card": {
-      "role_val": "Founder & Lead Engineer",
+      "role_val": "Founder & Lead Developer",
       "status_val": "SaaS Ürünleri Geliştiriyor 🚀"
     },
     "about": {
-      "title": "MÜHENDİSLİK + İŞ DÜNYASI",
-      "text": "Sadece kod yazmıyorum; ölçeklenebilir sistemler tasarlıyorum. Supabase & Next.js gibi modern teknolojilerle 'Büyük Resim' bakış açısını birleştirerek, iş mantığının teknik mükemmellikle buluşmasını sağlıyorum. Eski kod yok, sadece shipping.",
+      "title": "TEKNOLOJİ + İŞ DÜNYASI",
+      "text": "Sadece kod yazmıyorum; dijital varlıklar inşa ediyorum. YBS'nin 'Büyük Resim' bakış açısını Supabase & Next.js gibi modern teknolojilerle birleştirerek, iş mantığının geliştirme mükemmelliğiyle buluştuğu ölçeklenebilir sistemler tasarlıyorum. Eski kod yok, sadece shipping.",
       "read_more": "Detaylar"
     },
     "hobbies": {

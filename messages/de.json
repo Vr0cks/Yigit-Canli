@@ -3,19 +3,19 @@
     "hero": {
       "status": "Offen für Projekte",
       "role": "Softwareentwickler",
-      "education": "Gründer @ vr0cks Software | Full-Stack Engineer",
+      "education": "Gründer @ vr0cks Software | Lead Developer",
       "description": "Keine Phrasen, nur Code. Ich löse Probleme mit sauberer Architektur – funktionierende Systeme statt technischer Schulden.",
       "cta_projects": "Meine Projekte",
       "cta_resume": "Lebenslauf laden",
       "cta_contact": "Kontakt"
     },
     "developer_card": {
-      "role_val": "Founder & Lead Engineer",
+      "role_val": "Founder & Lead Developer",
       "status_val": "Shipping SaaS Products 🚀"
     },
     "about": {
-      "title": "ENGINEERING MEETS BUSINESS",
-      "text": "Ich schreibe nicht nur Code; ich entwerfe skalierbare Systeme. Mit dem 'Big Picture'-Mindset und modernen Tech-Stacks wie Supabase & Next.js sorge ich dafür, dass Geschäftslogik auf technische Exzellenz trifft. Kein Legacy-Code, nur Shipping.",
+      "title": "BUSINESS MEETS TECHNOLOGY",
+      "text": "Ich schreibe nicht nur Code; ich baue digitale Assets. Mit dem 'Big Picture'-Mindset von MIS und modernen Tech-Stacks wie Supabase & Next.js entwerfe ich skalierbare Systeme, in denen Geschäftslogik auf Entwicklungs-Exzellenz trifft. Kein Legacy-Code, nur Shipping.",
       "read_more": "Mehr lesen"
     },
     "hobbies": {

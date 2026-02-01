@@ -3,19 +3,19 @@
     "hero": {
       "status": "Open to Work",
       "role": "Software Developer",
-      "education": "Founder @ vr0cks Software | Full-Stack Engineer",
+      "education": "Founder @ vr0cks Software | Lead Developer",
       "description": "No buzzwords, just code. I solve complex problems with clean architectures and leave behind systems that actually work, not technical debt.",
       "cta_projects": "See My Work",
       "cta_resume": "Download CV",
       "cta_contact": "Contact"
     },
     "developer_card": {
-      "role_val": "Founder | Full-Stack Developer",
+      "role_val": "Founder & Lead Developer",
       "status_val": "Shipping SaaS Products 🚀"
     },
     "about": {
-      "title": "ENGINEERING MEETS BUSINESS",
-      "text": "I don't just write code; I design scalable systems. Combining the 'Big Picture' mindset with modern tech stacks like Supabase & Next.js, I ensure business logic meets technical excellence. No legacy code, just shipping.",
+      "title": "BUSINESS MEETS TECHNOLOGY",
+      "text": "I don't just write code; I build digital assets. Combining the 'Big Picture' mindset of MIS with modern tech stacks like Supabase & Next.js, I design scalable systems where business logic meets development excellence. No legacy code, just shipping.",
       "read_more": "Read More"
     },
     "hobbies": {
