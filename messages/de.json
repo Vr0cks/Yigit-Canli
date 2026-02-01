@@ -136,16 +136,16 @@
     "button": "Verstanden"
   },
   "AboutPage": {
-    "title": "Die Geschichte hinter dem Code",
-    "intro": "Hallo, ich bin Yiğit. Softwareentwicklung ist für mich mehr als Technik – es ist die Kunst, komplexe Probleme zu lösen. Mein MIS-Hintergrund hilft mir, Code mit geschäftlichen Zielen in Einklang zu bringen.",
+    "title": "Hey, ich bin Yiğit 👋",
+    "intro": "Ich bin ein Entwickler, der es wirklich genießt, komplexe Probleme in saubere, funktionierende Lösungen zu verwandeln. Meine Reise begann mit der Neugier, wie Dinge funktionieren – und ehrlich gesagt, diese Neugier ist kein bisschen verblasst. Ich habe Wirtschaftsinformatik studiert, was mir die Superkraft verliehen hat, sowohl den Code ALS AUCH das Business dahinter zu verstehen.",
     "education": {
-      "title": "Ausbildung & Akademie",
-      "desc": "Wirtschaftsinformatik ist die Brücke zwischen Technik und Business. Hier lerne ich nicht nur Syntax, sondern Systemanalyse, Datenbankmanagement und agile Prozesse."
+      "title": "Wo ich das Handwerk gelernt habe",
+      "desc": "Die THK Universität hat mir beigebracht, dass großartige Software nicht nur Code schreiben bedeutet – es geht darum zu verstehen, WARUM man ihn schreibt. Datenbankdesign, Systemanalyse, agile Workflows... das wurden meine Bausteine. Aber die echte Ausbildung? Die passiert jeden Tag, mit jedem Bug, den ich beseitige, und jedem Feature, das ich ausliefere."
     },
     "vision": {
-      "title": "Vision",
-      "clean_code": "Code wird für Menschen geschrieben, nicht nur für Maschinen. Lesbarkeit und Wartbarkeit haben Vorrang.",
-      "learning": "Technologie steht nie still, ich auch nicht. Jeden Tag etwas Neues zu lernen, ist das Beste an diesem Job."
+      "title": "Woran ich glaube",
+      "clean_code": "Ich schreibe Code für den nächsten Entwickler (oft mein zukünftiges Ich). Sauber, lesbar und wartbar – weil niemand ein Chaos erben will.",
+      "learning": "Tech bewegt sich schnell, und ich liebe das. Es gibt immer ein neues Tool zu entdecken, einen besseren Weg, ein Problem zu lösen. Dieses ständige Lernen? Das ist kein Aufwand, das ist der spaßige Teil."
     }
   }
 }

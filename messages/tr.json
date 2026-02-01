@@ -141,16 +141,16 @@
     "button": "Tamam"
   },
   "AboutPage": {
-    "title": "Kodun Arkasındaki Hikaye",
-    "intro": "Merhaba, ben Yiğit. Yazılım geliştirmeyi sadece teknik bir iş olarak değil, karmaşık problemleri çözme sanatı olarak görüyorum. MIS eğitimim, bana kodu işletme hedefleriyle hizalama yeteneği kazandırdı.",
+    "title": "Merhaba, Ben Yiğit 👋",
+    "intro": "Karmaşık problemleri alıp, temiz ve çalışan çözümlere dönüştürmeyi seven bir yazılımcıyım. Hikayem 'bu nasıl çalışıyor?' merakıyla başladı – ve inan bu merak hâlâ dinmedi. Yönetim Bilişim Sistemleri okudum, bu da bana hem kodu HEM de arkasındaki iş mantığını anlama süper gücü verdi.",
     "education": {
-      "title": "Eğitim & Akademi",
-      "desc": "Yönetim Bilişim Sistemleri, teknoloji ve işletme arasındaki o kritik köprüdür. Burada sadece yazılım dillerini değil; sistem analizini, veritabanı yönetimini ve proje süreçlerini (Agile/Scrum) öğreniyorum."
+      "title": "Zanaatı Öğrendiğim Yer",
+      "desc": "THK Üniversitesi bana harika bir yazılımın sadece kod yazmak olmadığını öğretti – asıl mesele NEDEN yazdığını anlamak. Veritabanı tasarımı, sistem analizi, çevik metodolojiler... bunlar temeli oluşturdu. Ama asıl eğitim? O her gün, her ezdiğim bug'da ve her çıkardığım özellikte devam ediyor."
     },
     "vision": {
-      "title": "Vizyon",
-      "clean_code": "Kod sadece makine için değil, insanlar için de yazılır. Okunabilirlik ve sürdürülebilirlik önceliğimdir.",
-      "learning": "Teknoloji durmaz, ben de durmam. Her gün yeni bir şeyler öğrenmek, bu mesleğin en güzel yanı."
+      "title": "Neye İnanıyorum",
+      "clean_code": "Kodu bir sonraki geliştirici için yazarım (çoğu zaman gelecekteki ben). Temiz, okunabilir ve sürdürülebilir – çünkü kimse karmakarışık bir kod devralmak istemez.",
+      "learning": "Teknoloji hızlı ilerliyor ve ben bunu seviyorum. Her zaman keşfedilecek yeni bir araç, bir problemi çözmenin daha iyi bir yolu var. Sürekli öğrenmek mi? O bir yük değil, eğlenceli kısım."
     }
   }
 }

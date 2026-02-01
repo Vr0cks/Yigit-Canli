@@ -138,16 +138,16 @@
     "button": "Got it"
   },
   "AboutPage": {
-    "title": "The Story Behind the Code",
-    "intro": "Hello, I'm Yiğit. I view software development not just as a technical task, but as the art of solving complex problems. My MIS background empowers me to align code with business goals effectively.",
+    "title": "Hey, I'm Yiğit 👋",
+    "intro": "I'm a developer who genuinely enjoys turning complex problems into clean, working solutions. My journey started with curiosity about how things work – and honestly, that curiosity hasn't faded one bit. I studied Management Information Systems, which gave me the superpower of understanding both the code AND the business behind it.",
     "education": {
-      "title": "Education & Academy",
-      "desc": "Management Information Systems is the critical bridge between tech and business. Here, I learn not just syntax, but system analysis, database management, and agile project processes."
+      "title": "Where I Learned the Craft",
+      "desc": "THK University taught me that great software isn't just about writing code – it's about understanding why you're writing it. Database design, system analysis, agile workflows... these became my building blocks. But the real education? That happens every day, with every bug I squash and every feature I ship."
     },
     "vision": {
-      "title": "Vision",
-      "clean_code": "Code is written for humans, not just machines. Readability and maintainability are my top priorities.",
-      "learning": "Tech never stops, and neither do I. Learning something new every day is the best part of this job."
+      "title": "What I Believe In",
+      "clean_code": "I write code for the next developer (often future-me). Clean, readable, and maintainable – because nobody likes inheriting a mess.",
+      "learning": "Tech moves fast, and I love that. There's always a new tool to explore, a better way to solve a problem. That constant learning? It's not a burden, it's the fun part."
     }
   }
 }

@@ -257,7 +257,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
-              <a href="https://vrocks-agency.vercel.app" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-[var(--foreground)] text-[var(--background)] hover:opacity-90 transition-all text-xs font-bold font-mono">
+              <a href="https://vrocks-agency.vercel.app" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-red-600 to-rose-600 text-white hover:opacity-90 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-lg shadow-red-500/20">
                 <ExternalLink size={14} /> {t('projects.live_demo')}
               </a>
               <a href="https://github.com/Vr0cks/vrocks-agency" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
