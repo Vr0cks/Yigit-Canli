@@ -3,19 +3,19 @@
     "hero": {
       "status": "Open to Work",
       "role": "Software Developer",
-      "education": "MIS Student at THK University",
+      "education": "Founder @ vr0cks Software | Full-Stack Engineer",
       "description": "No buzzwords, just code. I solve complex problems with clean architectures and leave behind systems that actually work, not technical debt.",
       "cta_projects": "See My Work",
       "cta_resume": "Download CV",
       "cta_contact": "Contact"
     },
     "developer_card": {
-      "role_val": "Full Stack Developer",
-      "status_val": "Building..."
+      "role_val": "Founder & Lead Engineer",
+      "status_val": "Shipping SaaS Products 🚀"
     },
     "about": {
-      "title": "Developer Approach",
-      "text": "Being an MIS student gave me the 'Big Picture' mindset. I don't just write functions; I design seamless flows from the database to the UI, ensuring business logic meets technical excellence.",
+      "title": "ENGINEERING MEETS BUSINESS",
+      "text": "I don't just write code; I design scalable systems. Combining the 'Big Picture' mindset with modern tech stacks like Supabase & Next.js, I ensure business logic meets technical excellence. No legacy code, just shipping.",
       "read_more": "Read More"
     },
     "hobbies": {
@@ -68,31 +68,67 @@
     "placeholder": "Type 'help'...",
     "data": [
       {
-        "keywords": ["hello", "hi", "hey", "greetings"],
+        "keywords": [
+          "hello",
+          "hi",
+          "hey",
+          "greetings"
+        ],
         "response": "Hello! I'm Terminal. Yiğit is currently coding. I'm here to answer your questions. Type 'help' to get started."
       },
       {
-        "keywords": ["skills", "stack", "tech", "framework", "languages"],
+        "keywords": [
+          "skills",
+          "stack",
+          "tech",
+          "framework",
+          "languages"
+        ],
         "response": "On the technical side, I invest in Next.js 14, TypeScript, and Tailwind CSS. My main strength is building clean, readable, and scalable architectures."
       },
       {
-        "keywords": ["why you", "hire", "hr", "difference"],
+        "keywords": [
+          "why you",
+          "hire",
+          "hr",
+          "difference"
+        ],
         "response": "Here's the difference: I don't just write code. Thanks to my MIS background, I analyze the business value of every line I write. I merge technical skills with business intelligence."
       },
       {
-        "keywords": ["education", "school", "mis", "university"],
+        "keywords": [
+          "education",
+          "school",
+          "mis",
+          "university"
+        ],
         "response": "I study Management Information Systems (MIS) at THK University. This interdisciplinary education allows me to solve problems not just technically, but analytically."
       },
       {
-        "keywords": ["hobby", "sports", "personal", "football", "gamer"],
+        "keywords": [
+          "hobby",
+          "sports",
+          "personal",
+          "football",
+          "gamer"
+        ],
         "response": "Beyond code: 14 years of scouting, 8 years as a goalkeeper, and I play American Football. Teamplayer to be is for me not a cliché, it's a lifestyle."
       },
       {
-        "keywords": ["help", "commands", "question"],
+        "keywords": [
+          "help",
+          "commands",
+          "question"
+        ],
         "response": "You can ask about: 'tech', 'education', 'hobbies', 'why you', or 'contact'."
       },
       {
-        "keywords": ["secret", "hidden", "easter egg", "mystery"],
+        "keywords": [
+          "secret",
+          "hidden",
+          "easter egg",
+          "mystery"
+        ],
         "response": "Shhh. There is a back door in the system. Try the '/secret' path in your browser. But you didn't hear the password from me: 'hell yeah'."
       }
     ]

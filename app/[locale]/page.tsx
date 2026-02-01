@@ -152,6 +152,7 @@ export default function Home() {
               </div>
               <div className="pl-10 text-emerald-600 dark:text-emerald-700 font-medium">
                 "Next.js", "React", "TypeScript",<br/>"PostgreSQL", "Tailwind"
+                
               </div>
               <div className="pl-6 text-[var(--card-fg)]">],</div>
               <div className="pl-6">
