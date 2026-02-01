@@ -42,9 +42,17 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 text-xs font-mono tracking-wide"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-wide"
+            style={{
+              color: 'var(--status-text)',
+              backgroundColor: 'var(--status-bg)',
+              border: '1px solid var(--status-border)'
+            }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-500 animate-pulse" />
+            <span
+              className="w-1.5 h-1.5 rounded-full animate-pulse"
+              style={{ backgroundColor: 'var(--status-dot)' }}
+            />
             {t('hero.status')}
           </motion.div>
 
@@ -90,7 +98,7 @@ export default function Home() {
               href="https://github.com/Vr0cks"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-rose-600 text-white font-semibold rounded-md hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg shadow-red-500/20"
+              className="flex items-center gap-2 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-md hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg"
             >
               {t('hero.cta_projects')} <ArrowRight size={18} />
             </a>
@@ -185,29 +193,100 @@ export default function Home() {
 
         <SpotifyCard />
 
-        <Card className="md:col-span-1 relative overflow-hidden flex flex-col justify-between min-h-[280px]" delay={0.8}>
-          <div className="absolute -right-6 -top-6 opacity-5 dark:opacity-[0.03] rotate-12 pointer-events-none">
+        <Card className="md:col-span-1 relative overflow-hidden flex flex-col justify-between min-h-[280px] group" delay={0.8}>
+          {/* Scanlines effect */}
+          <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]" />
+
+          {/* Birthday Confetti - only shows on Nov 2 */}
+          {(() => {
+            const now = new Date();
+            const isBirthday = now.getMonth() === 10 && now.getDate() === 2; // Nov 2
+            if (isBirthday) {
+              return (
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  {[...Array(20)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute animate-bounce"
+                      style={{
+                        left: `${Math.random() * 100}%`,
+                        top: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 2}s`,
+                        animationDuration: `${1 + Math.random()}s`
+                      }}
+                    >
+                      {['🎉', '🎂', '🎈', '✨', '🎊'][Math.floor(Math.random() * 5)]}
+                    </div>
+                  ))}
+                </div>
+              );
+            }
+            return null;
+          })()}
+
+          <div className="absolute -right-6 -top-6 opacity-5 dark:opacity-[0.03] rotate-12 pointer-events-none group-hover:rotate-[20deg] group-hover:scale-110 transition-all duration-500">
             <Gamepad2 size={140} />
           </div>
 
           <div className="relative z-10">
-            <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 mb-6">
-              <Coffee size={18} />
-              <span className="text-xs font-mono font-bold tracking-wider">{t('hobbies.title').toUpperCase()}</span>
+            {/* Terminal-style header */}
+            <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 mb-4">
+              <span className="text-green-500 font-mono text-xs">▶</span>
+              <span className="text-xs font-mono font-bold tracking-wider animate-pulse">{t('hobbies.title').toUpperCase()}</span>
+              <span className="text-[10px] font-mono text-[var(--muted)]">// since 2005</span>
             </div>
 
-            <p className="text-[var(--card-fg)] font-bold text-xl mb-1">"Half-time Gamer"</p>
-            <p className="text-[var(--muted)] text-xs font-medium mb-6">{t('hobbies.subtitle')}</p>
+            {/* Gamer title */}
+            <p className="text-[var(--card-fg)] font-bold text-xl mb-1 font-mono group-hover:text-purple-500 transition-colors">
+              &gt; "Half-time Gamer"
+            </p>
+            <p className="text-[var(--muted)] text-xs font-mono mb-2">{t('hobbies.subtitle')}</p>
+
+            {/* Dynamic XP Bar based on birthday */}
+            {(() => {
+              const birthday = new Date(2005, 10, 2); // Nov 2, 2005
+              const now = new Date();
+              const age = now.getFullYear() - birthday.getFullYear();
+              const lastBirthday = new Date(now.getFullYear(), 10, 2);
+              if (now < lastBirthday) lastBirthday.setFullYear(now.getFullYear() - 1);
+
+              const monthsSinceBirthday = (now.getMonth() - lastBirthday.getMonth() + 12) % 12 ||
+                (now >= lastBirthday && now.getMonth() === 10 ? 0 :
+                  ((now.getFullYear() - lastBirthday.getFullYear()) * 12 + now.getMonth() - 10 + 12) % 12);
+
+              const xp = monthsSinceBirthday * 100;
+              const maxXp = 1200;
+              const level = now < new Date(now.getFullYear(), 10, 2) ? age : age;
+              const isBirthday = now.getMonth() === 10 && now.getDate() === 2;
+
+              return (
+                <div className="mb-4">
+                  <div className="flex justify-between text-[8px] font-mono text-[var(--muted)] mb-1">
+                    <span className={isBirthday ? 'text-yellow-500 animate-pulse' : ''}>
+                      LVL {level} {isBirthday && '🎂 LEVEL UP!'}
+                    </span>
+                    <span>XP: {xp.toLocaleString()} / {maxXp.toLocaleString()}</span>
+                  </div>
+                  <div className="h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className={`h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ${isBirthday ? 'animate-pulse' : ''}`}
+                      style={{ width: `${Math.min((xp / maxXp) * 100, 100)}%` }}
+                    />
+                  </div>
+                </div>
+              );
+            })()}
           </div>
 
+          {/* Achievement badges - no hover XP */}
           <div className="relative z-10 flex flex-wrap gap-2">
             {[
               { name: 'RPG', icon: <Hash size={10} /> },
               { name: 'FPS', icon: <Gamepad2 size={10} /> },
               { name: 'Indie', icon: <BookOpen size={10} /> }
             ].map((hobby) => (
-              <div key={hobby.name} className="flex items-center gap-1.5 px-3 py-1.5 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 rounded-md text-[var(--muted)] text-[10px] font-mono font-bold uppercase hover:bg-purple-500/10 hover:text-purple-500 dark:hover:text-purple-400 transition-colors cursor-default">
-                {hobby.icon}
+              <div key={hobby.name} className="flex items-center gap-1.5 px-3 py-1.5 bg-black/5 dark:bg-white/5 border border-purple-500/20 rounded-md text-[var(--muted)] text-[10px] font-mono font-bold uppercase hover:bg-purple-500/20 hover:text-purple-400 hover:border-purple-500/40 transition-all cursor-default">
+                <span className="text-purple-400">{hobby.icon}</span>
                 {hobby.name}
               </div>
             ))}
@@ -249,7 +328,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {['Next.js 14', 'Framer Motion', 'Tailwind'].map((tech) => (
-                  <span key={tech} className="text-[10px] font-mono font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10 px-2 py-1 rounded border border-red-200 dark:border-red-500/20 uppercase tracking-wider">
+                  <span key={tech} className="tag-primary text-[10px] font-mono font-bold px-2 py-1 rounded uppercase tracking-wider">
                     {tech}
                   </span>
                 ))}
@@ -257,7 +336,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
-              <a href="https://vrocks-agency.vercel.app" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-red-600 to-rose-600 text-white hover:opacity-90 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-lg shadow-red-500/20">
+              <a href="https://www.vr0cks.com/en" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-[var(--card-fg)] text-[var(--card-bg)] hover:opacity-90 hover:scale-[1.02] transition-all text-xs font-bold font-mono">
                 <ExternalLink size={14} /> {t('projects.live_demo')}
               </a>
               <a href="https://github.com/Vr0cks/vrocks-agency" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">

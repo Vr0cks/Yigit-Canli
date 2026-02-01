@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class', // <--- BUNU EKLEMEZSEN TEMA DEĞİŞMEZ
+  darkMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Light mode için arka planı beyaz, yazı rengini siyah tanımlıyoruz
-        // Dark mode zaten css'de tanımlıydı ama burayı özelleştiriyoruz
-        background: "var(--background)", 
+        background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        accent: "var(--accent)",
       },
     },
   },
   plugins: [],
 };
+
 export default config;

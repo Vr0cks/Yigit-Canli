@@ -4,77 +4,181 @@
 
 @layer base {
 
-  /* --- LIGHT MODE (GÜNDÜZ) --- */
-  /* Zemin Açık Gri, KARTLAR SİYAH */
+  /* ═══════════════════════════════════════════════════════════════════════════
+     🌞 LIGHT MODE - Clean, Professional
+     ═══════════════════════════════════════════════════════════════════════════ */
   :root {
     --background: #F0F2F5;
-    /* Sayfa Zemini: Açık Gri */
     --foreground: #000000;
-    /* Sayfa Başlıkları: Siyah */
 
     --card-bg: #111111;
-    /* KART RENGİ: SİYAH (Reverse) */
     --card-fg: #ffffff;
-    /* KART İÇİ YAZI: BEYAZ */
     --card-border: #000000;
-    /* Kart Kenarlığı: Siyah */
 
     --muted: #9ca3af;
-    /* Kart içindeki sönük yazılar (Gri) */
-    --primary: #e11d48;
-    /* Soul Red - Rose-600 */
-    --accent-from: #dc2626;
-    /* Red-600 */
-    --accent-to: #e11d48;
-    /* Rose-600 */
+    --primary: #3b82f6;
+    --primary-light: #60a5fa;
+    --accent: #3b82f6;
+
+    /* Button gradient colors */
+    --btn-from: #dc2626;
+    --btn-to: #e11d48;
+    --btn-glow: rgba(220, 38, 38, 0.2);
+
+    /* Tag colors - Blue for default */
+    --tag-text: #3b82f6;
+    --tag-bg: rgba(59, 130, 246, 0.1);
+    --tag-border: rgba(59, 130, 246, 0.2);
+
+    /* Status badge - Blue for default */
+    --status-text: #3b82f6;
+    --status-bg: rgba(59, 130, 246, 0.1);
+    --status-border: rgba(59, 130, 246, 0.2);
+    --status-dot: #3b82f6;
 
     --selection-bg: #bfdbfe;
     --selection-text: #1e3a8a;
   }
 
-  /* --- DARK MODE (GECE) --- */
-  /* Zemin Siyah, KARTLAR BEYAZ (Kırık Beyaz) */
+  /* ═══════════════════════════════════════════════════════════════════════════
+     🌙 DARK MODE - Soft Contrast
+     ═══════════════════════════════════════════════════════════════════════════ */
   .dark {
     --background: #0a0a0a;
-    /* Zemin: Off-Black (Soft) */
     --foreground: #e4e4e7;
-    /* Başlıklar: Zinc-200 (Soft White) */
 
-    /* KART RENGİ (GÜNCELLENDİ): Daha açık bir beton rengi */
-    /* Eskiden #C0C2C5 idi, şimdi #E5E5E5 yapıyoruz ki siyah yazı net okunsun */
     --card-bg: #E4E4E7;
-    /* Zinc-200 (Açık Beton) */
-
     --card-fg: #09090b;
-    /* Kart içi ANA yazılar: NEREDEYSE SİYAH */
     --card-border: #3f3f46;
-    /* Kart Kenarlığı: Koyu Gri */
 
-    /* ARA METİNLER (Description vb.) İÇİN KRİTİK AYAR: */
-    /* Kartın içi aydınlık olduğu için, ara metin KOYU olmalı */
     --muted: #52525b;
-    /* Zinc-600 (Koyu Kurşun Kalem Rengi) */
+    --primary: #3b82f6;
+    --primary-light: #60a5fa;
+    --accent: #3b82f6;
 
-    --primary: #e11d48;
-    /* Soul Red - Rose-600 */
+    /* Button gradient colors */
+    --btn-from: #dc2626;
+    --btn-to: #e11d48;
+    --btn-glow: rgba(220, 38, 38, 0.2);
 
-    --accent-from: #dc2626;
-    /* Red-600 */
-    --accent-to: #e11d48;
-    /* Rose-600 */
+    /* Tag colors - Blue for default dark */
+    --tag-text: #60a5fa;
+    --tag-bg: rgba(96, 165, 250, 0.1);
+    --tag-border: rgba(96, 165, 250, 0.2);
 
-    --selection-bg: #E0A458;
-    --selection-text: #121212;
+    /* Status badge - Blue for default dark */
+    --status-text: #60a5fa;
+    --status-bg: rgba(96, 165, 250, 0.1);
+    --status-border: rgba(96, 165, 250, 0.2);
+    --status-dot: #60a5fa;
+
+    --selection-bg: #3b82f6;
+    --selection-text: #ffffff;
   }
 
-  /* --- ÖNEMLİ EKLEME: Footer İçin İstisna --- */
-  /* Footer siyah zeminde durduğu için oradaki muted yazılar açık renk olmalı */
+  /* ═══════════════════════════════════════════════════════════════════════════
+     🔴 SOUL THEME (Mazda Identity) - Soul Red Accents
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  .soul-theme {
+    --primary: #dc143c;
+    --primary-light: #f43f5e;
+    --accent: #e11d48;
+
+    --btn-from: #dc2626;
+    --btn-to: #e11d48;
+    --btn-glow: rgba(220, 20, 60, 0.3);
+
+    --tag-text: #dc143c;
+    --tag-bg: rgba(220, 20, 60, 0.1);
+    --tag-border: rgba(220, 20, 60, 0.2);
+
+    /* Status badge - Soul Red */
+    --status-text: #dc143c;
+    --status-bg: rgba(220, 20, 60, 0.1);
+    --status-border: rgba(220, 20, 60, 0.2);
+    --status-dot: #dc143c;
+
+    --selection-bg: #dc143c;
+    --selection-text: #ffffff;
+  }
+
+  .soul-theme.dark {
+    --background: #0a0506;
+    /* Deep wine/burgundy - like Racing's green */
+    --foreground: #f5f5f5;
+    --card-bg: #140a0c;
+    /* Dark burgundy cards */
+    --card-fg: #f5f5f5;
+    --card-border: #2a1418;
+    /* Wine-tinted border */
+    --muted: #8b7a7d;
+    /* Warm gray muted */
+
+    --tag-text: #fb7185;
+    --tag-bg: rgba(251, 113, 133, 0.1);
+    --tag-border: rgba(251, 113, 133, 0.2);
+
+    --status-text: #fb7185;
+    --status-bg: rgba(251, 113, 133, 0.1);
+    --status-border: rgba(251, 113, 133, 0.2);
+    --status-dot: #fb7185;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     🏎️ RACING THEME (Aston Martin Identity) - Racing Green + Gold
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  .racing-theme {
+    --primary: #10b981;
+    --primary-light: #34d399;
+    --accent: #d4a726;
+
+    --btn-from: #059669;
+    --btn-to: #10b981;
+    --btn-glow: rgba(16, 185, 129, 0.3);
+
+    --tag-text: #059669;
+    --tag-bg: rgba(5, 150, 105, 0.1);
+    --tag-border: rgba(5, 150, 105, 0.2);
+
+    /* Status badge - Racing Green */
+    --status-text: #059669;
+    --status-bg: rgba(5, 150, 105, 0.1);
+    --status-border: rgba(5, 150, 105, 0.2);
+    --status-dot: #059669;
+
+    --selection-bg: #10b981;
+    --selection-text: #ffffff;
+  }
+
+  .racing-theme.dark {
+    --background: #050a08;
+    --foreground: #e8e4db;
+    --card-bg: #0d1a14;
+    --card-fg: #e8e4db;
+    --card-border: #1a3328;
+    --muted: #6b7c74;
+
+    --tag-text: #34d399;
+    --tag-bg: rgba(52, 211, 153, 0.1);
+    --tag-border: rgba(52, 211, 153, 0.2);
+
+    --status-text: #34d399;
+    --status-bg: rgba(52, 211, 153, 0.1);
+    --status-border: rgba(52, 211, 153, 0.2);
+    --status-dot: #34d399;
+  }
+
+  /* Footer text fix */
   .dark footer .text-\[var\(--muted\)\] {
     color: #a1a1aa !important;
-    /* Açık Gri */
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLOBAL STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
 html {
   scroll-behavior: smooth;
 }
@@ -85,7 +189,35 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* --- KART SINIFI (Her şeyi düzelten yer) --- */
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME-AWARE BUTTON CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+.btn-primary {
+  background: linear-gradient(to right, var(--btn-from), var(--btn-to));
+  box-shadow: 0 10px 25px -5px var(--btn-glow);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Theme-aware tags */
+.tag-primary {
+  color: var(--tag-text);
+  background-color: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BENTO CARD SYSTEM
+   ═══════════════════════════════════════════════════════════════════════════ */
 .bento-card {
   background-color: var(--card-bg);
   color: var(--card-fg);
@@ -94,14 +226,23 @@ body {
   transition: all 0.5s ease;
 }
 
-/* Developer Card içindeki kod blokları için özel ayar */
-/* Kart siyahsa kodlar açık, kart beyazsa kodlar koyu olsun diye */
 .bento-card pre,
 .bento-card code {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Link Reset */
+/* Theme glow effects on cards */
+.soul-theme .bento-card:hover {
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.15);
+}
+
+.racing-theme .bento-card:hover {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESET STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
 a {
   color: inherit;
   text-decoration: none;
@@ -113,9 +254,11 @@ button {
   cursor: pointer;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
 @media print {
 
-  /* Yazdırırken gizlenecekler */
   header,
   footer,
   button,
@@ -124,13 +267,11 @@ button {
     display: none !important;
   }
 
-  /* Yazdırırken arka planı beyaz yap, yazıları siyah */
   body {
     background-color: white !important;
     color: black !important;
   }
 
-  /* Linklerin yanına URL'sini açıkça yaz (kağıtta tıklayamazlar :) ) */
   a::after {
     content: " (" attr(href) ")";
     font-size: 0.8rem;

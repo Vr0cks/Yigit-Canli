@@ -2,8 +2,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "@/app/globals.css";
-import { Providers } from '../providers'; // Yeni ekledik
-import Header from '@/components/Header'; // Yeni ekledik
+import { Providers } from '../providers';
+import Header from '@/components/Header';
 import SecretHint from '@/components/SecretHint';
 import type { Metadata } from "next";
 
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yiğit Canlı | Software Developer",
     description: "Karmaşık sorunlar, temiz kodlar.",
-    url: "https://yigit.vr0cks.com/en", //
+    url: "https://yigit.vr0cks.com/en",
     siteName: "Yiğit Canlı Portfolio",
     images: [
       {
-        url: "/og-image.png", // public klasörüne attığın dosyanın adı
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Yiğit Canlı Portfolio Open Graph Image",
@@ -48,29 +48,22 @@ export default async function LocaleLayout({
     messages = {};
   }
 
-
   return (
-    // 'suppressHydrationWarning' next-themes için gereklidir
     <html lang={locale} className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
-      <body className="antialiased min-h-screen selection:bg-emerald-500 selection:text-white">
+      <body className="antialiased min-h-screen">
 
-        {/* Providers, tüm uygulamayı sarar ve temayı yönetir */}
         <Providers>
 
-          {/* Mühendis Izgarası - Renge göre uyum sağlar */}
-          <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none dark:opacity-[0.03]"
+          {/* Engineer Grid */}
+          <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none"
             style={{
               backgroundImage: `linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)`,
               backgroundSize: '50px 50px'
             }}
           />
 
-
           <NextIntlClientProvider messages={messages} locale={locale}>
-            {/* Header: Dil ve Tema Kontrolü */}
             <Header />
-
-            {/* YENİ EKLENEN: Gizli İpucu Bildirimi (5dk sonra çıkar) */}
             <SecretHint />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-24">
