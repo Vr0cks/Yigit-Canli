@@ -348,41 +348,39 @@ export default function Home() {
           {/* PROJECT 2 */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.9}>
             <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
-              <Users size={180} />
+              <Globe size={180} />
             </div>
 
             <div>
               <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-blue-800/10 rounded-lg text-blue-700 dark:text-blue-400 border border-blue-800/20">
-                  <Users size={24} />
+                <div className="p-3 bg-amber-500/10 rounded-lg text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                  <Globe size={24} />
                 </div>
                 <div className="flex items-center gap-2 text-[var(--muted)] text-xs font-mono bg-black/5 dark:bg-white/10 px-2 py-1 rounded">
-                  <span>Community</span>
+                  <span>VIP Transfer</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
                 </div>
               </div>
 
-              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
-                United Fenerbahçe
+              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                JNR VIP Transfer
               </h4>
               <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 font-medium">
                 {t('project_desc.united')}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Next.js', 'TypeScript', 'Tailwind'].map((tech) => (
-                  <span key={tech} className="text-[10px] font-mono font-bold text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/10 px-2 py-1 rounded border border-blue-200 dark:border-blue-500/20 uppercase tracking-wider">
+                {['Next.js', 'Supabase', 'Tailwind'].map((tech) => (
+                  <span key={tech} className="text-[10px] font-mono font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/10 px-2 py-1 rounded border border-amber-200 dark:border-amber-500/20 uppercase tracking-wider">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
-              <a href="https://united-fenerbah-e-fans-association.vercel.app" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-[var(--foreground)] text-[var(--background)] hover:opacity-90 transition-all text-xs font-bold font-mono">
-                <ExternalLink size={14} /> {t('projects.live_demo')}
-              </a>
-              <a href="https://github.com/Vr0cks/United-Fenerbah-e-Fans-Association-Web-Platform" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
-                <Code2 size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.review_code')}
+            <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
+              <a href="https://www.jnrviptransfer.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-amber-500 text-white hover:bg-amber-600 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
+                <ExternalLink size={14} /> {t('projects.visit')}
               </a>
             </div>
           </Card>

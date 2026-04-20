@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "hero": {
-      "status": "Offen für Projekte",
+      "status": "Angebot senden",
       "role": "Softwareentwickler",
       "education": "Gründer @ vr0cks Software | Lead Developer",
       "description": "Keine Phrasen, nur Code. Ich löse Probleme mit sauberer Architektur – funktionierende Systeme statt technischer Schulden.",
@@ -11,7 +11,7 @@
     },
     "developer_card": {
       "role_val": "Founder & Lead Developer",
-      "status_val": "Entwickelt SaaS-Produkte 🚀"
+      "status_val": "Entwickelt ERP-System für Karaca 🚀"
     },
     "about": {
       "title": "Wo Business auf Code trifft",
@@ -46,7 +46,7 @@
     },
     "project_desc": {
       "vrocks": "Vintage-Ästhetik trifft moderne Technik. Schnell, nostalgisch, aber leistungsstark unter der Haube.",
-      "united": "Eine moderne Webplattform für Fenerbahçe-Fans, die Event-Tracking, Mitgliedermanagement und Community-Interaktion bietet."
+      "united": "JNR VIP Transfer — eine Premium-Plattform für Luxus-Fahrzeugvermietung und VIP-Transferdienste für Geschäfts- und Privatkunden."
     }
   },
   "Contact": {

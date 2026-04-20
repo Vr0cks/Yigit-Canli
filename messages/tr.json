@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "hero": {
-      "status": "Projeye Açık",
+      "status": "Teklif Gönder",
       "role": "Yazılım Geliştiricisi",
       "education": "Kurucu @ vr0cks Software | Lead Developer",
       "description": "Süslü kelimelere gerek yok. Karmaşık sorunları alıyor, temiz kodla çözüyor ve arkamda teknik borç değil, tıkır tıkır çalışan sistemler bırakıyorum.",
@@ -11,7 +11,7 @@
     },
     "developer_card": {
       "role_val": "Founder & Lead Developer",
-      "status_val": "SaaS Ürünleri Geliştiriyor 🚀"
+      "status_val": "Karaca için ERP Sistemi Geliştiriyor 🚀"
     },
     "about": {
       "title": "Teknolojiyle İş Kuruyorum",
@@ -46,7 +46,7 @@
     },
     "project_desc": {
       "vrocks": "Eski internet estetiği, modern teknolojiyle buluştu. Hızlı, nostaljik ama güçlü.",
-      "united": "Fenerbahçe taraftarları için etkinlik takibi, üyelik yönetimi ve topluluk etkileşimi sağlayan modern web platformu."
+      "united": "JNR VIP Transfer — kurumsal ve bireysel müşterilere özel lüks araç kiralama ve VIP transfer hizmetleri sunan premium bir platform."
     }
   },
   "Contact": {
