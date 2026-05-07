@@ -13,7 +13,7 @@ import ContactModal from '@/components/contact-modal';
 import { getGitHubStats, GitHubStats } from '@/lib/github';
 
 const Card = ({ children, className = "", delay = 0, href }: { children: React.ReactNode; className?: string; delay?: number; href?: string }) => {
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
