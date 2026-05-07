@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send } from 'lucide-react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullanıyoruz
@@ -10,18 +10,33 @@ import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullan
 import SpotifyCard from '@/components/SpotifyCard';
 import Chatbot from '@/components/Chatbot';
 import ContactModal from '@/components/contact-modal';
+import { getGitHubStats, GitHubStats } from '@/lib/github';
 
-const Card = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.5, delay }}
-    className={`bento-card p-6 hover:scale-[1.02] hover:shadow-xl ${className}`}
-  >
-    {children}
-  </motion.div>
-);
+const Card = ({ children, className = "", delay = 0, href }: { children: React.ReactNode; className?: string; delay?: number; href?: string }) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
+    e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
+  };
+
+  const Component = href ? motion.a : motion.div;
+
+  return (
+    <Component
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay }}
+      onMouseMove={handleMouseMove}
+      {...(href ? { href, target: "_blank", rel: "noopener noreferrer" } : {})}
+      className={`bento-card p-6 hover:scale-[1.01] hover:shadow-xl transition-all duration-300 ${className} ${href ? 'cursor-pointer block' : ''}`}
+    >
+      {children}
+    </Component>
+  );
+};
 
 export default function Home() {
   const t = useTranslations('HomePage');
@@ -31,6 +46,16 @@ export default function Home() {
 
   // Modal'ın açık/kapalı durumunu kontrol eden state
   const [isContactOpen, setIsContactOpen] = useState(false);
+  
+  // Hydration hatasını önlemek için mount kontrolü
+  const [isMounted, setIsMounted] = useState(false);
+  const [githubData, setGithubData] = useState<GitHubStats | null>(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+    // Fetch real GitHub stats
+    getGitHubStats('Vr0cks').then(data => setGithubData(data));
+  }, []);
 
   return (
     <main className="flex flex-col gap-16 pb-20">
@@ -259,13 +284,27 @@ export default function Home() {
               const level = now < new Date(now.getFullYear(), 10, 2) ? age : age;
               const isBirthday = now.getMonth() === 10 && now.getDate() === 2;
 
+              if (!isMounted) {
+                return (
+                  <div className="mb-4">
+                    <div className="flex justify-between text-[8px] font-mono text-[var(--muted)] mb-1">
+                      <span>LVL --</span>
+                      <span>XP: -- / --</span>
+                    </div>
+                    <div className="h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
+                      <div className="h-full bg-zinc-500/20 w-0" />
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <div className="mb-4">
                   <div className="flex justify-between text-[8px] font-mono text-[var(--muted)] mb-1">
                     <span className={isBirthday ? 'text-yellow-500 animate-pulse' : ''}>
                       LVL {level} {isBirthday && '🎂 LEVEL UP!'}
                     </span>
-                    <span>XP: {xp.toLocaleString()} / {maxXp.toLocaleString()}</span>
+                    <span>XP: {xp.toLocaleString(locale)} / {maxXp.toLocaleString(locale)}</span>
                   </div>
                   <div className="h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
                     <div
@@ -290,6 +329,118 @@ export default function Home() {
                 {hobby.name}
               </div>
             ))}
+          </div>
+        </Card>
+      </section>
+
+      {/* 2.5. TECH & GITHUB BENTO */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* ENHANCED GITHUB CARD */}
+        <Card className="group overflow-hidden relative" delay={0.9} href="https://github.com/Vr0cks">
+          <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+            <Github size={60} />
+          </div>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2 text-emerald-500">
+                <div className="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                  <GitGraph size={14} />
+                </div>
+                <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase">GitHub</h3>
+              </div>
+              <span className="text-[9px] font-mono text-emerald-500 flex items-center gap-1.5 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                <div className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
+                Active
+              </span>
+            </div>
+
+            {/* HEATMAP */}
+            <div className="rounded-lg overflow-hidden bg-emerald-500/5 p-2 border border-emerald-500/10 mb-4">
+               <img 
+                src="https://ghchart.rshah.org/10b981/Vr0cks" 
+                alt="Vr0cks GitHub Contributions" 
+                className="w-full opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-2">
+              <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-white/5 group-hover:border-emerald-500/30 transition-all">
+                <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">Latest Push</p>
+                <p className="text-[10px] font-mono text-[var(--foreground)] line-clamp-1 italic">
+                  "{githubData?.lastCommitMessage || "Building..."}"
+                </p>
+              </div>
+              <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-white/5 group-hover:border-emerald-500/30 transition-all flex flex-col justify-between">
+                <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">Public Repos</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-mono font-bold text-emerald-500">{githubData?.public_repos || "--"}</span>
+                  <a href="https://github.com/Vr0cks" target="_blank" className="text-[var(--muted)] hover:text-emerald-500 transition-colors">
+                    <ArrowRight size={12} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* ENHANCED TECH STACK CARD */}
+        <Card className="md:col-span-2 relative group overflow-hidden" delay={1.0}>
+          <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+            style={{
+              backgroundImage: `radial-gradient(var(--primary) 0.5px, transparent 0.5px)`,
+              backgroundSize: '24px 24px'
+            }}
+          />
+          
+          <div className="flex items-center justify-between mb-4 relative z-10">
+            <div className="flex items-center gap-2 text-blue-500">
+              <div className="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                <Code2 size={14} />
+              </div>
+              <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase">{t('tech_stack.title')}</h3>
+            </div>
+            <div className="text-[8px] font-mono text-[var(--muted)] bg-black/5 dark:bg-white/5 px-2 py-0.5 rounded border border-white/10 uppercase tracking-[0.2em]">
+              v2.5
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 relative z-10">
+            {[
+              { name: 'Next.js', icon: <Globe size={12} />, level: 95 },
+              { name: 'TypeScript', icon: <Code2 size={12} />, level: 90 },
+              { name: 'React', icon: <LayoutTemplate size={12} />, level: 95 },
+              { name: 'Supabase', icon: <Cpu size={12} />, level: 85 },
+              { name: 'Tailwind', icon: <Hash size={12} />, level: 95 },
+              { name: 'Node.js', icon: <Terminal size={12} />, level: 80 },
+              { name: 'PostgreSQL', icon: <GitGraph size={12} />, level: 85 },
+              { name: 'Framer', icon: <ExternalLink size={12} />, level: 90 }
+            ].map((tech) => (
+              <div key={tech.name} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-black/5 dark:bg-white/5 border border-white/5 hover:border-blue-500/40 hover:bg-blue-500/[0.05] transition-all duration-300 group/item">
+                <div className="text-[var(--muted)] group-hover/item:text-blue-500 transition-colors">
+                  {tech.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-[9px] font-bold uppercase tracking-tighter truncate">{tech.name}</span>
+                  </div>
+                  <div className="h-[1.5px] bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-blue-500 rounded-full transition-all duration-1000" 
+                      style={{ width: `${tech.level}%`, opacity: 0.6 }}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 flex items-center justify-between text-[7px] font-mono text-[var(--muted)] uppercase tracking-widest relative z-10 border-t border-white/5 pt-3">
+            <span className="flex items-center gap-2">
+              <div className="w-1 h-1 rounded-full bg-blue-500 animate-pulse" />
+              Continuous Learning
+            </span>
+            <span>Exploring WebGL & AI</span>
           </div>
         </Card>
       </section>

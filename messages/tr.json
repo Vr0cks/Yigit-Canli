@@ -22,6 +22,9 @@
       "title": "Online Mod",
       "subtitle": "Yarı Zamanlı Oyuncu, Tam Zamanlı Dev."
     },
+    "tech_stack": {
+      "title": "Teknik Yetkinlikler"
+    },
     "projects": {
       "title": "Seçilmiş İşler",
       "live_demo": "Canlı Demo",

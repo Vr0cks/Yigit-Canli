@@ -8,65 +8,63 @@
      🌞 LIGHT MODE - Clean, Professional
      ═══════════════════════════════════════════════════════════════════════════ */
   :root {
-    --background: #F0F2F5;
-    --foreground: #000000;
+    --background: #F8FAFC;
+    --foreground: #0F172A;
 
-    --card-bg: #111111;
-    --card-fg: #ffffff;
-    --card-border: #000000;
+    --card-bg: #ffffff;
+    --card-fg: #0F172A;
+    --card-border: #E2E8F0;
 
-    --muted: #9ca3af;
-    --primary: #3b82f6;
+    --muted: #475569;
+    --primary: #2563eb;
     --primary-light: #60a5fa;
-    --accent: #3b82f6;
+    --accent: #2563eb;
 
     /* Button gradient colors */
-    --btn-from: #dc2626;
-    --btn-to: #e11d48;
-    --btn-glow: rgba(220, 38, 38, 0.2);
+    --btn-from: #2563eb;
+    --btn-to: #1d4ed8;
+    --btn-glow: rgba(37, 99, 235, 0.2);
 
-    /* Tag colors - Blue for default */
-    --tag-text: #3b82f6;
-    --tag-bg: rgba(59, 130, 246, 0.1);
-    --tag-border: rgba(59, 130, 246, 0.2);
+    /* Tag colors */
+    --tag-text: #2563eb;
+    --tag-bg: rgba(37, 99, 235, 0.05);
+    --tag-border: rgba(37, 99, 235, 0.1);
 
-    /* Status badge - Blue for default */
-    --status-text: #3b82f6;
-    --status-bg: rgba(59, 130, 246, 0.1);
-    --status-border: rgba(59, 130, 246, 0.2);
-    --status-dot: #3b82f6;
+    /* Status badge */
+    --status-text: #2563eb;
+    --status-bg: rgba(37, 99, 235, 0.05);
+    --status-border: rgba(37, 99, 235, 0.1);
+    --status-dot: #2563eb;
 
     --selection-bg: #bfdbfe;
     --selection-text: #1e3a8a;
   }
 
-  /* ═══════════════════════════════════════════════════════════════════════════
-     🌙 DARK MODE - Soft Contrast
-     ═══════════════════════════════════════════════════════════════════════════ */
+  /* 🌙 DARK MODE - Deep Contrast */
   .dark {
-    --background: #0a0a0a;
-    --foreground: #e4e4e7;
+    --background: #020617;
+    --foreground: #F8FAFC;
 
-    --card-bg: #E4E4E7;
-    --card-fg: #09090b;
-    --card-border: #3f3f46;
+    --card-bg: #0F172A;
+    --card-fg: #F8FAFC;
+    --card-border: #1E293B;
 
-    --muted: #52525b;
-    --primary: #3b82f6;
+    --muted: #94A3B8;
+    --primary: #3B82F6;
     --primary-light: #60a5fa;
     --accent: #3b82f6;
 
     /* Button gradient colors */
-    --btn-from: #dc2626;
-    --btn-to: #e11d48;
-    --btn-glow: rgba(220, 38, 38, 0.2);
+    --btn-from: #3b82f6;
+    --btn-to: #2563eb;
+    --btn-glow: rgba(59, 130, 246, 0.2);
 
-    /* Tag colors - Blue for default dark */
+    /* Tag colors */
     --tag-text: #60a5fa;
     --tag-bg: rgba(96, 165, 250, 0.1);
     --tag-border: rgba(96, 165, 250, 0.2);
 
-    /* Status badge - Blue for default dark */
+    /* Status badge */
     --status-text: #60a5fa;
     --status-bg: rgba(96, 165, 250, 0.1);
     --status-border: rgba(96, 165, 250, 0.2);
@@ -232,12 +230,41 @@ body {
 }
 
 /* Theme glow effects on cards */
+.bento-card:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+  border-color: var(--primary);
+}
+
 .soul-theme .bento-card:hover {
-  box-shadow: 0 0 30px rgba(220, 20, 60, 0.15);
+  box-shadow: 0 0 40px rgba(220, 20, 60, 0.2);
+  border-color: var(--primary);
 }
 
 .racing-theme .bento-card:hover {
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+  border-color: var(--primary);
+}
+
+.bento-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.03), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.bento-card:hover::after {
+  opacity: 1;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════

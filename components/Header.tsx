@@ -77,7 +77,7 @@ export default function Header() {
   }
 
   const colorThemes = [
-    { id: 'default' as const, label: 'Zinc', icon: <Palette size={14} />, color: 'bg-zinc-500' },
+    { id: 'default' as const, label: 'Navy Blue', icon: <Palette size={14} />, color: 'bg-blue-900' },
     { id: 'soul' as const, label: 'Soul', icon: <Flame size={14} />, color: 'bg-gradient-to-r from-red-600 to-rose-600' },
     { id: 'racing' as const, label: 'Racing', icon: <Flag size={14} />, color: 'bg-gradient-to-r from-emerald-600 to-green-600' },
   ];

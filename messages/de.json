@@ -22,6 +22,9 @@
       "title": "Online-Modus",
       "subtitle": "Teilzeit-Gamer, Vollzeit-Dev."
     },
+    "tech_stack": {
+      "title": "Technischer Stack"
+    },
     "projects": {
       "title": "Ausgewählte Werke",
       "live_demo": "Live Demo",
