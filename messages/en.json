@@ -89,9 +89,9 @@
     "error": "Something went wrong!"
   },
   "Chatbot": {
-    "welcome": "Hello! I'm 'Terminal', the digital assistant. Type 'help' to start or ask me anything.",
-    "fallback": "Sorry, command not recognized. Please type 'help' to see available commands.",
-    "typing": "// Terminal is computing...",
+    "welcome": "System active. I am Terminal. vr0cks is probably building an ERP system architecture or busy with AI integration right now. If you have anything you want me to pass on, I'm here. Type 'help' to see commands.",
+    "fallback": "Sorry, I don't recognize this command. Please type 'help' to see the list of commands.",
+    "typing": "// Terminal is generating response...",
     "placeholder": "Type 'help'...",
     "data": [
       {
@@ -101,7 +101,7 @@
           "hey",
           "greetings"
         ],
-        "response": "Hello! I'm Terminal. Yiğit is currently coding. I'm here to answer your questions. Type 'help' to get started."
+        "response": "System active. I am Terminal. vr0cks is probably building an ERP system architecture or busy with AI integration right now. If you have anything you want me to pass on, I'm here. Type 'help' to see commands."
       },
       {
         "keywords": [
@@ -111,7 +111,7 @@
           "framework",
           "languages"
         ],
-        "response": "On the technical side, I invest in Next.js 14, TypeScript, and Tailwind CSS. My main strength is building clean, readable, and scalable architectures."
+        "response": "Main stack: Next.js 15 (App Router), TypeScript, Python, Tailwind, and React Native. I don't just write standard code; I build end-to-end ERP systems, integrate AI agents, and deploy projects to production. No spaghetti code, only perfectly running, scalable systems."
       },
       {
         "keywords": [
@@ -120,7 +120,7 @@
           "hr",
           "difference"
         ],
-        "response": "Here's the difference: I don't just write code. Thanks to my MIS background, I analyze the business value of every line I write. I merge technical skills with business intelligence."
+        "response": "My difference: I am not an ordinary 'task finisher'. I currently manage the IT Department of a company and concurrently develop AI-powered luxury identity verification systems. Thanks to my MIS education, I map technical architecture directly to business goals. I bring your company not just code, but money-making automations and ROI-driven solutions."
       },
       {
         "keywords": [
@@ -129,7 +129,7 @@
           "mis",
           "university"
         ],
-        "response": "I study Management Information Systems (MIS) at THK University. This interdisciplinary education allows me to solve problems not just technically, but analytically."
+        "response": "I study Management Information Systems (MIS) at THK University. This department taught me not just to write code, but to integrate software into the heart of the business world. While building technical architecture, I structure the commercial logic with the same clarity."
       },
       {
         "keywords": [
@@ -139,7 +139,7 @@
           "football",
           "gamer"
         ],
-        "response": "Beyond code: 14 years of scouting, 8 years as a goalkeeper, and I play American Football. Teamplayer to be is for me not a cliché, it's a lifestyle."
+        "response": "Outside of work? I have a 14-year scouting history, 8 years as a goalkeeper, and I play American Football. I have no business with anything that doesn't require discipline and strategy. I am a team player, but I also know very well how to shoulder a project and finish it alone when necessary."
       },
       {
         "keywords": [
@@ -147,7 +147,17 @@
           "commands",
           "question"
         ],
-        "response": "You can ask about: 'tech', 'education', 'hobbies', 'why you', or 'contact'."
+        "response": "You can inquire about these topics: 'tech', 'education', 'hobbies', 'why you', or 'contact'."
+      },
+      {
+        "keywords": [
+          "contact",
+          "reach",
+          "email",
+          "mail",
+          "hire"
+        ],
+        "response": "If you have a serious project or business offer, you can reach me via ahmetcanli1943@gmail.com or LinkedIn. I am always ready for visionary work."
       },
       {
         "keywords": [
@@ -156,7 +166,7 @@
           "easter egg",
           "mystery"
         ],
-        "response": "Shhh. There is a back door in the system. Try the '/secret' path in your browser. But you didn't hear the password from me: 'hell yeah'."
+        "response": "Unauthorized access detected... Just kidding. Try the '/secret' route in your browser. Your password: 'hell yeah'"
       }
     ]
   },

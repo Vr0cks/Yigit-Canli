@@ -89,28 +89,26 @@
     "error": "Es ist ein Fehler aufgetreten!"
   },
   "Chatbot": {
-    "welcome": "Hallo! Ich bin 'Terminal'. Tippen Sie 'hilfe', um zu beginnen.",
-    "fallback": "Entschuldigung, Befehl nicht erkannt. Tippen Sie 'hilfe' für eine Liste.",
-    "typing": "// Terminal berechnet...",
-    "placeholder": "Tippen Sie 'hilfe'...",
+    "welcome": "System aktiv. Ich bin Terminal. vr0cks baut wahrscheinlich gerade eine ERP-Systemarchitektur oder beschäftigt sich mit KI-Integration. Wenn Sie ihm etwas mitteilen möchten, bin ich hier. Tippen Sie 'hilfe', um Befehle zu sehen.",
+    "fallback": "Entschuldigung, dieser Befehl wird nicht erkannt. Bitte tippe 'hilfe', um die Befehlsliste zu sehen.",
+    "typing": "// Terminal erstellt Antwort...",
+    "placeholder": "Tippe 'hilfe'...",
     "data": [
       {
         "keywords": [
           "hallo",
           "hi",
-          "hey",
-          "guten tag"
+          "hey"
         ],
-        "response": "Hallo! Ich bin Terminal. Yiğit codet gerade. Ich bin hier, um Fragen zu beantworten. Tippen Sie 'hilfe', um zu beginnen."
+        "response": "System aktiv. Ich bin Terminal. vr0cks baut wahrscheinlich gerade eine ERP-Systemarchitektur oder beschäftigt sich mit KI-Integration. Wenn Sie ihm etwas mitteilen möchten, bin ich hier. Tippen Sie 'hilfe', um Befehle zu sehen."
       },
       {
         "keywords": [
-          "skills",
           "stack",
           "tech",
           "technologie"
         ],
-        "response": "Technisch setze ich auf Next.js 14, TypeScript und Tailwind CSS. Meine Stärke liegt in sauberen und skalierbaren Architekturen."
+        "response": "Haupt-Stack: Next.js 15 (App Router), TypeScript, Python, Tailwind und React Native. Ich schreibe nicht nur Standardcode; ich baue End-to-End-ERP-Systeme, integriere KI-Agenten und bringe Projekte live. Kein Spaghetti-Code, nur perfekt laufende, skalierbare Systeme."
       },
       {
         "keywords": [
@@ -119,7 +117,7 @@
           "job",
           "unterschied"
         ],
-        "response": "Der Unterschied: Ich schreibe nicht nur Code. Dank meines MIS-Hintergrunds analysiere ich den geschäftlichen Wert jeder Zeile. Ich verbinde Technik mit Business-Intelligenz."
+        "response": "Mein Unterschied: Ich bin kein gewöhnlicher 'Task-Erlediger'. Ich leite derzeit die IT-Abteilung eines Unternehmens und entwickle gleichzeitig KI-gestützte Luxus-Identitätsprüfungssysteme. Dank meiner MIS-Ausbildung verknüpfe ich die technische Architektur direkt mit den Geschäftszielen. Ich bringe Ihrem Unternehmen nicht nur Code, sondern gewinnbringende Automatisierungen und ROI-orientierte Lösungen."
       },
       {
         "keywords": [
@@ -128,7 +126,7 @@
           "uni",
           "mis"
         ],
-        "response": "Ich studiere Wirtschaftsinformatik (MIS) an der THK Universität. Diese Ausbildung erlaubt es mir, Probleme nicht nur technisch, sondern auch analytisch zu lösen."
+        "response": "Ich studiere Wirtschaftsinformatik (MIS) an der THK Universität. Dieser Studiengang hat mich gelehrt, nicht nur Code zu schreiben, sondern Software in das Herz der Geschäftswelt zu integrieren. Wenn ich technische Architektur aufbaue, strukturiere ich die kommerzielle Logik mit der gleichen Klarheit."
       },
       {
         "keywords": [
@@ -137,7 +135,7 @@
           "persönlich",
           "fussball"
         ],
-        "response": "Abseits vom Code: 14 Jahre Pfadfinder, 8 Jahre Torwart und American Football. Teamplayer zu sein ist für mich kein Klischee, sondern ein Lebensstil."
+        "response": "Außerhalb der Arbeit? Ich habe 14 Jahre Pfadfindererfahrung, 8 Jahre als Torwart und spiele American Football. Ich habe nichts mit Dingen zu tun, die keine Disziplin und Strategie erfordern. Ich bin ein Teamplayer, aber ich weiß auch sehr gut, wie man ein Projekt schultert und es bei Bedarf alleine abschließt."
       },
       {
         "keywords": [
@@ -145,7 +143,17 @@
           "help",
           "frage"
         ],
-        "response": "Fragen Sie nach: 'tech', 'studium', 'hobby', 'warum du' oder 'kontakt'."
+        "response": "Sie können nach diesen Themen fragen: 'tech', 'ausbildung', 'hobby', 'warum du' oder 'kontakt'."
+      },
+      {
+        "keywords": [
+          "kontakt",
+          "erreichen",
+          "email",
+          "mail",
+          "einstellung"
+        ],
+        "response": "Wenn Sie ein ernsthaftes Projekt oder ein Geschäftsangebot haben, können Sie mich über ahmetcanli1943@gmail.com oder LinkedIn erreichen. Ich bin immer bereit für visionäre Arbeit."
       },
       {
         "keywords": [
@@ -154,7 +162,7 @@
           "versteckt",
           "easter egg"
         ],
-        "response": "Pst. Es gibt eine Hintertür im System. Versuch den Pfad '/secret' im Browser. Aber das Passwort hast du nicht von mir: 'hell yeah'."
+        "response": "Unbefugter Zugriff erkannt... Nur ein Scherz. Versuchen Sie die Route '/secret' im Browser. Ihr Passwort: 'hell yeah'"
       }
     ]
   },

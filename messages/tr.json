@@ -89,7 +89,7 @@
     "error": "Bir hata oluştu!"
   },
   "Chatbot": {
-    "welcome": "Selamlar! Ben dijital asistan 'Terminal'. Başlamak için 'yardım' yazabilir veya bana soru sorabilirsiniz.",
+    "welcome": "Sistem aktif. Ben Terminal. vr0cks şu an muhtemelen bir ERP sistemi mimarisi kuruyor veya yapay zeka (AI) entegrasyonuyla meşgul. Ona iletmemi istediğin bir şey varsa buradayım. Komutları görmek için 'yardım' yazabilirsin.",
     "fallback": "Üzgünüm, bu komutu tanıyamadım. Lütfen 'yardım' yazarak komut listesini gör.",
     "typing": "// Terminal cevap oluşturuyor...",
     "placeholder": "'yardım' yaz...",
@@ -102,7 +102,7 @@
           "hello",
           "merhabalar"
         ],
-        "response": "Selam! Ben Terminal. Yiğit şu an kodların başında. Ona iletmemi istediğin bir şey varsa buradayım. Başlamak için 'yardım' yazabilirsin."
+        "response": "Sistem aktif. Ben Terminal. vr0cks şu an muhtemelen bir ERP sistemi mimarisi kuruyor veya yapay zeka (AI) entegrasyonuyla meşgul. Ona iletmemi istediğin bir şey varsa buradayım. Komutları görmek için 'yardım' yazabilirsin."
       },
       {
         "keywords": [
@@ -112,7 +112,7 @@
           "tech",
           "dil"
         ],
-        "response": "Teknik tarafta Next.js 14, TypeScript ve Tailwind CSS favorilerim. Ama asıl olayım; temiz, okunabilir ve ölçeklenebilir mimariler kurmak."
+        "response": "Ana stack: Next.js 15 (App Router), TypeScript, Python, Tailwind ve React Native. Sadece standart kod yazmıyorum; baştan uca ERP sistemleri inşa ediyor, yapay zeka ajanları entegre ediyor ve projeleri canlıya alıyorum. Spagetti kod yok, sadece tıkır tıkır çalışan, ölçeklenebilir sistemler var."
       },
       {
         "keywords": [
@@ -122,7 +122,7 @@
           "hire",
           "fark"
         ],
-        "response": "Farkım şu: Ben sadece kod yazmam. MIS eğitimim sayesinde işin ticari ve analitik boyutunu da görürüm. Sadece 'çalışan' değil, 'kazandıran' sistemler geliştiririm."
+        "response": "Farkım şu: Ben sıradan bir 'task bitirici' değilim. Halihazırda bir şirketin IT Departmanını yönetiyor ve eşzamanlı olarak yapay zeka destekli lüks kimlik doğrulama sistemleri geliştiriyorum. MIS eğitimim sayesinde teknik mimariyi doğrudan iş hedefleriyle eşleştiriyorum. Şirketinize sadece kod değil, para kazandıran otomasyonlar ve ROI odaklı çözümler getiririm."
       },
       {
         "keywords": [
@@ -131,7 +131,7 @@
           "mis",
           "ybs"
         ],
-        "response": "THK Üniversitesi'nde Yönetim Bilişim Sistemleri (YBS) okuyorum. Bu bölüm bana yazılımın teknik tarafı ile iş dünyasının ihtiyaçları arasında köprü kurmayı öğretti."
+        "response": "THK Üniversitesi'nde Yönetim Bilişim Sistemleri (YBS) okuyorum. Bu bölüm bana sadece kod yazmayı değil, yazılımı iş dünyasının kalbine entegre etmeyi öğretti. Teknik mimariyi kurarken, işin ticari mantığını da aynı netlikte kurgularım."
       },
       {
         "keywords": [
@@ -141,7 +141,7 @@
           "futbol",
           "gamer"
         ],
-        "response": "Kod dışında; 14 yıllık izcilik, 8 yıllık kalecilik geçmişim var ve Amerikan Futbolu oynuyorum. Takım oyuncusu olmak benim için bir klişe değil, yaşam tarzı."
+        "response": "İş dışında mı? 14 yıllık izcilik, 8 yıllık kalecilik geçmişim var ve Amerikan Futbolu oynuyorum. Disiplin ve strateji gerektirmeyen hiçbir şeyle işim olmaz. Takım oyuncusuyum ama gerektiğinde projeyi sırtlanıp tek başıma bitirmeyi de çok iyi bilirim."
       },
       {
         "keywords": [
@@ -150,7 +150,18 @@
           "soru",
           "komut"
         ],
-        "response": "Şu konuları sorabilirsin: 'teknoloji', 'eğitim', 'hobi', 'neden sen' veya 'iletişim'."
+        "response": "Şu konuları sorgulayabilirsin: 'teknoloji', 'eğitim', 'hobi', 'neden sen' veya 'iletişim'."
+      },
+      {
+        "keywords": [
+          "iletişim",
+          "contact",
+          "ulaş",
+          "mail",
+          "email",
+          "e-posta"
+        ],
+        "response": "Eğer ciddi bir projen veya iş teklifin varsa ahmetcanli1943@gmail.com üzerinden veya LinkedIn'den ulaşabilirsin. Vizyoner işler için her zaman hazırım."
       },
       {
         "keywords": [
@@ -159,7 +170,7 @@
           "secret",
           "easter egg"
         ],
-        "response": "Şşşt. Sistemde arka bir kapı var. Tarayıcıda '/secret' yolunu dene. Ama şifreyi benden duymadın: 'hell yeah'."
+        "response": "Yetkisiz giriş tespit edildi... Şaka yapıyorum. Tarayıcıda '/secret' rotasını dene. Şifren: 'hell yeah'"
       }
     ]
   },
