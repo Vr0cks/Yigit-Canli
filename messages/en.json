@@ -33,6 +33,30 @@
       "review_code": "Review Code",
       "visit": "Visit Site"
     },
+    "leadership": {
+      "section_title": "Leadership Beyond the Screen",
+      "scout": {
+        "title": "Scout Leader",
+        "org": "Ankara Çankaya Scout Group",
+        "member_label": "SCOUT MEMBER",
+        "leader_label": "SCOUT LEADER",
+        "badge_member": "Member",
+        "badge_leader": "Leader",
+        "desc": "Field leadership, crisis decision-making, and team coordination under real-world pressure — long before writing a single line of code."
+      },
+      "igl": {
+        "title": "In-Game Leader",
+        "game": "Valorant",
+        "team_label": "TEAM",
+        "team_name": "KNAVES",
+        "role_label": "ROLE",
+        "role_val": "IGL (In-Game Leader)",
+        "desc": "Calling strategies, reading enemy rotations, and making split-second decisions under elimination pressure. Pressure is just another build environment.",
+        "badge_igl": "Strategist",
+        "badge_coord": "Coordinator",
+        "badge_fragger": "Clutch Caller"
+      }
+    },
     "philosophy": {
       "analyze": {
         "title": "Analyze First",
@@ -151,6 +175,12 @@
       "title": "What I Believe In",
       "clean_code": "I write code for the next developer (often future-me). Clean, readable, and maintainable – because nobody likes inheriting a mess.",
       "learning": "Tech moves fast, and I love that. There's always a new tool to explore, a better way to solve a problem. That constant learning? It's not a burden, it's the fun part."
+    },
+    "leadership": {
+      "title": "Leadership & Decision-Making",
+      "desc": "Software is not just architecture — it's making fast decisions under pressure. Whether leading scouts through a field crisis or calling strategies as an IGL in a 5v5 match, I've learned that great teams don't happen by accident. They're built with communication, trust, and clarity. I bring that same mindset to every codebase and every sprint.",
+      "scout_tag": "14 years of scouting",
+      "igl_tag": "E-Sports IGL"
     }
   }
 }

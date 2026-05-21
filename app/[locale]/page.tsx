@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
-import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send } from 'lucide-react';
+import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send, Shield, Zap, Swords } from 'lucide-react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullanıyoruz
 
@@ -130,8 +130,8 @@ export default function Home() {
 
             {/* --- GÜNCELLENEN CV BUTONU --- */}
             <a
-              href={`/cv-${locale}.pdf`}
-              download={`Yigit_Canli_CV_${locale.toUpperCase()}.pdf`}
+              href={`/cv-${locale === 'de' ? 'en' : locale}.pdf`}
+              download={`Yigit_Canli_CV_${(locale === 'de' ? 'en' : locale).toUpperCase()}.pdf`}
               className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] text-[var(--muted)] font-medium rounded-md hover:border-[var(--foreground)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
             >
               <Download size={18} /> {t('hero.cta_resume')}
@@ -535,6 +535,155 @@ export default function Home() {
               </a>
             </div>
           </Card>
+        </div>
+      </section>
+
+      {/* LEADERSHIP SECTION */}
+      <section className="space-y-6">
+        <div className="flex items-center gap-3">
+          <Shield size={22} className="text-amber-500" />
+          <h3 className="text-2xl font-bold text-[var(--foreground)]">{t('leadership.section_title')}</h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          {/* SCOUT CARD */}
+          <Card className="relative overflow-hidden group min-h-[260px] flex flex-col justify-between" delay={0.8}>
+            {/* Ambient glow */}
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-amber-500/10 blur-[60px] rounded-full pointer-events-none" />
+            <div className="absolute -bottom-6 -right-6 opacity-[0.04] dark:opacity-[0.03] rotate-12 pointer-events-none group-hover:rotate-[20deg] group-hover:scale-110 transition-all duration-500">
+              <Shield size={160} />
+            </div>
+
+            <div className="relative z-10">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2 text-amber-500">
+                  <div className="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                    <Shield size={14} />
+                  </div>
+                  <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase">{t('leadership.scout.title')}</h4>
+                </div>
+                <span className="text-[9px] font-mono text-amber-500 flex items-center gap-1.5 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
+                  <div className="w-1 h-1 rounded-full bg-amber-500 animate-pulse" />
+                  {t('leadership.scout.org')}
+                </span>
+              </div>
+
+              {/* Dynamic year counters */}
+              {(() => {
+                const memberSince = 2012;
+                const leaderSince = 2023;
+                const currentYear = new Date().getFullYear();
+                const memberYears = currentYear - memberSince;
+                const leaderYears = currentYear - leaderSince;
+
+                if (!isMounted) {
+                  return (
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-amber-500/10">
+                        <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">{t('leadership.scout.member_label')}</p>
+                        <p className="text-2xl font-bold font-mono text-amber-500">--</p>
+                        <p className="text-[9px] text-[var(--muted)] font-mono">{t('leadership.scout.badge_member')}</p>
+                      </div>
+                      <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-amber-500/10">
+                        <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">{t('leadership.scout.leader_label')}</p>
+                        <p className="text-2xl font-bold font-mono text-amber-500">--</p>
+                        <p className="text-[9px] text-[var(--muted)] font-mono">{t('leadership.scout.badge_leader')}</p>
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-amber-500/10 group-hover:border-amber-500/30 transition-all">
+                      <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">{t('leadership.scout.member_label')}</p>
+                      <p className="text-2xl font-bold font-mono text-amber-500">{memberYears}<span className="text-sm ml-1">yr</span></p>
+                      <p className="text-[9px] text-[var(--muted)] font-mono">since {memberSince}</p>
+                    </div>
+                    <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-amber-500/10 group-hover:border-amber-500/30 transition-all">
+                      <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">{t('leadership.scout.leader_label')}</p>
+                      <p className="text-2xl font-bold font-mono text-amber-500">{leaderYears}<span className="text-sm ml-1">yr</span></p>
+                      <p className="text-[9px] text-[var(--muted)] font-mono">since {leaderSince}</p>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              <p className="text-[var(--muted)] text-xs leading-relaxed font-medium">{t('leadership.scout.desc')}</p>
+            </div>
+
+            {/* Badges */}
+            <div className="relative z-10 flex flex-wrap gap-2 mt-4">
+              {[
+                { name: t('leadership.scout.badge_member'), icon: <Users size={10} /> },
+                { name: t('leadership.scout.badge_leader'), icon: <Shield size={10} /> },
+              ].map((b) => (
+                <div key={b.name} className="flex items-center gap-1.5 px-3 py-1.5 bg-black/5 dark:bg-white/5 border border-amber-500/20 rounded-md text-[var(--muted)] text-[10px] font-mono font-bold uppercase hover:bg-amber-500/10 hover:text-amber-400 hover:border-amber-500/40 transition-all cursor-default">
+                  <span className="text-amber-400">{b.icon}</span>
+                  {b.name}
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          {/* IGL CARD */}
+          <Card className="relative overflow-hidden group min-h-[260px] flex flex-col justify-between" delay={0.9}>
+            {/* Ambient glow */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-red-500/10 blur-[60px] rounded-full pointer-events-none" />
+            <div className="absolute -bottom-6 -right-6 opacity-[0.04] dark:opacity-[0.03] -rotate-12 pointer-events-none group-hover:rotate-[20deg] group-hover:scale-110 transition-all duration-500">
+              <Swords size={160} />
+            </div>
+            {/* Scanlines */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]" />
+
+            <div className="relative z-10">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2 text-red-500">
+                  <div className="p-1.5 rounded-lg bg-red-500/10 border border-red-500/20">
+                    <Swords size={14} />
+                  </div>
+                  <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase">{t('leadership.igl.title')}</h4>
+                </div>
+                <span className="text-[9px] font-mono text-red-400 flex items-center gap-1.5 bg-red-500/10 px-2 py-0.5 rounded-full border border-red-500/20">
+                  <div className="w-1 h-1 rounded-full bg-red-500 animate-pulse" />
+                  {t('leadership.igl.game')}
+                </span>
+              </div>
+
+              {/* Stats grid */}
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-red-500/10 group-hover:border-red-500/30 transition-all">
+                  <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">{t('leadership.igl.team_label')}</p>
+                  <p className="text-base font-bold font-mono text-red-400 tracking-widest">{t('leadership.igl.team_name')}</p>
+                  <p className="text-[9px] text-[var(--muted)] font-mono">e-sports</p>
+                </div>
+                <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-red-500/10 group-hover:border-red-500/30 transition-all">
+                  <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">{t('leadership.igl.role_label')}</p>
+                  <p className="text-xs font-bold font-mono text-red-400 leading-tight">{t('leadership.igl.role_val')}</p>
+                </div>
+              </div>
+
+              <p className="text-[var(--muted)] text-xs leading-relaxed font-medium">{t('leadership.igl.desc')}</p>
+            </div>
+
+            {/* Badges */}
+            <div className="relative z-10 flex flex-wrap gap-2 mt-4">
+              {[
+                { name: t('leadership.igl.badge_igl'), icon: <Zap size={10} /> },
+                { name: t('leadership.igl.badge_coord'), icon: <Users size={10} /> },
+                { name: t('leadership.igl.badge_fragger'), icon: <Swords size={10} /> },
+              ].map((b) => (
+                <div key={b.name} className="flex items-center gap-1.5 px-3 py-1.5 bg-black/5 dark:bg-white/5 border border-red-500/20 rounded-md text-[var(--muted)] text-[10px] font-mono font-bold uppercase hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/40 transition-all cursor-default">
+                  <span className="text-red-400">{b.icon}</span>
+                  {b.name}
+                </div>
+              ))}
+            </div>
+          </Card>
+
         </div>
       </section>
 

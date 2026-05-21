@@ -33,6 +33,30 @@
       "review_code": "Kodu İncele",
       "visit": "Siteyi Ziyaret Et"
     },
+    "leadership": {
+      "section_title": "Ekran Ötesinde Liderlik",
+      "scout": {
+        "title": "İzci Lideri",
+        "org": "Ankara Çankaya İzci Grubu",
+        "member_label": "İZCİ ÜYESİ",
+        "leader_label": "İZCİ LİDERİ",
+        "badge_member": "Üye",
+        "badge_leader": "Lider",
+        "desc": "Sahada kriz anında karar alma, ekip koordinasyonu ve basınç altında liderlik — ilk kod satırımdan çok önce başladı."
+      },
+      "igl": {
+        "title": "In-Game Leader",
+        "game": "Valorant",
+        "team_label": "TAKıM",
+        "team_name": "KNAVES",
+        "role_label": "ROL",
+        "role_val": "IGL (In-Game Leader)",
+        "desc": "Strateji çağrıları, düşman hareketleri okuma ve eleme baskısı altında anlık karar alma. Baskı benim için sadece bir başka ortam.",
+        "badge_igl": "Stratejist",
+        "badge_coord": "Koordinatör",
+        "badge_fragger": "Karar Alıcı"
+      }
+    },
     "philosophy": {
       "analyze": {
         "title": "Önce Analiz",
@@ -154,6 +178,12 @@
       "title": "Neye İnanıyorum",
       "clean_code": "Kodu bir sonraki geliştirici için yazarım (çoğu zaman gelecekteki ben). Temiz, okunabilir ve sürdürülebilir – çünkü kimse karmakarışık bir kod devralmak istemez.",
       "learning": "Teknoloji hızlı ilerliyor ve ben bunu seviyorum. Her zaman keşfedilecek yeni bir araç, bir problemi çözmenin daha iyi bir yolu var. Sürekli öğrenmek mi? O bir yük değil, eğlenceli kısım."
+    },
+    "leadership": {
+      "title": "Liderlik & Karar Alma",
+      "desc": "Yazılım sadece mimari değil; basınç altında hızlı karar alabilmektir. İzci kamplarında kriz anında takıma liderlik etmek ya da Valorant’ta 5v5 bir maçta IGL olarak strateji çağrabilmek — bu deneyimler bana şunu öğretti: harika ekipler kazara oluşmaz. İletişim, güven ve netlikle inşa edilir. Aynı anlayışı her kod satırına ve her sprinte taşırım.",
+      "scout_tag": "14 yıllık izcilik",
+      "igl_tag": "E-Spor IGL"
     }
   }
 }

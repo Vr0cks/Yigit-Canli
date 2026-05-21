@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, BookOpen, Code2, GraduationCap, Target } from 'lucide-react';
+import { ArrowLeft, BookOpen, Code2, GraduationCap, Target, Shield, Zap, Users } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
@@ -81,6 +81,40 @@ export default function AboutPage() {
               <BookOpen className="mb-4 text-[var(--foreground)]" />
               <h3 className="font-bold mb-2 text-[var(--card-fg)]">Continuous Learning</h3>
               <p className="text-sm text-[var(--muted)]">{t('vision.learning')}</p>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* LEADERSHIP */}
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="space-y-4"
+        >
+          <div className="flex items-center gap-3 text-amber-500">
+            <Shield size={24} />
+            <h2 className="text-xl font-bold uppercase tracking-wider">{t('leadership.title')}</h2>
+          </div>
+
+          <div className="bento-card p-8 relative overflow-hidden">
+            {/* Ambient glow */}
+            <div className="absolute -top-10 -right-10 w-48 h-48 bg-amber-500/10 blur-[70px] rounded-full pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-red-500/10 blur-[60px] rounded-full pointer-events-none" />
+
+            <blockquote className="text-lg text-[var(--card-fg)] leading-relaxed mb-6 relative z-10 italic border-l-2 border-amber-500 pl-6">
+              {t('leadership.desc')}
+            </blockquote>
+
+            <div className="flex flex-wrap gap-3 relative z-10">
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-500">
+                <Shield size={14} />
+                <span className="text-xs font-mono font-bold uppercase tracking-wider">{t('leadership.scout_tag')}</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400">
+                <Zap size={14} />
+                <span className="text-xs font-mono font-bold uppercase tracking-wider">{t('leadership.igl_tag')}</span>
+              </div>
             </div>
           </div>
         </motion.section>

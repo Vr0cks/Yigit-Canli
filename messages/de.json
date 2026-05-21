@@ -33,6 +33,30 @@
       "review_code": "Code ansehen",
       "visit": "Seite besuchen"
     },
+    "leadership": {
+      "section_title": "Führung jenseits des Bildschirms",
+      "scout": {
+        "title": "Pfadfinderführer",
+        "org": "Ankara Çankaya Pfadfindergruppe",
+        "member_label": "PFADFINDER",
+        "leader_label": "GRUPPENFÜHRER",
+        "badge_member": "Mitglied",
+        "badge_leader": "Führer",
+        "desc": "Feldentscheidungen in Krisenmomenten, Teamkoordination und Führung unter echtem Druck — lange bevor ich eine einzige Zeile Code schrieb."
+      },
+      "igl": {
+        "title": "In-Game Leader",
+        "game": "Valorant",
+        "team_label": "TEAM",
+        "team_name": "KNAVES",
+        "role_label": "ROLLE",
+        "role_val": "IGL (In-Game Leader)",
+        "desc": "Strategien abrufen, feindliche Rotationen lesen und blitzschnelle Entscheidungen unter Eliminationsdruck treffen. Druck ist nur eine weitere Build-Umgebung.",
+        "badge_igl": "Stratege",
+        "badge_coord": "Koordinator",
+        "badge_fragger": "Entscheider"
+      }
+    },
     "philosophy": {
       "analyze": {
         "title": "Erst Analysieren",
@@ -149,6 +173,12 @@
       "title": "Woran ich glaube",
       "clean_code": "Ich schreibe Code für den nächsten Entwickler (oft mein zukünftiges Ich). Sauber, lesbar und wartbar – weil niemand ein Chaos erben will.",
       "learning": "Tech bewegt sich schnell, und ich liebe das. Es gibt immer ein neues Tool zu entdecken, einen besseren Weg, ein Problem zu lösen. Dieses ständige Lernen? Das ist kein Aufwand, das ist der spaßige Teil."
+    },
+    "leadership": {
+      "title": "Führung & Entscheidungsfindung",
+      "desc": "Software ist nicht nur Architektur — es geht darum, unter Druck schnelle Entscheidungen zu treffen. Ob ich in einem Feldkrise als Pfadfinderführer leitete oder in einem 5v5-Match als IGL Strategien abrief — große Teams entstehen nicht zufällig. Sie werden durch Kommunikation, Vertrauen und Klarheit aufgebaut. Genau dieses Mindset trage ich in jeden Codebase und jeden Sprint.",
+      "scout_tag": "14 Jahre Pfadfinder",
+      "igl_tag": "E-Sports IGL"
     }
   }
 }
