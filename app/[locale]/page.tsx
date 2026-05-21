@@ -557,13 +557,11 @@ export default function Home() {
             {/* LEFT: Year counters */}
             <div className="relative z-10 flex-shrink-0">
               <div className="flex items-center gap-2 text-amber-500 mb-5">
-                <div className="flex items-center gap-2 text-amber-500">
-                  <div className="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">
-                    <Shield size={14} />
-                  </div>
-                  <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase">{t('leadership.scout.title')}</h4>
+                <div className="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                  <Shield size={14} />
                 </div>
-
+                <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase">{t('leadership.scout.title')}</h4>
+              </div>
               {/* Dynamic year counters */}
               {(() => {
                 const memberSince = 2012;
