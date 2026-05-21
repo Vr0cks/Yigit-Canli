@@ -545,7 +545,7 @@ export default function Home() {
           <h3 className="text-2xl font-bold text-[var(--foreground)]">{t('leadership.section_title')}</h3>
         </div>
 
-        {/* SCOUT CARD — full width, horizontal layout */
+        {/* SCOUT CARD — full width, horizontal layout */}
 
         <Card className="relative overflow-hidden group flex flex-col md:flex-row md:items-center gap-8" delay={0.8}>
             {/* Ambient glow */}
