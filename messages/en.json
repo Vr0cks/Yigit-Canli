@@ -74,8 +74,8 @@
     "project_desc": {
       "vrocks": "Old internet aesthetic meets modern technology. Fast, nostalgic yet powerful.",
       "united": "JNR VIP Transfer — a premium platform offering luxury car rental and VIP transfer services for corporate and individual clients.",
-      "karaca": "A comprehensive B2B e-commerce platform designed down to the smallest detail, featuring the unique ability to generate proforma invoices in TR.",
-      "karaca_erp": "A comprehensive Micro ERP system custom-coded for Karaca File. Codebase and live link are closed due to NDA (Non-Disclosure Agreement)."
+      "karaca": "B2B e-commerce platform developed for Karaca File Market. Features industry-specific solutions like a custom proforma invoice module.",
+      "karaca_erp": "A custom Micro ERP system digitizing Karaca File's operational processes. (Closed source due to NDA)."
     }
   },
   "Contact": {

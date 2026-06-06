@@ -74,8 +74,8 @@
     "project_desc": {
       "vrocks": "Alte Internet-Ästhetik trifft auf moderne Technologie. Schnell, nostalgisch und leistungsstark.",
       "united": "JNR VIP Transfer — eine Premium-Plattform für luxuriöse Autovermietung und VIP-Transfers für Geschäfts- und Privatkunden.",
-      "karaca": "Eine umfassende B2B-E-Commerce-Plattform, die bis ins kleinste Detail durchdacht ist und die in der Türkei einzigartige Funktion zur Erstellung von Proforma-Rechnungen bietet.",
-      "karaca_erp": "Ein umfassendes Micro-ERP-System, das speziell für Karaca File programmiert wurde. Codebasis und Live-Link sind aufgrund einer Geheimhaltungsvereinbarung (NDA) geschlossen."
+      "karaca": "B2B-E-Commerce-Plattform für den Karaca File Market. Bietet branchenspezifische Lösungen wie ein Modul für Proforma-Rechnungen.",
+      "karaca_erp": "Ein spezielles Micro-ERP-System, das die operativen Prozesse von Karaca File digitalisiert. (Geschlossen aufgrund von NDA)."
     }
   },
   "Contact": {
