@@ -535,6 +535,86 @@ export default function Home() {
               </a>
             </div>
           </Card>
+
+          {/* PROJECT 3: KARACA FILE MARKET */}
+          <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={1.0}>
+            <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
+              <Globe size={180} />
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 bg-blue-500/10 rounded-lg text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                  <Globe size={24} />
+                </div>
+                <div className="flex items-center gap-2 text-[var(--muted)] text-xs font-mono bg-black/5 dark:bg-white/10 px-2 py-1 rounded">
+                  <span>B2B E-Commerce</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                </div>
+              </div>
+
+              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                Karaca File Market
+              </h4>
+              <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 font-medium">
+                {t('project_desc.karaca')}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['Next.js 15', 'TypeScript', 'Tailwind', 'Python'].map((tech) => (
+                  <span key={tech} className="text-[10px] font-mono font-bold text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/10 px-2 py-1 rounded border border-blue-200 dark:border-blue-500/20 uppercase tracking-wider">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
+              <a href="https://karacafilemarket.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
+                <ExternalLink size={14} /> {t('projects.live_demo')}
+              </a>
+            </div>
+          </Card>
+
+          {/* PROJECT 4: KARACA MICRO ERP */}
+          <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={1.1}>
+            <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
+              <Code2 size={180} />
+            </div>
+
+            <div>
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 bg-purple-500/10 rounded-lg text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                  <Code2 size={24} />
+                </div>
+                <div className="flex items-center gap-2 text-[var(--muted)] text-xs font-mono bg-black/5 dark:bg-white/10 px-2 py-1 rounded">
+                  <span>Micro ERP</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                </div>
+              </div>
+
+              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                Karaca ERP System
+              </h4>
+              <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 font-medium">
+                {t('project_desc.karaca_erp')}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['Next.js 15', 'PostgreSQL', 'Express', 'Prisma'].map((tech) => (
+                  <span key={tech} className="text-[10px] font-mono font-bold text-purple-700 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/10 px-2 py-1 rounded border border-purple-200 dark:border-purple-500/20 uppercase tracking-wider">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
+              <div className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--muted)] text-xs font-bold font-mono cursor-not-allowed opacity-80">
+                <Shield size={14} /> NDA Protected / Closed Source
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
