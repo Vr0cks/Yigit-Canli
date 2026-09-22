@@ -592,7 +592,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/ahmet-yiğit-canlı/?locale=tr_TR"
+            href="https://www.linkedin.com/in/vr0cks/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
