@@ -12,7 +12,7 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: '--font-jetbrai
 
 export const metadata: Metadata = {
   title: "Yiğit Canlı | Software Developer",
-  description: "YBS Öğrencisi & Full Stack Geliştirici. Minimalist portfolyo.",
+  description: "Tech Lead & Fullstack Developer. Next.js, React, Node.js ve React Native ile ürün geliştiriyorum.",
   openGraph: {
     title: "Yiğit Canlı | Software Developer",
     description: "Karmaşık sorunlar, temiz kodlar.",

@@ -2,16 +2,18 @@
   "HomePage": {
     "hero": {
       "status": "Teklif Gönder",
-      "role": "Yazılım Geliştiricisi",
-      "education": "Kurucu @ vr0cks Software | Lead Developer",
+      "role": "Tech Lead | Yazılım Geliştiricisi",
+      "education": "Tech Lead @ Peony Collective | YBS @ THK Üniversitesi",
       "description": "Süslü kelimelere gerek yok. Karmaşık sorunları alıyor, temiz kodla çözüyor ve arkamda teknik borç değil, tıkır tıkır çalışan sistemler bırakıyorum.",
       "cta_projects": "Neler Yaptım?",
       "cta_resume": "CV İndir",
       "cta_contact": "İletişim"
     },
     "developer_card": {
-      "role_val": "Founder & Lead Developer",
-      "status_val": "Karaca için ERP Sistemi Geliştiriyor 🚀"
+      "role_val": "Tech Lead & Fullstack Developer",
+      "current_1": "Tech Lead @ Peony Collective",
+      "current_2": "Lead Dev @ Karaca File",
+      "focus_val": "Web'den mobile: React Native 🚀"
     },
     "about": {
       "title": "Teknolojiyle İş Kuruyorum",
@@ -72,7 +74,7 @@
       }
     },
     "project_desc": {
-      "vrocks": "Eski internet estetiği, modern teknolojiyle buluştu. Hızlı, nostaljik ama güçlü.",
+      "peony": "Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri. Teknoloji tarafını yönetiyorum: otomatize pazaryeri, ödeme & escrow akışları ve App Store / Google Play yayınları.",
       "united": "JNR VIP Transfer — kurumsal ve bireysel müşterilere özel lüks araç kiralama ve VIP transfer hizmetleri sunan premium bir platform.",
       "karaca": "Karaca File Market için geliştirilen B2B e-ticaret platformu. Özel proforma fatura modülü gibi sektörel ihtiyaçlara yönelik çözümler barındırır.",
       "karaca_erp": "Karaca File'ın operasyonel süreçlerini dijitalleştiren özel Micro ERP sistemi. (Gizlilik Sözleşmesi sebebiyle kapalı kaynak)."
@@ -124,7 +126,7 @@
           "hire",
           "fark"
         ],
-        "response": "Farkım şu: Ben sıradan bir 'task bitirici' değilim. Halihazırda bir şirketin IT Departmanını yönetiyor ve eşzamanlı olarak yapay zeka destekli lüks kimlik doğrulama sistemleri geliştiriyorum. MIS eğitimim sayesinde teknik mimariyi doğrudan iş hedefleriyle eşleştiriyorum. Şirketinize sadece kod değil, para kazandıran otomasyonlar ve ROI odaklı çözümler getiririm."
+        "response": "Farkım şu: Ben sıradan bir 'task bitirici' değilim. Halihazırda Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri Peony Collective'in teknoloji tarafını yönetiyor, eşzamanlı olarak Karaca File'ın e-ticaret platformunu ve Micro ERP sistemini Lead Fullstack Developer olarak geliştiriyorum. MIS eğitimim sayesinde teknik mimariyi doğrudan iş hedefleriyle eşleştiriyorum. Şirketinize sadece kod değil, para kazandıran otomasyonlar ve ROI odaklı çözümler getiririm."
       },
       {
         "keywords": [

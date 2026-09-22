@@ -3,14 +3,13 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
-import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send, Shield } from 'lucide-react';
+import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send, Shield, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullanıyoruz
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Chatbot from '@/components/Chatbot';
 import ContactModal from '@/components/contact-modal';
-import { getGitHubStats, GitHubStats } from '@/lib/github';
 
 const Card = ({ children, className = "", delay = 0, href }: { children: React.ReactNode; className?: string; delay?: number; href?: string }) => {
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -49,12 +48,9 @@ export default function Home() {
   
   // Hydration hatasını önlemek için mount kontrolü
   const [isMounted, setIsMounted] = useState(false);
-  const [githubData, setGithubData] = useState<GitHubStats | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
-    // Fetch real GitHub stats
-    getGitHubStats('Vr0cks').then(data => setGithubData(data));
   }, []);
 
   return (
@@ -120,9 +116,7 @@ export default function Home() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="https://github.com/Vr0cks"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#projects"
               className="flex items-center gap-2 px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold rounded-md hover:opacity-90 hover:scale-[1.02] transition-all shadow-lg"
             >
               {t('hero.cta_projects')} <ArrowRight size={18} />
@@ -130,8 +124,8 @@ export default function Home() {
 
             {/* --- GÜNCELLENEN CV BUTONU --- */}
             <a
-              href={`/cv-${locale === 'de' ? 'en' : locale}.pdf`}
-              download={`Yigit_Canli_CV_${(locale === 'de' ? 'en' : locale).toUpperCase()}.pdf`}
+              href="/cv-en.pdf"
+              download="Ahmet_Yigit_Canli_CV.pdf"
               className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] text-[var(--muted)] font-medium rounded-md hover:border-[var(--foreground)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
             >
               <Download size={18} /> {t('hero.cta_resume')}
@@ -165,14 +159,14 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2 text-xs opacity-60 font-mono">
                 <Terminal size={12} />
-                <span>developer.json</span>
+                <span>developer.ts</span>
               </div>
               <div className="w-10" />
             </div>
 
             <div className="p-6 font-mono text-sm leading-7 relative z-10">
               <div className="text-purple-700 dark:text-purple-800 font-bold">
-                const <span className="text-amber-600 dark:text-amber-700">portfolio</span> = <span className="text-[var(--card-fg)]">{`{`}</span>
+                const <span className="text-amber-600 dark:text-amber-700">developer</span> = <span className="text-[var(--card-fg)]">{`{`}</span>
               </div>
               <div className="pl-6">
                 <span className="text-blue-600 dark:text-blue-800">name</span>: <span className="text-emerald-600 dark:text-emerald-700 font-medium">"Yiğit Canlı"</span>,
@@ -181,15 +175,21 @@ export default function Home() {
                 <span className="text-blue-600 dark:text-blue-800">role</span>: <span className="text-emerald-600 dark:text-emerald-700 font-medium">"{t('developer_card.role_val')}"</span>,
               </div>
               <div className="pl-6">
-                <span className="text-blue-600 dark:text-blue-800">skills</span>: <span className="text-[var(--card-fg)]">[</span>
+                <span className="text-blue-600 dark:text-blue-800">stack</span>: <span className="text-[var(--card-fg)]">[</span>
               </div>
               <div className="pl-10 text-emerald-600 dark:text-emerald-700 font-medium">
-                "Next.js", "React", "TypeScript",<br />"PostgreSQL", "Tailwind"
-
+                "Next.js", "React", "Node.js",<br />"TypeScript", "PostgreSQL", "React Native"
               </div>
               <div className="pl-6 text-[var(--card-fg)]">],</div>
               <div className="pl-6">
-                <span className="text-blue-600 dark:text-blue-800">status</span>: <span className="text-orange-600 dark:text-orange-700 font-medium">"{t('developer_card.status_val')}"</span>
+                <span className="text-blue-600 dark:text-blue-800">currently</span>: <span className="text-[var(--card-fg)]">[</span>
+              </div>
+              <div className="pl-10 text-orange-600 dark:text-orange-700 font-medium">
+                "{t('developer_card.current_1')}",<br />"{t('developer_card.current_2')}"
+              </div>
+              <div className="pl-6 text-[var(--card-fg)]">],</div>
+              <div className="pl-6">
+                <span className="text-blue-600 dark:text-blue-800">focus</span>: <span className="text-emerald-600 dark:text-emerald-700 font-medium">"{t('developer_card.focus_val')}"</span>
               </div>
               <div className="text-[var(--card-fg)]">{`};`}</div>
             </div>
@@ -333,59 +333,10 @@ export default function Home() {
         </Card>
       </section>
 
-      {/* 2.5. TECH & GITHUB BENTO */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* ENHANCED GITHUB CARD */}
-        <Card className="group overflow-hidden relative" delay={0.9} href="https://github.com/Vr0cks">
-          <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-            <Github size={60} />
-          </div>
-          
-          <div className="relative z-10">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-2 text-emerald-500">
-                <div className="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                  <GitGraph size={14} />
-                </div>
-                <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase">GitHub</h3>
-              </div>
-              <span className="text-[9px] font-mono text-emerald-500 flex items-center gap-1.5 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                <div className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
-                Active
-              </span>
-            </div>
-
-            {/* HEATMAP */}
-            <div className="rounded-lg overflow-hidden bg-emerald-500/5 p-2 border border-emerald-500/10 mb-4">
-               <img 
-                src="https://ghchart.rshah.org/10b981/Vr0cks" 
-                alt="Vr0cks GitHub Contributions" 
-                className="w-full opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            </div>
-
-            <div className="grid grid-cols-2 gap-2">
-              <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-white/5 group-hover:border-emerald-500/30 transition-all">
-                <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">Latest Push</p>
-                <p className="text-[10px] font-mono text-[var(--foreground)] line-clamp-1 italic">
-                  "{githubData?.lastCommitMessage || "Building..."}"
-                </p>
-              </div>
-              <div className="p-3 rounded-xl bg-black/5 dark:bg-white/5 border border-white/5 group-hover:border-emerald-500/30 transition-all flex flex-col justify-between">
-                <p className="text-[8px] font-mono text-[var(--muted)] mb-1 uppercase tracking-tighter">Public Repos</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-mono font-bold text-emerald-500">{githubData?.public_repos || "--"}</span>
-                  <a href="https://github.com/Vr0cks" target="_blank" className="text-[var(--muted)] hover:text-emerald-500 transition-colors">
-                    <ArrowRight size={12} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Card>
-
+      {/* 2.5. TECH STACK */}
+      <section>
         {/* ENHANCED TECH STACK CARD */}
-        <Card className="md:col-span-2 relative group overflow-hidden" delay={1.0}>
+        <Card className="relative group overflow-hidden" delay={0.9}>
           <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
             style={{
               backgroundImage: `radial-gradient(var(--primary) 0.5px, transparent 0.5px)`,
@@ -453,45 +404,42 @@ export default function Home() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* PROJECT 1 */}
+          {/* PROJECT 1: PEONY COLLECTIVE */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.8}>
             <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
-              <Globe size={180} />
+              <ShoppingBag size={180} />
             </div>
 
             <div>
               <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-red-500/10 rounded-lg text-red-600 dark:text-red-500 border border-red-500/20">
-                  <Globe size={24} />
+                <div className="p-3 bg-rose-500/10 rounded-lg text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                  <ShoppingBag size={24} />
                 </div>
                 <div className="flex items-center gap-2 text-[var(--muted)] text-xs font-mono bg-black/5 dark:bg-white/10 px-2 py-1 rounded">
-                  <span>v1.0.4</span>
+                  <span>Tech Lead</span>
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
                 </div>
               </div>
 
-              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
-                VR0CKS Agency
+              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                Peony Collective
               </h4>
               <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 font-medium">
-                {t('project_desc.vrocks')}
+                {t('project_desc.peony')}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Next.js 14', 'Framer Motion', 'Tailwind'].map((tech) => (
-                  <span key={tech} className="tag-primary text-[10px] font-mono font-bold px-2 py-1 rounded uppercase tracking-wider">
+                {['React', 'Node.js', 'Supabase', 'PayTR', 'App Store'].map((tech) => (
+                  <span key={tech} className="text-[10px] font-mono font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/10 px-2 py-1 rounded border border-rose-200 dark:border-rose-500/20 uppercase tracking-wider">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
-              <a href="https://www.vr0cks.com/en" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-[var(--card-fg)] text-[var(--card-bg)] hover:opacity-90 hover:scale-[1.02] transition-all text-xs font-bold font-mono">
-                <ExternalLink size={14} /> {t('projects.live_demo')}
-              </a>
-              <a href="https://github.com/Vr0cks/vrocks-agency" target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
-                <GitGraph size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.architecture')}
+            <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
+              <a href="https://www.peonycollective.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-rose-500 text-white hover:bg-rose-600 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
+                <ExternalLink size={14} /> {t('projects.visit')}
               </a>
             </div>
           </Card>

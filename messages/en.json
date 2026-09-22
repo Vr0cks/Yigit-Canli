@@ -2,16 +2,18 @@
   "HomePage": {
     "hero": {
       "status": "Send a Proposal",
-      "role": "Software Developer",
-      "education": "Founder @ vr0cks Software | Lead Developer",
+      "role": "Tech Lead | Software Developer",
+      "education": "Tech Lead @ Peony Collective | MIS @ THK University",
       "description": "No buzzwords, just code. I solve complex problems with clean architectures and leave behind systems that actually work, not technical debt.",
       "cta_projects": "See My Work",
       "cta_resume": "Download CV",
       "cta_contact": "Contact"
     },
     "developer_card": {
-      "role_val": "Founder & Lead Developer",
-      "status_val": "Building ERP System for Karaca 🚀"
+      "role_val": "Tech Lead & Fullstack Developer",
+      "current_1": "Tech Lead @ Peony Collective",
+      "current_2": "Lead Dev @ Karaca File",
+      "focus_val": "Shipping web → mobile with React Native 🚀"
     },
     "about": {
       "title": "BUSINESS MEETS TECHNOLOGY",
@@ -72,7 +74,7 @@
       }
     },
     "project_desc": {
-      "vrocks": "Old internet aesthetic meets modern technology. Fast, nostalgic yet powerful.",
+      "peony": "Turkey's first authenticated luxury resale marketplace. Leading the tech: automated marketplace, payment & escrow flows, and App Store / Google Play releases.",
       "united": "JNR VIP Transfer — a premium platform offering luxury car rental and VIP transfer services for corporate and individual clients.",
       "karaca": "B2B e-commerce platform developed for Karaca File Market. Features industry-specific solutions like a custom proforma invoice module.",
       "karaca_erp": "A custom Micro ERP system digitizing Karaca File's operational processes. (Closed source due to NDA)."
@@ -122,7 +124,7 @@
           "hr",
           "difference"
         ],
-        "response": "My difference: I am not an ordinary 'task finisher'. I currently manage the IT Department of a company and concurrently develop AI-powered luxury identity verification systems. Thanks to my MIS education, I map technical architecture directly to business goals. I bring your company not just code, but money-making automations and ROI-driven solutions."
+        "response": "My difference: I am not an ordinary 'task finisher'. I currently lead the tech at Peony Collective, Turkey's first authenticated luxury resale marketplace, and concurrently build Karaca File's e-commerce platform and Micro ERP as Lead Fullstack Developer. Thanks to my MIS education, I map technical architecture directly to business goals. I bring your company not just code, but money-making automations and ROI-driven solutions."
       },
       {
         "keywords": [

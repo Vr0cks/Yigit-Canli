@@ -2,16 +2,18 @@
   "HomePage": {
     "hero": {
       "status": "Angebot senden",
-      "role": "Softwareentwickler",
-      "education": "Gründer @ vr0cks Software | Lead Developer",
+      "role": "Tech Lead | Softwareentwickler",
+      "education": "Tech Lead @ Peony Collective | Wirtschaftsinformatik @ THK Universität",
       "description": "Keine Phrasen, nur Code. Ich löse Probleme mit sauberer Architektur – funktionierende Systeme statt technischer Schulden.",
       "cta_projects": "Meine Projekte",
       "cta_resume": "Lebenslauf laden",
       "cta_contact": "Kontakt"
     },
     "developer_card": {
-      "role_val": "Founder & Lead Developer",
-      "status_val": "Entwickelt ERP-System für Karaca 🚀"
+      "role_val": "Tech Lead & Fullstack Developer",
+      "current_1": "Tech Lead @ Peony Collective",
+      "current_2": "Lead Dev @ Karaca File",
+      "focus_val": "Von Web zu Mobile mit React Native 🚀"
     },
     "about": {
       "title": "Wo Business auf Code trifft",
@@ -72,7 +74,7 @@
       }
     },
     "project_desc": {
-      "vrocks": "Alte Internet-Ästhetik trifft auf moderne Technologie. Schnell, nostalgisch und leistungsstark.",
+      "peony": "Der erste Luxus-Secondhand-Marktplatz der Türkei mit Echtheitsgarantie. Ich leite die Technik: automatisierter Marktplatz, Zahlungs- & Escrow-Flows sowie App-Store- / Google-Play-Releases.",
       "united": "JNR VIP Transfer — eine Premium-Plattform für luxuriöse Autovermietung und VIP-Transfers für Geschäfts- und Privatkunden.",
       "karaca": "B2B-E-Commerce-Plattform für den Karaca File Market. Bietet branchenspezifische Lösungen wie ein Modul für Proforma-Rechnungen.",
       "karaca_erp": "Ein spezielles Micro-ERP-System, das die operativen Prozesse von Karaca File digitalisiert. (Geschlossen aufgrund von NDA)."
@@ -119,7 +121,7 @@
           "job",
           "unterschied"
         ],
-        "response": "Mein Unterschied: Ich bin kein gewöhnlicher 'Task-Erlediger'. Ich leite derzeit die IT-Abteilung eines Unternehmens und entwickle gleichzeitig KI-gestützte Luxus-Identitätsprüfungssysteme. Dank meiner MIS-Ausbildung verknüpfe ich die technische Architektur direkt mit den Geschäftszielen. Ich bringe Ihrem Unternehmen nicht nur Code, sondern gewinnbringende Automatisierungen und ROI-orientierte Lösungen."
+        "response": "Mein Unterschied: Ich bin kein gewöhnlicher 'Task-Erlediger'. Ich leite derzeit die Technik bei Peony Collective, dem ersten Luxus-Secondhand-Marktplatz der Türkei mit Echtheitsgarantie, und entwickle parallel als Lead Fullstack Developer die E-Commerce-Plattform und das Micro-ERP von Karaca File. Dank meiner MIS-Ausbildung verknüpfe ich die technische Architektur direkt mit den Geschäftszielen. Ich bringe Ihrem Unternehmen nicht nur Code, sondern gewinnbringende Automatisierungen und ROI-orientierte Lösungen."
       },
       {
         "keywords": [
