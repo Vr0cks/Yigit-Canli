@@ -4,7 +4,7 @@
       "status": "Teklif Gönder",
       "role": "Tech Lead | Yazılım Geliştiricisi",
       "education": "Tech Lead @ Peony Collective | YBS @ THK Üniversitesi",
-      "description": "Süslü kelimelere gerek yok. Karmaşık sorunları alıyor, temiz kodla çözüyor ve arkamda teknik borç değil, tıkır tıkır çalışan sistemler bırakıyorum.",
+      "description": "Ürün odaklı geliştiriciyim. Pazaryerinden App Store'a kadar, gerçekten yayına çıkan full-stack web uygulamaları, güvenli API'lar ve kurumsal entegrasyonlar geliştiriyorum.",
       "cta_projects": "Neler Yaptım?",
       "cta_resume": "CV İndir",
       "cta_contact": "İletişim"
@@ -17,12 +17,8 @@
     },
     "about": {
       "title": "Teknolojiyle İş Kuruyorum",
-      "text": "Sadece kod yazmıyorum; dijital varlıklar inşa ediyorum. Yönetim Bilişim Sistemleri'nden gelen iş zekasını, Supabase ve Next.js gibi modern araçlarla harmanlayarak ölçeklenebilir sistemler tasarlıyorum. Eski usul kod yok, sadece ürün çıkarmak var.",
+      "text": "Sadece kod yazmıyorum; ürün inşa ediyorum. YBS altyapısı ve React / Node.js stack'iyle, iş mantığının temiz mühendislikle buluştuğu ölçeklenebilir sistemler tasarlıyorum — özel ERP ve e-ticaretten App Store yayınlarına kadar. Şimdi bu full-stack derinliği React Native ile mobile taşıyorum.",
       "read_more": "Detaylar"
-    },
-    "hobbies": {
-      "title": "Online Mod",
-      "subtitle": "Yarı Zamanlı Oyuncu, Tam Zamanlı Dev."
     },
     "tech_stack": {
       "title": "Teknik Yetkinlikler"

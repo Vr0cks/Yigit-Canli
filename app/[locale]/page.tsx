@@ -3,9 +3,8 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
-import { Terminal, ArrowRight, Github, Linkedin, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, Calendar, Gamepad2, GitGraph, ExternalLink, Coffee, Hash, Users, Send, Shield, ShoppingBag } from 'lucide-react';
+import { Terminal, ArrowRight, Mail, Code2, Cpu, Globe, LayoutTemplate, Download, GitGraph, ExternalLink, Hash, Users, Shield, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
-import { useLocale } from 'next-intl'; // Import zaten vardı, aşağıda kullanıyoruz
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Chatbot from '@/components/Chatbot';
@@ -39,9 +38,6 @@ const Card = ({ children, className = "", delay = 0, href }: { children: React.R
 
 export default function Home() {
   const t = useTranslations('HomePage');
-
-  // 1. MEVCUT DİLİ ALIYORUZ (tr, en, de)
-  const locale = useLocale();
 
   // Modal'ın açık/kapalı durumunu kontrol eden state
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -198,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* 2. BENTO GRID */}
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="md:col-span-2 flex flex-col justify-between min-h-[280px]" delay={0.6}>
           <div>
             <div className="flex items-center gap-2 mb-4 text-primary">
@@ -217,120 +213,6 @@ export default function Home() {
         </Card>
 
         <SpotifyCard />
-
-        <Card className="md:col-span-1 relative overflow-hidden flex flex-col justify-between min-h-[280px] group" delay={0.8}>
-          {/* Scanlines effect */}
-          <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)]" />
-
-          {/* Birthday Confetti - only shows on Nov 2 */}
-          {(() => {
-            const now = new Date();
-            const isBirthday = now.getMonth() === 10 && now.getDate() === 2; // Nov 2
-            if (isBirthday) {
-              return (
-                <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  {[...Array(20)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute animate-bounce"
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animationDelay: `${Math.random() * 2}s`,
-                        animationDuration: `${1 + Math.random()}s`
-                      }}
-                    >
-                      {['🎉', '🎂', '🎈', '✨', '🎊'][Math.floor(Math.random() * 5)]}
-                    </div>
-                  ))}
-                </div>
-              );
-            }
-            return null;
-          })()}
-
-          <div className="absolute -right-6 -top-6 opacity-5 dark:opacity-[0.03] rotate-12 pointer-events-none group-hover:rotate-[20deg] group-hover:scale-110 transition-all duration-500">
-            <Gamepad2 size={140} />
-          </div>
-
-          <div className="relative z-10">
-            {/* Terminal-style header */}
-            <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 mb-4">
-              <span className="text-green-500 font-mono text-xs">▶</span>
-              <span className="text-xs font-mono font-bold tracking-wider animate-pulse">{t('hobbies.title').toUpperCase()}</span>
-              <span className="text-[10px] font-mono text-[var(--muted)]">// since 2005</span>
-            </div>
-
-            {/* Gamer title */}
-            <p className="text-[var(--card-fg)] font-bold text-xl mb-1 font-mono group-hover:text-purple-500 transition-colors">
-              &gt; "Half-time Gamer"
-            </p>
-            <p className="text-[var(--muted)] text-xs font-mono mb-2">{t('hobbies.subtitle')}</p>
-
-            {/* Dynamic XP Bar based on birthday */}
-            {(() => {
-              const birthday = new Date(2005, 10, 2); // Nov 2, 2005
-              const now = new Date();
-              const age = now.getFullYear() - birthday.getFullYear();
-              const lastBirthday = new Date(now.getFullYear(), 10, 2);
-              if (now < lastBirthday) lastBirthday.setFullYear(now.getFullYear() - 1);
-
-              const monthsSinceBirthday = (now.getMonth() - lastBirthday.getMonth() + 12) % 12 ||
-                (now >= lastBirthday && now.getMonth() === 10 ? 0 :
-                  ((now.getFullYear() - lastBirthday.getFullYear()) * 12 + now.getMonth() - 10 + 12) % 12);
-
-              const xp = monthsSinceBirthday * 100;
-              const maxXp = 1200;
-              const level = now < new Date(now.getFullYear(), 10, 2) ? age : age;
-              const isBirthday = now.getMonth() === 10 && now.getDate() === 2;
-
-              if (!isMounted) {
-                return (
-                  <div className="mb-4">
-                    <div className="flex justify-between text-[8px] font-mono text-[var(--muted)] mb-1">
-                      <span>LVL --</span>
-                      <span>XP: -- / --</span>
-                    </div>
-                    <div className="h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-zinc-500/20 w-0" />
-                    </div>
-                  </div>
-                );
-              }
-
-              return (
-                <div className="mb-4">
-                  <div className="flex justify-between text-[8px] font-mono text-[var(--muted)] mb-1">
-                    <span className={isBirthday ? 'text-yellow-500 animate-pulse' : ''}>
-                      LVL {level} {isBirthday && '🎂 LEVEL UP!'}
-                    </span>
-                    <span>XP: {xp.toLocaleString(locale)} / {maxXp.toLocaleString(locale)}</span>
-                  </div>
-                  <div className="h-1.5 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      className={`h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ${isBirthday ? 'animate-pulse' : ''}`}
-                      style={{ width: `${Math.min((xp / maxXp) * 100, 100)}%` }}
-                    />
-                  </div>
-                </div>
-              );
-            })()}
-          </div>
-
-          {/* Achievement badges - no hover XP */}
-          <div className="relative z-10 flex flex-wrap gap-2">
-            {[
-              { name: 'RPG', icon: <Hash size={10} /> },
-              { name: 'FPS', icon: <Gamepad2 size={10} /> },
-              { name: 'Indie', icon: <BookOpen size={10} /> }
-            ].map((hobby) => (
-              <div key={hobby.name} className="flex items-center gap-1.5 px-3 py-1.5 bg-black/5 dark:bg-white/5 border border-purple-500/20 rounded-md text-[var(--muted)] text-[10px] font-mono font-bold uppercase hover:bg-purple-500/20 hover:text-purple-400 hover:border-purple-500/40 transition-all cursor-default">
-                <span className="text-purple-400">{hobby.icon}</span>
-                {hobby.name}
-              </div>
-            ))}
-          </div>
-        </Card>
       </section>
 
       {/* 2.5. TECH STACK */}

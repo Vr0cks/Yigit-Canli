@@ -4,7 +4,7 @@
       "status": "Send a Proposal",
       "role": "Tech Lead | Software Developer",
       "education": "Tech Lead @ Peony Collective | MIS @ THK University",
-      "description": "No buzzwords, just code. I solve complex problems with clean architectures and leave behind systems that actually work, not technical debt.",
+      "description": "Product-minded developer. I build full-stack web apps, secure APIs and enterprise integrations that ship — from marketplace to App Store.",
       "cta_projects": "See My Work",
       "cta_resume": "Download CV",
       "cta_contact": "Contact"
@@ -17,12 +17,8 @@
     },
     "about": {
       "title": "BUSINESS MEETS TECHNOLOGY",
-      "text": "I don't just write code; I build digital assets. Combining the 'Big Picture' mindset of MIS with modern tech stacks like Supabase & Next.js, I design scalable systems where business logic meets development excellence. No legacy code, just shipping.",
+      "text": "I don't just write code; I build products. With an MIS foundation and a React / Node.js stack, I design scalable systems where business logic meets clean engineering — from custom ERPs and e-commerce to App Store releases. Now taking that full-stack depth into mobile with React Native.",
       "read_more": "Read More"
-    },
-    "hobbies": {
-      "title": "Online Mode",
-      "subtitle": "Part-time Gamer, Full-time Dev."
     },
     "tech_stack": {
       "title": "Technical Stack"

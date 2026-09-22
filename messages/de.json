@@ -4,7 +4,7 @@
       "status": "Angebot senden",
       "role": "Tech Lead | Softwareentwickler",
       "education": "Tech Lead @ Peony Collective | Wirtschaftsinformatik @ THK Universität",
-      "description": "Keine Phrasen, nur Code. Ich löse Probleme mit sauberer Architektur – funktionierende Systeme statt technischer Schulden.",
+      "description": "Produktorientierter Entwickler. Ich baue Full-Stack-Webanwendungen, sichere APIs und Enterprise-Integrationen, die wirklich live gehen – vom Marktplatz bis zum App Store.",
       "cta_projects": "Meine Projekte",
       "cta_resume": "Lebenslauf laden",
       "cta_contact": "Kontakt"
@@ -17,12 +17,8 @@
     },
     "about": {
       "title": "Wo Business auf Code trifft",
-      "text": "Ich schreibe nicht nur Code – ich baue digitale Produkte. Mit dem strategischen Denken aus dem Wirtschaftsinformatik-Studium und modernen Tech-Stacks wie Supabase und Next.js entwickle ich skalierbare Systeme, in denen Geschäftslogik auf technische Exzellenz trifft. Kein Legacy-Code, nur Shipping.",
+      "text": "Ich schreibe nicht nur Code – ich baue Produkte. Mit Wirtschaftsinformatik-Hintergrund und einem React / Node.js-Stack entwickle ich skalierbare Systeme, in denen Geschäftslogik auf sauberes Engineering trifft – von individuellen ERPs und E-Commerce bis zu App-Store-Releases. Jetzt bringe ich diese Full-Stack-Tiefe mit React Native aufs Mobile.",
       "read_more": "Mehr lesen"
-    },
-    "hobbies": {
-      "title": "Online-Modus",
-      "subtitle": "Teilzeit-Gamer, Vollzeit-Dev."
     },
     "tech_stack": {
       "title": "Technischer Stack"
