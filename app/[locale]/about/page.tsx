@@ -53,7 +53,7 @@ export default function AboutPage() {
           </div>
           <div className="bento-card p-8">
             <h3 className="text-xl font-bold text-[var(--card-fg)] mb-2">Türk Hava Kurumu Üniversitesi</h3>
-            <p className="text-sm font-mono text-[var(--muted)] mb-4">Yönetim Bilişim Sistemleri (MIS) | 2020 - Present</p>
+            <p className="text-sm font-mono text-[var(--muted)] mb-4">Yönetim Bilişim Sistemleri (MIS) | 2023 - Present</p>
             <p className="text-[var(--muted)] leading-relaxed">
               {t('education.desc')}
             </p>
