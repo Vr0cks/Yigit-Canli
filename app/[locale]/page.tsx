@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react';
-import { Terminal, ArrowRight, Mail, Code2, Cpu, Globe, LayoutTemplate, Download, GitGraph, ExternalLink, Hash, Users, Shield, ShoppingBag } from 'lucide-react';
+import { Terminal, ArrowRight, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, GitGraph, ExternalLink, Hash, Users, Shield, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 
 import SpotifyCard from '@/components/SpotifyCard';
@@ -399,10 +399,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
+            <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
               <a href="https://karacafilemarket.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
                 <ExternalLink size={14} /> {t('projects.live_demo')}
               </a>
+              <Link href="/work/karaca" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
+                <BookOpen size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.case_study')}
+              </Link>
             </div>
           </Card>
 
@@ -440,8 +443,11 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
-              <div className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--muted)] text-xs font-bold font-mono cursor-not-allowed opacity-80">
-                <Shield size={14} /> NDA Protected / Closed Source
+              <Link href="/work/karaca" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-purple-600 text-white hover:bg-purple-700 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
+                <BookOpen size={14} /> {t('projects.case_study')}
+              </Link>
+              <div className="flex items-center justify-center gap-2 text-[10px] font-mono text-[var(--muted)]">
+                <Shield size={12} /> NDA Protected / Closed Source
               </div>
             </div>
           </Card>

@@ -29,7 +29,8 @@
       "architecture": "Mimari",
       "github_repo": "GitHub Repo",
       "review_code": "Kodu İncele",
-      "visit": "Siteyi Ziyaret Et"
+      "visit": "Siteyi Ziyaret Et",
+      "case_study": "Vakayı İncele"
     },
     "leadership": {
       "section_title": "Ekran Ötesinde Liderlik",
@@ -196,5 +197,87 @@
       "scout_tag": "14 yıllık izcilik",
       "igl_tag": "E-Spor IGL"
     }
+  },
+  "CaseStudy": {
+    "back": "Ana Sayfaya Dön",
+    "eyebrow": "VAKA ÇALIŞMASI",
+    "title": "Bir şirketin tüm operasyonunu sıfırdan dijitalleştirmek",
+    "client": "By Karaca File",
+    "clientNote": "Güvenlik fileleri ve endüstriyel tekstil üretimi",
+    "roleLabel": "Rolüm",
+    "roleValue": "Lead Fullstack Developer",
+    "periodLabel": "Süre",
+    "periodValue": "Nisan 2026 — devam ediyor",
+    "scopeLabel": "Kapsam",
+    "scopeValue": "B2B e-ticaret platformu + Micro ERP",
+    "problemTitle": "Durum",
+    "problem": [
+      "Şirketin satış ve operasyon süreçleri birbirinden kopuktu. Siparişler telefon ve WhatsApp üzerinden geliyor, stok takibi elle tutulan tablolarda yürüyor, faturalar ayrı bir yerde hazırlanıyordu.",
+      "Bu yapının en büyük maliyeti aslında hata değil, tekrardı: aynı bilgi üç ayrı yere elle giriliyordu. Bir siparişin nerede olduğunu öğrenmek için birkaç kişiye sormak gerekiyordu.",
+      "Hazır bir e-ticaret paketi ya da kutudan çıkan bir ERP bu sektöre oturmuyordu. Güvenlik filesi satışı metrekare, örgü tipi ve özel ölçü üzerinden yürüyor; standart ürün-varyant mantığı bunu karşılamıyor."
+    ],
+    "approachTitle": "Yaklaşım",
+    "approach": [
+      {
+        "title": "Önce süreci öğrendim, sonra kod yazdım",
+        "body": "İlk iş bir sipariş fişinin şirket içinde izlediği yolu baştan sona takip etmek oldu. Hangi adım kimde bekliyor, hangi bilgi nerede kayboluyor. Yazılım kararlarının çoğu bu haritadan çıktı."
+      },
+      {
+        "title": "İki ayrı sistem değil, tek bir akış",
+        "body": "E-ticaret ve ERP çoğu yerde ayrı ürünlerdir ve arada bir entegrasyon katmanı olur. Burada ikisini baştan birbirine bakacak şekilde tasarladım: mağazaya düşen sipariş, ERP tarafında zaten beklenen bir kayıt."
+      },
+      {
+        "title": "Sektöre özel olan yerde taviz vermedim",
+        "body": "Proforma fatura, özel ölçü hesabı ve toptan fiyatlandırma gibi bu işin kendine has ihtiyaçları hazır çözümlerde ya yok ya da zorlama. Bunları genel bir kalıba sıkıştırmak yerine kendi modülleri olarak yazdım."
+      },
+      {
+        "title": "Devralınabilir bir sistem bıraktım",
+        "body": "Sistemi kullanacak olan ekip yazılımcı değil. Panelin her ekranını, birinin ilk kez oturup kullanabileceği varsayımıyla kurguladım; eğitim gerektiren bir yer kaldıysa orası yanlış tasarlanmıştır."
+      }
+    ],
+    "resultTitle": "Sonuç",
+    "results": [
+      "Sipariş, stok, cari ve faturalama tek panelde. Aynı bilginin birden fazla yere elle girilmesi ortadan kalktı.",
+      "Herkes kendi işini görüyor: patron, muhasebe, saha ve web yönetimi için ayrı paneller var.",
+      "Fatura, cari ekstre ve referans belgeleri sistem içinden hazır çıkıyor; ayrı bir programda hazırlanmıyor.",
+      "Depo tarafında barkod ve QR okutma çalışıyor; sayım ve giriş-çıkış elle kayıt gerektirmiyor.",
+      "Siteye düşen sipariş doğrudan panele geliyor ve ilgili kişiye anlık bildirim gidiyor.",
+      "Tablo ve kağıtla yürüyen takip tamamen sisteme taşındı; bir siparişin durumu tek yerden görülebiliyor."
+    ],
+    "resultNote": "Buradaki sayılar sistemin kapsamını gösteriyor; iş sonuçlarının önce/sonra ölçümü henüz yapılmadı. Sistem üzerinden geçen işlem hacmi için ölçüm altyapısı kuruluyor, sayısal sonuçlar çıktığında bu sayfaya eklenecek.",
+    "factsTitle": "Sistemin ölçeği",
+    "facts": [
+      {
+        "value": "31",
+        "label": "Veri tablosu"
+      },
+      {
+        "value": "4",
+        "label": "Role özel panel"
+      },
+      {
+        "value": "5 ay",
+        "label": "İlk sürümden bugüne aktif geliştirme"
+      }
+    ],
+    "ndaTitle": "Neden ekran görüntüsü yok?",
+    "nda": "ERP tarafı şirketin iç operasyonunu, müşteri ve fiyat bilgilerini içeriyor ve gizlilik sözleşmesi kapsamında. Bu sayfada sistemin ne yaptığını anlatıyorum; ekran ve kod paylaşmıyorum. Görüşmede sistemin mantığını detaylı konuşabilirim.",
+    "ctaTitle": "Benzer bir işiniz mi var?",
+    "ctaBody": "Operasyonu dağınık yürüyen, hazır çözümlerin oturmadığı bir işletmeyseniz konuşalım.",
+    "ctaButton": "İletişime Geç",
+    "visitSite": "Mağazayı Gör",
+    "modulesTitle": "Sistemin kapsadığı alanlar",
+    "modules": [
+      "Sipariş yönetimi",
+      "Depo ve stok",
+      "Cari hesaplar",
+      "Faturalama",
+      "Finans defteri",
+      "Kasa ve giderler",
+      "Tedarikçi takibi",
+      "Personel ve saha",
+      "Destek talepleri",
+      "Web sipariş akışı"
+    ]
   }
 }

@@ -29,7 +29,8 @@
       "architecture": "Architecture",
       "github_repo": "GitHub Repo",
       "review_code": "Review Code",
-      "visit": "Visit Site"
+      "visit": "Visit Site",
+      "case_study": "Read the Case Study"
     },
     "leadership": {
       "section_title": "Leadership Beyond the Screen",
@@ -192,5 +193,87 @@
       "scout_tag": "14 years of scouting",
       "igl_tag": "E-Sports IGL"
     }
+  },
+  "CaseStudy": {
+    "back": "Back to Home",
+    "eyebrow": "CASE STUDY",
+    "title": "Digitising a company’s entire operation from scratch",
+    "client": "By Karaca File",
+    "clientNote": "Security netting and industrial textile manufacturing",
+    "roleLabel": "My role",
+    "roleValue": "Lead Fullstack Developer",
+    "periodLabel": "Period",
+    "periodValue": "April 2026 — ongoing",
+    "scopeLabel": "Scope",
+    "scopeValue": "B2B commerce platform + Micro ERP",
+    "problemTitle": "The situation",
+    "problem": [
+      "Sales and operations ran on separate tracks. Orders arrived by phone and WhatsApp, stock was tracked in hand-kept spreadsheets, and invoices were prepared somewhere else entirely.",
+      "The real cost of that setup was not mistakes but repetition: the same information was typed into three different places. Finding out where an order stood meant asking two or three people.",
+      "An off-the-shelf store or a boxed ERP did not fit the trade. Security netting is sold by square metre, weave type and custom dimensions — standard product-and-variant logic does not describe that."
+    ],
+    "approachTitle": "Approach",
+    "approach": [
+      {
+        "title": "I learned the process before writing code",
+        "body": "The first job was following a single order all the way through the company. Which step waits on whom, where information gets lost. Most of the technical decisions came out of that map."
+      },
+      {
+        "title": "One flow, not two systems bolted together",
+        "body": "Commerce and ERP are usually separate products with an integration layer between them. Here I designed both to face each other from the start: an order placed in the store is a record the ERP is already expecting."
+      },
+      {
+        "title": "No compromise where the trade is specific",
+        "body": "Proforma invoicing, custom-dimension pricing and wholesale tiers are either missing from ready-made tools or awkwardly bolted on. Rather than force them into a generic shape, I wrote them as their own modules."
+      },
+      {
+        "title": "A system someone else can take over",
+        "body": "The people using it are not developers. I built every screen on the assumption that someone would sit down at it for the first time without training; anywhere that needs explaining is a design failure."
+      }
+    ],
+    "resultTitle": "Outcome",
+    "results": [
+      "Orders, stock, accounts and invoicing live in one panel. The same information is no longer entered by hand in several places.",
+      "Everyone sees their own work: separate panels for the owner, accounting, field staff and online sales.",
+      "Invoices, account statements and reference documents come out of the system itself rather than a separate program.",
+      "Barcode and QR scanning works in the warehouse, so stock counts and movements need no manual entry.",
+      "An order placed online lands directly in the panel and notifies the right person immediately.",
+      "Spreadsheet-and-paper tracking has moved into the system; the status of an order is visible from one place."
+    ],
+    "resultNote": "The figures above describe the scale of the system; no before-and-after measurement of business results has been taken yet. Instrumentation for volume going through the system is being set up, and numbers will be added here once they exist.",
+    "factsTitle": "Scale of the system",
+    "facts": [
+      {
+        "value": "31",
+        "label": "Data tables"
+      },
+      {
+        "value": "4",
+        "label": "Role-specific panels"
+      },
+      {
+        "value": "5 months",
+        "label": "Active development since first release"
+      }
+    ],
+    "ndaTitle": "Why there are no screenshots",
+    "nda": "The ERP holds the company’s internal operations, customer records and pricing, and falls under a non-disclosure agreement. This page describes what the system does; it does not share screens or code. I am happy to talk through the design in a conversation.",
+    "ctaTitle": "Have something similar?",
+    "ctaBody": "If your operation is scattered across tools that were never built for your trade, let’s talk.",
+    "ctaButton": "Get in Touch",
+    "visitSite": "View the Store",
+    "modulesTitle": "What the system covers",
+    "modules": [
+      "Order management",
+      "Warehouse and stock",
+      "Customer accounts",
+      "Invoicing",
+      "Financial ledger",
+      "Cash and expenses",
+      "Supplier tracking",
+      "Staff and field work",
+      "Support tickets",
+      "Online order flow"
+    ]
   }
 }

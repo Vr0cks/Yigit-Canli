@@ -29,7 +29,8 @@
       "architecture": "Architektur",
       "github_repo": "GitHub Repo",
       "review_code": "Code ansehen",
-      "visit": "Seite besuchen"
+      "visit": "Seite besuchen",
+      "case_study": "Fallstudie lesen"
     },
     "leadership": {
       "section_title": "Führung jenseits des Bildschirms",
@@ -188,5 +189,87 @@
       "scout_tag": "14 Jahre Pfadfinder",
       "igl_tag": "E-Sports IGL"
     }
+  },
+  "CaseStudy": {
+    "back": "Zurück zur Startseite",
+    "eyebrow": "FALLSTUDIE",
+    "title": "Den gesamten Betrieb eines Unternehmens von Grund auf digitalisieren",
+    "client": "By Karaca File",
+    "clientNote": "Herstellung von Sicherheitsnetzen und Industrietextilien",
+    "roleLabel": "Meine Rolle",
+    "roleValue": "Lead Fullstack Developer",
+    "periodLabel": "Zeitraum",
+    "periodValue": "April 2026 — laufend",
+    "scopeLabel": "Umfang",
+    "scopeValue": "B2B-Handelsplattform + Micro ERP",
+    "problemTitle": "Die Ausgangslage",
+    "problem": [
+      "Vertrieb und Betrieb liefen getrennt voneinander. Bestellungen kamen per Telefon und WhatsApp, der Bestand wurde in handgeführten Tabellen verwaltet, Rechnungen entstanden an einer ganz anderen Stelle.",
+      "Der eigentliche Preis dieser Struktur waren nicht Fehler, sondern Wiederholung: dieselbe Information wurde an drei Stellen von Hand eingetragen. Um den Stand einer Bestellung zu erfahren, musste man zwei, drei Personen fragen.",
+      "Ein Standard-Shop oder ein ERP von der Stange passte nicht zur Branche. Sicherheitsnetze werden nach Quadratmeter, Gewebeart und Sondermaß verkauft — die übliche Produkt-Varianten-Logik bildet das nicht ab."
+    ],
+    "approachTitle": "Vorgehen",
+    "approach": [
+      {
+        "title": "Erst den Prozess verstanden, dann Code geschrieben",
+        "body": "Die erste Aufgabe war, eine einzelne Bestellung durch das ganze Unternehmen zu verfolgen. Welcher Schritt wartet auf wen, wo geht Information verloren. Die meisten technischen Entscheidungen folgten aus dieser Karte."
+      },
+      {
+        "title": "Ein Ablauf statt zwei verbundener Systeme",
+        "body": "Handel und ERP sind meist getrennte Produkte mit einer Integrationsschicht dazwischen. Hier habe ich beide von Anfang an aufeinander ausgerichtet: eine Bestellung im Shop ist ein Datensatz, den das ERP bereits erwartet."
+      },
+      {
+        "title": "Keine Kompromisse dort, wo die Branche besonders ist",
+        "body": "Proforma-Rechnungen, Sondermaß-Kalkulation und Großhandelsstufen fehlen in Standardlösungen oder wirken aufgesetzt. Statt sie in eine allgemeine Form zu pressen, habe ich sie als eigene Module geschrieben."
+      },
+      {
+        "title": "Ein System, das jemand übernehmen kann",
+        "body": "Die Menschen, die damit arbeiten, sind keine Entwickler. Ich habe jeden Bildschirm unter der Annahme gebaut, dass sich jemand ohne Schulung zum ersten Mal davorsetzt; alles, was Erklärung braucht, ist ein Designfehler."
+      }
+    ],
+    "resultTitle": "Ergebnis",
+    "results": [
+      "Bestellungen, Bestand, Konten und Rechnungen liegen in einem Panel. Dieselbe Information wird nicht mehr mehrfach von Hand erfasst.",
+      "Jeder sieht seine eigene Arbeit: getrennte Panels für Leitung, Buchhaltung, Außendienst und Online-Vertrieb.",
+      "Rechnungen, Kontoauszüge und Referenzdokumente entstehen im System selbst statt in einem separaten Programm.",
+      "Im Lager funktionieren Barcode- und QR-Scans, sodass Inventur und Bewegungen keine Handeingabe brauchen.",
+      "Eine Online-Bestellung landet direkt im Panel und benachrichtigt sofort die zuständige Person.",
+      "Die Verfolgung über Tabellen und Papier ist vollständig ins System gewandert; der Status einer Bestellung ist an einer Stelle sichtbar."
+    ],
+    "resultNote": "Die Zahlen oben beschreiben den Umfang des Systems; eine Vorher-Nachher-Messung der Geschäftsergebnisse liegt noch nicht vor. Die Erfassung des Volumens wird gerade aufgebaut; Zahlen ergänze ich hier, sobald sie vorliegen.",
+    "factsTitle": "Umfang des Systems",
+    "facts": [
+      {
+        "value": "31",
+        "label": "Datentabellen"
+      },
+      {
+        "value": "4",
+        "label": "Rollenspezifische Panels"
+      },
+      {
+        "value": "5 Monate",
+        "label": "Aktive Entwicklung seit dem ersten Release"
+      }
+    ],
+    "ndaTitle": "Warum es keine Screenshots gibt",
+    "nda": "Das ERP enthält die internen Abläufe, Kundendaten und Preise des Unternehmens und unterliegt einer Geheimhaltungsvereinbarung. Diese Seite beschreibt, was das System leistet; sie zeigt weder Oberflächen noch Code. Über den Entwurf spreche ich gern im Gespräch.",
+    "ctaTitle": "Haben Sie etwas Ähnliches?",
+    "ctaBody": "Wenn Ihr Betrieb über Werkzeuge verstreut läuft, die nie für Ihre Branche gebaut wurden, sprechen wir darüber.",
+    "ctaButton": "Kontakt aufnehmen",
+    "visitSite": "Zum Shop",
+    "modulesTitle": "Was das System abdeckt",
+    "modules": [
+      "Auftragsverwaltung",
+      "Lager und Bestand",
+      "Debitorenkonten",
+      "Rechnungsstellung",
+      "Finanzbuch",
+      "Kasse und Ausgaben",
+      "Lieferantenverwaltung",
+      "Personal und Außendienst",
+      "Support-Tickets",
+      "Online-Bestellablauf"
+    ]
   }
 }
