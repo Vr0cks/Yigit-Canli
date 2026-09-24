@@ -275,5 +275,83 @@
       "Support tickets",
       "Online order flow"
     ]
+  },
+  "CaseStudyPeony": {
+    "back": "Back to Home",
+    "eyebrow": "CASE STUDY",
+    "title": "In second-hand luxury, the real problem is trust",
+    "client": "Peony Collective",
+    "clientNote": "Curated second-hand luxury fashion marketplace",
+    "roleLabel": "My role",
+    "roleValue": "Tech Lead",
+    "periodLabel": "Period",
+    "periodValue": "January 2026 — ongoing",
+    "scopeLabel": "Scope",
+    "scopeValue": "Marketplace platform and technical direction",
+    "problemTitle": "The situation",
+    "problem": [
+      "In second-hand luxury, both sides are nervous at the same time. The buyer cannot be sure a bag worth tens of thousands is genuine. The seller cannot be sure the money will arrive once the item is gone.",
+      "Because of that, these trades usually happen through acquaintances, in messaging apps, with cash changing hands. It does not scale, nothing is recorded, and when something goes wrong neither side has anything to fall back on.",
+      "So the problem to solve was never \"build a website\". It was to put trust inside the transaction itself."
+    ],
+    "approachTitle": "Approach",
+    "approach": [
+      {
+        "title": "Verification inside the process, not beside it",
+        "body": "Authentication is not an add-on the buyer chases afterwards; it is a step the item must pass before it reaches them. The platform is built so a sale cannot complete on an unverified item."
+      },
+      {
+        "title": "Hold the money so it protects both sides",
+        "body": "Payment is held until the buyer confirms the item. The buyer is not risking their money, and the seller is not left unpaid after shipping. Trust is not left to good intentions."
+      },
+      {
+        "title": "Do not make sellers learn software",
+        "body": "Someone selling a handbag is not a software user. The consignment process was kept as simple as filling in a form, with the platform absorbing the work behind it."
+      },
+      {
+        "title": "Never let technical decisions break the feeling of luxury",
+        "body": "In this segment the experience is part of the product. Getting the technical side right — from page speed to image quality — without disturbing how the brand feels was the invisible but decisive part of the job."
+      }
+    ],
+    "resultTitle": "Outcome",
+    "results": [
+      "The purchase flow does not advance until authentication is complete.",
+      "Payment protection covers buyer and seller at the same time.",
+      "Sellers can list their own items; the process requires no technical knowledge.",
+      "The platform is live and serves as the brand’s sales channel."
+    ],
+    "resultNote": "Everything on this page reflects services Peony Collective states publicly. Transaction volume, sales figures and internal systems are confidential and are not shared here.",
+    "factsTitle": "Scope of my role",
+    "facts": [
+      {
+        "value": "Tech Lead",
+        "label": "Leading the technical side"
+      },
+      {
+        "value": "End to end",
+        "label": "Marketplace, payment and seller flows"
+      },
+      {
+        "value": "Live",
+        "label": "peonycollective.com in production"
+      }
+    ],
+    "modulesTitle": "Areas I work across",
+    "modules": [
+      "Marketplace flow",
+      "Authentication integration",
+      "Payments and protection",
+      "Seller / consignment process",
+      "Product listing",
+      "Storefront experience",
+      "Mobile app development",
+      "App store account infrastructure"
+    ],
+    "ndaTitle": "What is not here",
+    "nda": "Peony Collective’s internal systems, seller and customer data, commission structure and transaction volume fall under a non-disclosure agreement. This page covers only the services the platform presents publicly and the scope of my role; it contains no screenshots, code or business figures.",
+    "ctaTitle": "Building something that depends on trust?",
+    "ctaBody": "If your platform involves payments, verification or a two-sided transaction flow, let’s talk.",
+    "ctaButton": "Get in Touch",
+    "visitSite": "View the Platform"
   }
 }

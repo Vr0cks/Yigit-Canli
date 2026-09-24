@@ -319,10 +319,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
+            <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
               <a href="https://www.peonycollective.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-rose-500 text-white hover:bg-rose-600 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
                 <ExternalLink size={14} /> {t('projects.visit')}
               </a>
+              <Link href="/work/peony" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
+                <BookOpen size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.case_study')}
+              </Link>
             </div>
           </Card>
 
