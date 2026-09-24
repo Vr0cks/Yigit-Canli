@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useState, useEffect } from 'react';
 import { Terminal, ArrowRight, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, GitGraph, ExternalLink, Hash, Users, Shield, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
@@ -38,6 +38,7 @@ const Card = ({ children, className = "", delay = 0, href }: { children: React.R
 
 export default function Home() {
   const t = useTranslations('HomePage');
+  const locale = useLocale();
 
   // Modal'ın açık/kapalı durumunu kontrol eden state
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -206,7 +207,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-2 mt-6">
-            <Link href="/about" className="text-xs font-mono text-primary hover:underline underline-offset-4 flex items-center gap-1">
+            <Link href={`/${locale}/about`} className="text-xs font-mono text-primary hover:underline underline-offset-4 flex items-center gap-1">
               {t('about.read_more')} <ArrowRight size={12} />
             </Link>
           </div>
@@ -323,7 +324,7 @@ export default function Home() {
               <a href="https://www.peonycollective.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-rose-500 text-white hover:bg-rose-600 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
                 <ExternalLink size={14} /> {t('projects.visit')}
               </a>
-              <Link href="/work/peony" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
+              <Link href={`/${locale}/work/peony`} className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
                 <BookOpen size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.case_study')}
               </Link>
             </div>
@@ -406,7 +407,7 @@ export default function Home() {
               <a href="https://karacafilemarket.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
                 <ExternalLink size={14} /> {t('projects.live_demo')}
               </a>
-              <Link href="/work/karaca" className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
+              <Link href={`/${locale}/work/karaca`} className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
                 <BookOpen size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.case_study')}
               </Link>
             </div>
@@ -446,7 +447,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 gap-3 mt-auto relative z-10">
-              <Link href="/work/karaca" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-purple-600 text-white hover:bg-purple-700 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
+              <Link href={`/${locale}/work/karaca`} className="flex items-center justify-center gap-2 py-3 rounded-lg bg-purple-600 text-white hover:bg-purple-700 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
                 <BookOpen size={14} /> {t('projects.case_study')}
               </Link>
               <div className="flex items-center justify-center gap-2 text-[10px] font-mono text-[var(--muted)]">

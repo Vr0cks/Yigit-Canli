@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import {
     ArrowLeft, ArrowRight, ExternalLink, Shield,
@@ -23,6 +23,7 @@ type Props = {
 
 export default function CaseStudy({ namespace, siteUrl }: Props) {
     const t = useTranslations(namespace);
+    const locale = useLocale();
 
     const problem = t.raw('problem') as string[];
     const approach = t.raw('approach') as { title: string; body: string }[];
@@ -35,7 +36,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
 
             <div className="mb-12">
                 <Link
-                    href="/"
+                    href={`/${locale}`}
                     className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors text-sm font-mono group"
                 >
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
