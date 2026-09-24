@@ -4,7 +4,7 @@
       "status": "Angebot senden",
       "role": "Tech Lead | Softwareentwickler",
       "education": "Tech Lead @ Peony Collective | Wirtschaftsinformatik @ THK Universität",
-      "description": "Produktorientierter Entwickler. Ich baue Full-Stack-Webanwendungen, sichere APIs und Enterprise-Integrationen, die wirklich live gehen – vom Marktplatz bis zum App Store.",
+      "description": "Produktorientierter Entwickler. Ich baue Full-Stack-Webanwendungen, sichere APIs und Enterprise-Integrationen, die wirklich live gehen – vom Marktplatz bis zum maßgeschneiderten ERP.",
       "cta_projects": "Meine Projekte",
       "cta_resume": "Lebenslauf laden",
       "cta_contact": "Kontakt"
@@ -17,7 +17,7 @@
     },
     "about": {
       "title": "Wo Business auf Code trifft",
-      "text": "Ich schreibe nicht nur Code – ich baue Produkte. Mit Wirtschaftsinformatik-Hintergrund und einem React / Node.js-Stack entwickle ich skalierbare Systeme, in denen Geschäftslogik auf sauberes Engineering trifft – von individuellen ERPs und E-Commerce bis zu App-Store-Releases. Jetzt bringe ich diese Full-Stack-Tiefe mit React Native aufs Mobile.",
+      "text": "Ich schreibe nicht nur Code – ich baue Produkte. Mit Wirtschaftsinformatik-Hintergrund und einem React / Node.js-Stack entwickle ich skalierbare Systeme, in denen Geschäftslogik auf sauberes Engineering trifft – von individuellen ERPs und E-Commerce bis zu Marktplatz-Infrastruktur. Jetzt bringe ich diese Full-Stack-Tiefe mit React Native aufs Mobile.",
       "read_more": "Mehr lesen"
     },
     "tech_stack": {
@@ -71,10 +71,10 @@
       }
     },
     "project_desc": {
-      "peony": "Der erste Luxus-Secondhand-Marktplatz der Türkei mit Echtheitsgarantie. Ich leite die Technik: automatisierter Marktplatz, Zahlungs- & Escrow-Flows sowie App-Store- / Google-Play-Releases.",
-      "united": "JNR VIP Transfer — eine Premium-Plattform für luxuriöse Autovermietung und VIP-Transfers für Geschäfts- und Privatkunden.",
-      "karaca": "B2B-E-Commerce-Plattform für den Karaca File Market. Bietet branchenspezifische Lösungen wie ein Modul für Proforma-Rechnungen.",
-      "karaca_erp": "Ein spezielles Micro-ERP-System, das die operativen Prozesse von Karaca File digitalisiert. (Geschlossen aufgrund von NDA)."
+      "peony": "Der erste Luxus-Secondhand-Marktplatz der Türkei mit Echtheitsgarantie. Ich verantworte die Technik: Die Prüfung sitzt im Kaufprozess, und der Zahlungsablauf schützt Käufer und Verkäufer zugleich.",
+      "united": "Ein durchgängiges Buchungssystem für Luxus-Transferdienste. Ich habe Anfragen vom Telefon auf die Website verlagert und ein eigenes Dashboard für Flotte und Fahrer gebaut.",
+      "karaca": "Eine von Grund auf gebaute B2B-Plattform für Sicherheitsnetze und Industrietextilien. Branchenspezifische Anforderungen wie Proforma-Rechnungen habe ich als eigene Module geschrieben statt in Standardwerkzeuge zu pressen.",
+      "karaca_erp": "Ein maßgeschneidertes ERP, das den Betriebsalltag digitalisiert hat. Bestellungen, Bestand, Konten und Rechnungen laufen in einem Panel zusammen, der Datenfluss zwischen Shop und ERP ist automatisiert. (Wegen NDA Closed Source.)"
     }
   },
   "Contact": {

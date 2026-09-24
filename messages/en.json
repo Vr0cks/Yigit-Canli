@@ -4,7 +4,7 @@
       "status": "Send a Proposal",
       "role": "Tech Lead | Software Developer",
       "education": "Tech Lead @ Peony Collective | MIS @ THK University",
-      "description": "Product-minded developer. I build full-stack web apps, secure APIs and enterprise integrations that ship — from marketplace to App Store.",
+      "description": "Product-minded developer. I build full-stack web apps, secure APIs and enterprise integrations that ship — from marketplaces to custom ERP systems.",
       "cta_projects": "See My Work",
       "cta_resume": "Download CV",
       "cta_contact": "Contact"
@@ -17,7 +17,7 @@
     },
     "about": {
       "title": "BUSINESS MEETS TECHNOLOGY",
-      "text": "I don't just write code; I build products. With an MIS foundation and a React / Node.js stack, I design scalable systems where business logic meets clean engineering — from custom ERPs and e-commerce to App Store releases. Now taking that full-stack depth into mobile with React Native.",
+      "text": "I don't just write code; I build products. With an MIS foundation and a React / Node.js stack, I design scalable systems where business logic meets clean engineering — from custom ERPs and e-commerce to marketplace infrastructure. Now taking that full-stack depth into mobile with React Native.",
       "read_more": "Read More"
     },
     "tech_stack": {
@@ -71,10 +71,10 @@
       }
     },
     "project_desc": {
-      "peony": "Turkey's first authenticated luxury resale marketplace. Leading the tech: automated marketplace, payment & escrow flows, and App Store / Google Play releases.",
-      "united": "JNR VIP Transfer — a premium platform offering luxury car rental and VIP transfer services for corporate and individual clients.",
-      "karaca": "B2B e-commerce platform developed for Karaca File Market. Features industry-specific solutions like a custom proforma invoice module.",
-      "karaca_erp": "A custom Micro ERP system digitizing Karaca File's operational processes. (Closed source due to NDA)."
+      "peony": "Turkey's first authenticated luxury resale marketplace. I lead the technical side: I put verification inside the buying flow and built a payment flow that protects buyer and seller at the same time.",
+      "united": "An end-to-end booking system for luxury transfer services. I moved requests off the phone and onto the site, and built a separate dashboard for fleet and driver tracking.",
+      "karaca": "A B2B commerce platform I built from scratch for security netting and industrial textiles. Rather than force trade-specific needs like proforma invoicing into off-the-shelf tools, I wrote them as their own modules.",
+      "karaca_erp": "A bespoke ERP that digitised the company's daily operation. I unified orders, stock, accounts and invoicing in one panel and automated the data flow between the storefront and the ERP. (Closed source under NDA.)"
     }
   },
   "Contact": {

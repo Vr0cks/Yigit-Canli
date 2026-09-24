@@ -4,7 +4,7 @@
       "status": "Teklif Gönder",
       "role": "Tech Lead | Yazılım Geliştiricisi",
       "education": "Tech Lead @ Peony Collective | YBS @ THK Üniversitesi",
-      "description": "Ürün odaklı geliştiriciyim. Pazaryerinden App Store'a kadar, gerçekten yayına çıkan full-stack web uygulamaları, güvenli API'lar ve kurumsal entegrasyonlar geliştiriyorum.",
+      "description": "Ürün odaklı geliştiriciyim. Pazaryerinden kurumsal ERP sistemlerine kadar, gerçekten yayına çıkan full-stack web uygulamaları, güvenli API'lar ve kurumsal entegrasyonlar geliştiriyorum.",
       "cta_projects": "Neler Yaptım?",
       "cta_resume": "CV İndir",
       "cta_contact": "İletişim"
@@ -17,7 +17,7 @@
     },
     "about": {
       "title": "Teknolojiyle İş Kuruyorum",
-      "text": "Sadece kod yazmıyorum; ürün inşa ediyorum. YBS altyapısı ve React / Node.js stack'iyle, iş mantığının temiz mühendislikle buluştuğu ölçeklenebilir sistemler tasarlıyorum — özel ERP ve e-ticaretten App Store yayınlarına kadar. Şimdi bu full-stack derinliği React Native ile mobile taşıyorum.",
+      "text": "Sadece kod yazmıyorum; ürün inşa ediyorum. YBS altyapısı ve React / Node.js stack'iyle, iş mantığının temiz mühendislikle buluştuğu ölçeklenebilir sistemler tasarlıyorum — özel ERP ve e-ticaretten pazaryeri altyapılarına kadar. Şimdi bu full-stack derinliği React Native ile mobile taşıyorum.",
       "read_more": "Detaylar"
     },
     "tech_stack": {
@@ -71,10 +71,10 @@
       }
     },
     "project_desc": {
-      "peony": "Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri. Teknoloji tarafını yönetiyorum: otomatize pazaryeri, ödeme & escrow akışları ve App Store / Google Play yayınları.",
-      "united": "JNR VIP Transfer — kurumsal ve bireysel müşterilere özel lüks araç kiralama ve VIP transfer hizmetleri sunan premium bir platform.",
-      "karaca": "Karaca File Market için geliştirilen B2B e-ticaret platformu. Özel proforma fatura modülü gibi sektörel ihtiyaçlara yönelik çözümler barındırır.",
-      "karaca_erp": "Karaca File'ın operasyonel süreçlerini dijitalleştiren özel Micro ERP sistemi. (Gizlilik Sözleşmesi sebebiyle kapalı kaynak)."
+      "peony": "Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri. Teknoloji tarafını yönetiyorum: doğrulamayı satın alma akışının içine yerleştirdim, alıcı ve satıcıyı aynı anda koruyan ödeme akışını kurdum.",
+      "united": "Lüks transfer hizmetleri için uçtan uca rezervasyon sistemi. Telefonla alınan talepleri siteye taşıdım; araç ve sürücü takibi için ayrı bir yönetim paneli yazdım.",
+      "karaca": "Güvenlik fileleri ve endüstriyel tekstil için sıfırdan kurduğum B2B e-ticaret platformu. Proforma fatura gibi sektöre özel modülleri hazır çözümlere sıkıştırmak yerine kendi modülleri olarak yazdım.",
+      "karaca_erp": "Şirketin günlük operasyonunu dijitalleştiren özel ERP. Sipariş, stok, cari ve faturalamayı tek panelde birleştirdim; mağaza ile ERP arasındaki veri akışını otomatikleştirdim. (NDA sebebiyle kapalı kaynak.)"
     }
   },
   "Contact": {
