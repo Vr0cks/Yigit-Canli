@@ -7,6 +7,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Reveal from '@/components/Reveal';
+import Bant from '@/components/Bant';
 
 type Fixture = { date: string; opponent: string };
 
@@ -82,15 +83,22 @@ export default function Home() {
               </p>
 
               <h1
-                className="font-mono tracking-tight leading-none text-[var(--foreground)]"
+                className="font-mono font-bold tracking-tight leading-none text-[var(--foreground)]"
                 style={{ fontSize: 'clamp(2rem, 8.2vw, 6rem)' }}
               >
                 code, snap, block<span className="text-[var(--primary)]">.</span>
               </h1>
             </div>
           </div>
+
+          {/* Asagi kayma isareti — kelime yok, sadece inen bir cizgi. */}
+          <div className="absolute right-6 bottom-14 hidden md:block" aria-hidden>
+            <span className="block h-12 w-px bg-[var(--primary)] kayma-cizgisi" />
+          </div>
         </div>
       </section>
+
+      <Bant />
 
       {/* ── GIRIS ─────────────────────────────────────────────────────── */}
       <Reveal className="max-w-3xl space-y-8">
@@ -200,9 +208,9 @@ export default function Home() {
             {projeler.map((p, i) => (
               <li
                 key={p.ad}
-                className="grid md:grid-cols-[auto_1fr] gap-x-10 gap-y-4 py-10 md:py-12 border-b border-[var(--card-border)]"
+                className="group grid md:grid-cols-[auto_1fr] gap-x-10 gap-y-4 py-10 md:py-12 border-b border-[var(--card-border)]"
               >
-                <span className="font-mono text-4xl md:text-6xl tabular-nums leading-none select-none sira-no">
+                <span className="font-mono text-4xl md:text-6xl tabular-nums leading-none select-none sira-no group-hover:text-[var(--primary)] transition-colors duration-300">
                   {String(i + 1).padStart(2, '0')}
                 </span>
 
@@ -247,6 +255,8 @@ export default function Home() {
           </ol>
         </section>
       </Reveal>
+
+      <Bant ters />
 
       {/* ── SU AN ────────────────────────────────────────────────────── */}
       <Reveal>

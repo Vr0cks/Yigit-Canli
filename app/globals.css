@@ -398,3 +398,50 @@ body {
   background-color: var(--card-bg);
   background-color: color-mix(in srgb, var(--card-bg) 80%, transparent);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DOKU VE HAREKET
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Zemin grenli. Duz siyah bos duruyordu; cok hafif bir gurultu sayfaya
+   yuzey veriyor, renk eklemeden. Sadece koyu temada — acik temada kirli
+   gorunuyor. Icerik layout'ta z-10'da, bu katman onun altinda kaliyor. */
+.dark body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+}
+
+/* Stadyum LED bandi: yazi soldan saga suzuluyor. Icerik iki kez basili,
+   %50 kaydirinca dikissiz donuyor. */
+@keyframes bant-kay {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.bant-seridi {
+  display: flex;
+  width: max-content;
+  animation: bant-kay 40s linear infinite;
+}
+
+/* Acilistaki kayma isareti — ince bir cizgi asagi dogru iniyor. */
+@keyframes cizgi-in {
+  0%        { transform: scaleY(0); transform-origin: top; opacity: 0; }
+  40%       { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  60%       { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+  100%      { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+.kayma-cizgisi {
+  animation: cizgi-in 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bant-seridi,
+  .kayma-cizgisi { animation: none; }
+}
