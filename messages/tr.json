@@ -78,7 +78,19 @@
     },
     "v2": {
       "tagline": "code, snap, block.",
-      "intro": "Ankara'da yazılım geliştiriyorum. Sahada center oynuyorum — topu ben snap ediyorum, hattı ben okuyorum. İkisinde de uğraştığım şey aynı: işin, kimse fark etmeden yürümesi.",
+      "intro": "Ankara'da yazılım geliştiriyorum. İşim çoğunlukla başkasının işini yürüten sistemler: ERP panelleri, e-ticaret altyapıları, sipariş ve kargo akışları. Bir de sahada center oynuyorum — topu ben snap ediyorum, hattı ben okuyorum. İkisinde de uğraştığım şey aynı: işin, kimse fark etmeden yürümesi.",
+      "role": "yazılım geliştirici",
+      "stack_label": "ne ile çalışıyorum",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "React Native",
+        "Node.js",
+        "Python",
+        "PostgreSQL / Supabase",
+        "Tailwind"
+      ],
       "work_for": "iş için",
       "field_title": "Saha",
       "position": "Center",

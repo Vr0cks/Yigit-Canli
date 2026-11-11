@@ -416,19 +416,6 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
 }
 
-/* Stadyum LED bandi: yazi soldan saga suzuluyor. Icerik iki kez basili,
-   %50 kaydirinca dikissiz donuyor. */
-@keyframes bant-kay {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-.bant-seridi {
-  display: flex;
-  width: max-content;
-  animation: bant-kay 40s linear infinite;
-}
-
 /* Acilistaki kayma isareti — ince bir cizgi asagi dogru iniyor. */
 @keyframes cizgi-in {
   0%        { transform: scaleY(0); transform-origin: top; opacity: 0; }
@@ -442,6 +429,5 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bant-seridi,
   .kayma-cizgisi { animation: none; }
 }

@@ -78,7 +78,19 @@
     },
     "v2": {
       "tagline": "code, snap, block.",
-      "intro": "Ich entwickle Software in Ankara. Auf dem Feld spiele ich Center — ich snappe den Ball und lese die Line. Beides läuft auf dasselbe hinaus: dafür sorgen, dass es läuft, ohne dass es jemand merkt.",
+      "intro": "Ich entwickle Software in Ankara. Meist Systeme, die das Geschäft anderer am Laufen halten: ERP-Panels, E-Commerce-Infrastruktur, Bestell- und Versandabläufe. Außerdem spiele ich Center — ich snappe den Ball und lese die Line. Beides läuft auf dasselbe hinaus: dass die Arbeit läuft, ohne dass es jemand merkt.",
+      "role": "Softwareentwickler",
+      "stack_label": "womit ich arbeite",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "React Native",
+        "Node.js",
+        "Python",
+        "PostgreSQL / Supabase",
+        "Tailwind"
+      ],
       "work_for": "für Aufträge",
       "field_title": "Feld",
       "position": "Center",

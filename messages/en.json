@@ -78,7 +78,19 @@
     },
     "v2": {
       "tagline": "code, snap, block.",
-      "intro": "I build software in Ankara. I play center — I snap the ball and read the line. Both jobs come down to the same thing: making it work without anyone noticing.",
+      "intro": "I build software in Ankara. Mostly systems that keep someone else's business running: ERP panels, e-commerce infrastructure, order and shipping flows. I also play center — I snap the ball and read the line. Both come down to the same thing: the work running without anyone noticing.",
+      "role": "software developer",
+      "stack_label": "what I work with",
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "React",
+        "React Native",
+        "Node.js",
+        "Python",
+        "PostgreSQL / Supabase",
+        "Tailwind"
+      ],
       "work_for": "for work",
       "field_title": "Field",
       "position": "Center",

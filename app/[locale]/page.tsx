@@ -7,7 +7,6 @@ import { ArrowUpRight } from 'lucide-react';
 
 import SpotifyCard from '@/components/SpotifyCard';
 import Reveal from '@/components/Reveal';
-import Bant from '@/components/Bant';
 
 type Fixture = { date: string; opponent: string };
 
@@ -21,9 +20,8 @@ type Project = {
 };
 
 /**
- * Bolum basligi. Eskiden 12px mono bir ayracti — sayfadaki her seyle ayni
- * boydaydi, o yuzden goz hicbir yere carpmiyordu. Artik numara kucuk,
- * baslik iri: punto sicramasi sayfanin ritmini kuruyor.
+ * Bolum basligi: numara kucuk, baslik iri. Punto sicramasi sayfanin
+ * ritmini kuruyor — eskiden hepsi 12px mono ayracti.
  */
 function BolumBasligi({ no, children }: { no: string; children: React.ReactNode }) {
   return (
@@ -43,6 +41,7 @@ export default function Home() {
   const locale = useLocale();
 
   const fikstur = t.raw('fixtures') as Fixture[];
+  const stack = t.raw('stack') as string[];
 
   const projeler: Project[] = [
     { ad: 'Karaca ERP', yil: '2025', metin: t('projects.erp'), kapali: true },
@@ -55,9 +54,10 @@ export default function Home() {
     <main className="flex flex-col gap-28 md:gap-40 pb-24">
 
       {/* ── ACILIS ───────────────────────────────────────────────────────
-          Fotograf sayfayi devraliyor: tam genislik, ekran boyu, yazi
-          ustune biniyor. Ustteki negatif bosluk layout dolgusunu
-          (py-12 / md:py-24) iptal ediyor ki gorsel en tepeden baslasin. */}
+          Fotograf sayfayi devraliyor. Ustteki negatif bosluk layout
+          dolgusunu (py-12 / md:py-24) iptal ediyor ki gorsel en tepeden
+          baslasin. Kunye satiri yazilim kimligini soyluyor; sahayi
+          fotograf zaten anlatiyor, kelimeye gerek yok. */}
       <section className="tam-genislik -mt-12 md:-mt-24 relative">
         <div className="relative h-[82svh] min-h-[480px] md:h-[90svh]">
           <Image
@@ -79,7 +79,7 @@ export default function Home() {
                 <span className="text-[var(--primary)]"> · </span>
                 Ankara
                 <span className="text-[var(--primary)]"> · </span>
-                {t('team')} {t('position').toLowerCase()}
+                {t('role')}
               </p>
 
               <h1
@@ -98,13 +98,25 @@ export default function Home() {
         </div>
       </section>
 
-      <Bant />
-
       {/* ── GIRIS ─────────────────────────────────────────────────────── */}
-      <Reveal className="max-w-3xl space-y-8">
+      <Reveal className="max-w-3xl space-y-10">
         <p className="text-xl md:text-2xl leading-snug yazi-yumusak">
           {t('intro')}
         </p>
+
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-4">
+            {t('stack_label')}
+          </p>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-[var(--foreground)]">
+            {stack.map((arac) => (
+              <li key={arac} className="flex items-center gap-2">
+                <span className="h-1 w-1 rounded-full bg-[var(--primary)]" />
+                {arac}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <a
           href="https://vr0cks.com"
@@ -117,92 +129,12 @@ export default function Home() {
         </a>
       </Reveal>
 
-      {/* ── SAHA ─────────────────────────────────────────────────────────
-          Fikstur skorboard mantiginda: siradaki mac kor rengiyle ve
-          soldan cizgiyle one cikiyor, kalani geriye cekiliyor. */}
-      <Reveal>
-        <section id="saha">
-          <BolumBasligi no="01">{t('field_title')}</BolumBasligi>
-
-          <div className="grid sm:grid-cols-[minmax(0,240px)_1fr] gap-8 md:gap-14 items-start">
-            {/* Video dikey cekilmis; kendi oraninda duruyor. */}
-            <video
-              src="/saha/anka.mp4"
-              poster="/saha/anka-poster.jpg"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="none"
-              className="w-full rounded-2xl border border-[var(--card-border)]"
-            />
-
-            <div className="space-y-8">
-              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                <span className="text-xl md:text-2xl text-[var(--foreground)]">{t('team')}</span>
-                <span className="font-mono text-xs text-[var(--muted)]">{t('position')}</span>
-                <a
-                  href="https://www.instagram.com/thkanka/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-xs text-[var(--muted)] hover:text-[var(--foreground)] alt-cizgi transition-colors"
-                >
-                  @thkanka
-                </a>
-              </div>
-
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-5">
-                  {t('season')}
-                </p>
-
-                <ul className="border-t border-[var(--card-border)]">
-                  {fikstur.map((mac, i) => {
-                    const siradaki = i === 0;
-                    return (
-                      <li
-                        key={mac.opponent}
-                        className={`flex items-baseline gap-4 md:gap-6 py-4 border-b border-[var(--card-border)] ${
-                          siradaki ? 'border-l-2 border-l-[var(--primary)] pl-4' : ''
-                        }`}
-                      >
-                        <span
-                          className={`font-mono text-sm tabular-nums w-20 shrink-0 ${
-                            siradaki ? 'text-[var(--primary)]' : 'text-[var(--muted)]'
-                          }`}
-                        >
-                          {mac.date}
-                        </span>
-                        <span
-                          className={`flex-1 text-lg md:text-xl ${
-                            siradaki ? 'text-[var(--foreground)]' : 'yazi-silik'
-                          }`}
-                        >
-                          {mac.opponent}
-                        </span>
-                        {siradaki && (
-                          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--primary)] shrink-0">
-                            {t('next_label')}
-                          </span>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-
-              <p className="font-mono text-xs text-[var(--muted)] italic">{t('motto')}</p>
-            </div>
-          </div>
-        </section>
-      </Reveal>
-
       {/* ── YAPTIKLARIM ──────────────────────────────────────────────────
-          Iri numaralar ve iri proje adlari — bu liste artik fikstur
-          listesiyle ayni kalipta durmuyor. */}
+          Sayfanin govdesi burasi: acilistan sonra ilk gelen bolum isler,
+          saha ondan sonra geliyor. */}
       <Reveal>
         <section id="work">
-          <BolumBasligi no="02">{t('work_title')}</BolumBasligi>
+          <BolumBasligi no="01">{t('work_title')}</BolumBasligi>
 
           <ol className="border-t border-[var(--card-border)]">
             {projeler.map((p, i) => (
@@ -256,7 +188,86 @@ export default function Home() {
         </section>
       </Reveal>
 
-      <Bant ters />
+      {/* ── SAHA ─────────────────────────────────────────────────────────
+          Isin yanindaki bolum, onun kadar yer kaplamiyor: daha dar video,
+          daha kucuk punto. Fikstur skorboard duzeninde, siradaki mac kor
+          rengiyle isaretli. */}
+      <Reveal>
+        <section id="saha">
+          <BolumBasligi no="02">{t('field_title')}</BolumBasligi>
+
+          <div className="grid sm:grid-cols-[minmax(0,190px)_1fr] gap-8 md:gap-12 items-start">
+            {/* Video dikey cekilmis; kendi oraninda duruyor. */}
+            <video
+              src="/saha/anka.mp4"
+              poster="/saha/anka-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              className="w-full rounded-xl border border-[var(--card-border)]"
+            />
+
+            <div className="space-y-7 max-w-2xl">
+              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <span className="text-[var(--foreground)]">{t('team')}</span>
+                <span className="font-mono text-xs text-[var(--muted)]">{t('position')}</span>
+                <a
+                  href="https://www.instagram.com/thkanka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-[var(--muted)] hover:text-[var(--foreground)] alt-cizgi transition-colors"
+                >
+                  @thkanka
+                </a>
+              </div>
+
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--muted)] mb-4">
+                  {t('season')}
+                </p>
+
+                <ul className="border-t border-[var(--card-border)]">
+                  {fikstur.map((mac, i) => {
+                    const siradaki = i === 0;
+                    return (
+                      <li
+                        key={mac.opponent}
+                        className={`flex items-baseline gap-4 py-3 border-b border-[var(--card-border)] ${
+                          siradaki ? 'border-l-2 border-l-[var(--primary)] pl-3' : ''
+                        }`}
+                      >
+                        <span
+                          className={`font-mono text-xs tabular-nums w-20 shrink-0 ${
+                            siradaki ? 'text-[var(--primary)]' : 'text-[var(--muted)]'
+                          }`}
+                        >
+                          {mac.date}
+                        </span>
+                        <span
+                          className={`flex-1 text-sm ${
+                            siradaki ? 'text-[var(--foreground)]' : 'yazi-silik'
+                          }`}
+                        >
+                          {mac.opponent}
+                        </span>
+                        {siradaki && (
+                          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--primary)] shrink-0">
+                            {t('next_label')}
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <p className="font-mono text-xs text-[var(--muted)] italic">{t('motto')}</p>
+            </div>
+          </div>
+        </section>
+      </Reveal>
 
       {/* ── SU AN ────────────────────────────────────────────────────── */}
       <Reveal>
