@@ -59,7 +59,10 @@ export default function Home() {
           baslasin. Kunye satiri yazilim kimligini soyluyor; sahayi
           fotograf zaten anlatiyor, kelimeye gerek yok. */}
       <section className="tam-genislik -mt-12 md:-mt-24 relative">
-        <div className="relative h-[82svh] min-h-[480px] md:h-[90svh]">
+        {/* Telefonda fotograf ilk ekranin tamamini yemiyor: altindan giris
+            metni gorunuyor, kaydirmak gerektigi anlasiliyor. Masaustunde
+            tam ekran kaliyor. */}
+        <div className="relative h-[62svh] min-h-[380px] md:h-[90svh]">
           <Image
             src="/saha/snap.webp"
             alt={`${t('team')} — ${t('position')}`}
@@ -84,7 +87,7 @@ export default function Home() {
 
               <h1
                 className="font-mono font-bold tracking-tight leading-none text-[var(--foreground)]"
-                style={{ fontSize: 'clamp(2rem, 8.2vw, 6rem)' }}
+                style={{ fontSize: 'clamp(1.7rem, 8.2vw, 6rem)' }}
               >
                 code, snap, block<span className="text-[var(--primary)]">.</span>
               </h1>
