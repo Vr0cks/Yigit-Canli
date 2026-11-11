@@ -13,8 +13,8 @@ export default function GlobalNotFound() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#E2552F]">404</p>
 
           <div className="space-y-3">
-            <h1 className="text-3xl tracking-tight">Burada bir şey yok</h1>
-            <p className="text-[#8A8A90] leading-relaxed">
+            <h1 className="text-5xl md:text-6xl tracking-tight leading-[1.05]">Burada bir şey yok</h1>
+            <p className="text-lg text-[#8A8A90] leading-relaxed">
               Yanlış tarafa koştun. Topu geri getirelim.
             </p>
           </div>

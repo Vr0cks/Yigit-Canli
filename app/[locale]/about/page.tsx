@@ -4,14 +4,16 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 
-/** Ana sayfadaki ayraçlı başlıkla aynı dil. */
-function BolumBasligi({ children }: { children: React.ReactNode }) {
+/** Ana sayfadaki numarali baslikla ayni dil. */
+function BolumBasligi({ no, children }: { no: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-4 mb-6">
-      <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[var(--muted)]">
+    <div className="mb-8 md:mb-10">
+      <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-[var(--primary)]">
+        {no}
+      </span>
+      <h2 className="mt-2 text-2xl md:text-4xl tracking-tight text-[var(--foreground)]">
         {children}
       </h2>
-      <div className="h-px flex-1 bg-[var(--card-border)]" />
     </div>
   );
 }
@@ -26,7 +28,7 @@ export default function AboutPage() {
 
       <Link
         href={`/${locale}`}
-        className="inline-flex items-center gap-2 font-mono text-xs text-[var(--muted)] hover:text-[var(--primary)] transition-colors mb-16"
+        className="inline-flex items-center gap-2 font-mono text-xs text-[var(--muted)] hover:text-[var(--primary)] alt-cizgi transition-colors mb-16"
       >
         <ArrowLeft size={14} />
         {v2('back')}
@@ -35,16 +37,16 @@ export default function AboutPage() {
       <div className="max-w-2xl space-y-16">
 
         <section className="space-y-5">
-          <h1 className="text-3xl md:text-4xl tracking-tight text-[var(--foreground)]">
+          <h1 className="text-4xl md:text-6xl tracking-tight leading-[1.05] text-[var(--foreground)]">
             {t('title')}
           </h1>
-          <p className="text-lg leading-relaxed text-[var(--foreground)]/80">
+          <p className="text-xl md:text-2xl leading-snug yazi-yumusak">
             {t('intro')}
           </p>
         </section>
 
         <section>
-          <BolumBasligi>{t('education.title')}</BolumBasligi>
+          <BolumBasligi no="01">{t('education.title')}</BolumBasligi>
           <div className="space-y-2">
             <h3 className="text-[var(--foreground)]">Türk Hava Kurumu Üniversitesi</h3>
             <p className="font-mono text-xs text-[var(--muted)]">
@@ -55,7 +57,7 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <BolumBasligi>{t('vision.title')}</BolumBasligi>
+          <BolumBasligi no="02">{t('vision.title')}</BolumBasligi>
           <dl className="divide-y divide-[var(--card-border)] border-y border-[var(--card-border)]">
             <div className="py-5 grid sm:grid-cols-[160px_1fr] gap-2 sm:gap-6">
               <dt className="font-mono text-xs text-[var(--muted)] pt-1">Clean code</dt>
@@ -69,8 +71,8 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <BolumBasligi>{t('leadership.title')}</BolumBasligi>
-          <blockquote className="border-l-2 border-[var(--primary)] pl-6 text-[var(--foreground)]/80 leading-relaxed">
+          <BolumBasligi no="03">{t('leadership.title')}</BolumBasligi>
+          <blockquote className="border-l-2 border-[var(--primary)] pl-6 yazi-yumusak leading-relaxed">
             {t('leadership.desc')}
           </blockquote>
           <div className="flex flex-wrap gap-x-5 gap-y-2 mt-6 font-mono text-xs text-[var(--muted)]">

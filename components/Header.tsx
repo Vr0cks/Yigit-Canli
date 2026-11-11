@@ -39,7 +39,7 @@ export default function Header() {
   if (pathname.includes('/secret')) return null;
 
   const dugme =
-    'p-2.5 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)]/80 backdrop-blur-md text-[var(--muted)] hover:text-[var(--foreground)] transition-colors';
+    'p-2.5 rounded-full border border-[var(--card-border)] cam-zemin backdrop-blur-md text-[var(--muted)] hover:text-[var(--foreground)] transition-colors';
 
   return (
     <>
@@ -49,7 +49,7 @@ export default function Header() {
           <Mail size={16} />
         </button>
 
-        <div className="hidden sm:flex items-center gap-0.5 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)]/80 backdrop-blur-md px-1 py-1">
+        <div className="hidden sm:flex items-center gap-0.5 rounded-full border border-[var(--card-border)] cam-zemin backdrop-blur-md px-1 py-1">
           {['tr', 'en', 'de'].map((lang) => (
             <button
               key={lang}
@@ -65,7 +65,7 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="sm:hidden flex items-center rounded-full border border-[var(--card-border)] bg-[var(--card-bg)]/80 backdrop-blur-md px-2.5 py-1.5">
+        <div className="sm:hidden flex items-center rounded-full border border-[var(--card-border)] cam-zemin backdrop-blur-md px-2.5 py-1.5">
           <span className="text-[10px] font-mono text-[var(--muted)]">{locale.toUpperCase()}</span>
         </div>
 

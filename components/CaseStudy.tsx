@@ -11,14 +11,16 @@ type Props = {
     siteUrl: string;
 };
 
-/** Ana sayfadaki ayraçlı başlıkla aynı dil. */
-function BolumBasligi({ children }: { children: React.ReactNode }) {
+/** Ana sayfadaki numarali baslikla ayni dil. */
+function BolumBasligi({ no, children }: { no: string; children: React.ReactNode }) {
     return (
-        <div className="flex items-center gap-4 mb-6">
-            <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[var(--muted)]">
+        <div className="mb-8 md:mb-10">
+            <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-[var(--primary)]">
+                {no}
+            </span>
+            <h2 className="mt-2 text-2xl md:text-4xl tracking-tight text-[var(--foreground)]">
                 {children}
             </h2>
-            <div className="h-px flex-1 bg-[var(--card-border)]" />
         </div>
     );
 }
@@ -38,7 +40,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
 
             <Link
                 href={`/${locale}`}
-                className="inline-flex items-center gap-2 font-mono text-xs text-[var(--muted)] hover:text-[var(--primary)] transition-colors mb-16"
+                className="inline-flex items-center gap-2 font-mono text-xs text-[var(--muted)] hover:text-[var(--primary)] alt-cizgi transition-colors mb-16"
             >
                 <ArrowLeft size={14} />
                 {t('back')}
@@ -52,7 +54,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
                         {t('eyebrow')}
                     </p>
 
-                    <h1 className="text-3xl md:text-4xl tracking-tight leading-[1.15] text-[var(--foreground)]">
+                    <h1 className="text-4xl md:text-6xl tracking-tight leading-[1.05] text-[var(--foreground)]">
                         {t('title')}
                     </h1>
 
@@ -77,7 +79,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
 
                 {/* SORUN */}
                 <section>
-                    <BolumBasligi>{t('problemTitle')}</BolumBasligi>
+                    <BolumBasligi no="01">{t('problemTitle')}</BolumBasligi>
                     <div className="space-y-4">
                         {problem.map((para) => (
                             <p key={para} className="text-[var(--muted)] leading-relaxed">{para}</p>
@@ -87,7 +89,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
 
                 {/* YAKLAŞIM */}
                 <section>
-                    <BolumBasligi>{t('approachTitle')}</BolumBasligi>
+                    <BolumBasligi no="02">{t('approachTitle')}</BolumBasligi>
                     <ol className="divide-y divide-[var(--card-border)] border-y border-[var(--card-border)]">
                         {approach.map((step, i) => (
                             <li key={step.title} className="py-5 grid grid-cols-[32px_1fr] gap-4">
@@ -106,7 +108,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
                 {/* SONUÇ */}
                 <section className="space-y-8">
                     <div>
-                        <BolumBasligi>{t('resultTitle')}</BolumBasligi>
+                        <BolumBasligi no="03">{t('resultTitle')}</BolumBasligi>
                         <ul className="space-y-3">
                             {results.map((result) => (
                                 <li key={result} className="flex gap-3 text-[var(--muted)] leading-relaxed">
@@ -148,14 +150,14 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
 
                 {/* NDA */}
                 <section>
-                    <BolumBasligi>{t('ndaTitle')}</BolumBasligi>
+                    <BolumBasligi no="04">{t('ndaTitle')}</BolumBasligi>
                     <p className="text-sm text-[var(--muted)] leading-relaxed">{t('nda')}</p>
 
                     <a
                         href={siteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--foreground)] hover:text-[var(--primary)] transition-colors mt-6"
+                        className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--foreground)] hover:text-[var(--primary)] alt-cizgi transition-colors mt-6"
                     >
                         {t('visitSite')} <ArrowUpRight size={12} />
                     </a>
@@ -167,7 +169,7 @@ export default function CaseStudy({ namespace, siteUrl }: Props) {
                     <p className="text-sm text-[var(--muted)] leading-relaxed">{t('ctaBody')}</p>
                     <a
                         href="mailto:ahmetcanli1943@gmail.com"
-                        className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                        className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--foreground)] hover:text-[var(--primary)] alt-cizgi transition-colors"
                     >
                         {t('ctaButton')} →
                     </a>

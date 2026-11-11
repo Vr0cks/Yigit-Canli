@@ -312,3 +312,89 @@ button {
     color: #555;
   }
 }
+/* ═══════════════════════════════════════════════════════════════════════════
+   YENİ TASARIM YARDIMCILARI
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Sayfa gövdesi max-w-6xl bir kutunun içinde duruyor. Açılış fotoğrafının
+   o kutudan taşıp ekranı boydan boya kaplaması gerekiyor: negatif yan
+   boşluklar elemanı tam viewport genişliğine açıyor.
+   100vw kaydırma çubuğunu da saydığı için gövdede yatay taşma kırpılıyor. */
+.tam-genislik {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+body {
+  overflow-x: clip;
+}
+
+/* Link hover'ında alttan dolan çizgi — renk değişimi yerine hareket. */
+.alt-cizgi {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  transition: background-size 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.alt-cizgi:hover {
+  background-size: 100% 1px;
+}
+
+/* Spotify ekolayzeri. Çubukların animasyon sınıfları daha önce hiçbir yerde
+   tanımlı değildi, yani çubuklar donuk duruyordu. */
+@keyframes esitleyici {
+  0%, 100% { transform: scaleY(0.3); }
+  50%      { transform: scaleY(1); }
+}
+
+.esitleyici-cubuk {
+  transform-origin: bottom;
+  animation: esitleyici 900ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .esitleyici-cubuk { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Tailwind 3, CSS degiskeni tasiyan arbitrary renklere opaklik eki
+   uygulayamiyor: text-[var(--foreground)]/85 yazdiginda hicbir kural
+   uretmiyor, sinif sessizce olu kaliyor. Uretilen CSS'te dogrulandi.
+   Kademeli renkler bu yuzden burada acikca duruyor. */
+.yazi-yumusak {
+  color: var(--foreground);
+  color: color-mix(in srgb, var(--foreground) 85%, transparent);
+}
+
+.yazi-silik {
+  color: var(--muted);
+  color: color-mix(in srgb, var(--foreground) 55%, transparent);
+}
+
+/* Proje listesindeki iri sira numaralari — okunmasi gerekmiyor, sayfanin
+   ritmini kurmak icin var. */
+.sira-no {
+  color: var(--card-border);
+  color: color-mix(in srgb, var(--muted) 30%, transparent);
+}
+
+/* Acilis fotografinin uzerindeki perde: alt kenarda zemin rengiyle tam
+   kapali, yukari dogru kademeli olarak aciliyor. */
+.acilis-perde {
+  background: linear-gradient(to top, var(--background) 0%, transparent 85%);
+  background: linear-gradient(
+    to top,
+    var(--background) 0%,
+    color-mix(in srgb, var(--background) 82%, transparent) 22%,
+    color-mix(in srgb, var(--background) 35%, transparent) 52%,
+    transparent 88%
+  );
+}
+
+/* Header'daki yuvarlak dugmelerin yari saydam zemini. */
+.cam-zemin {
+  background-color: var(--card-bg);
+  background-color: color-mix(in srgb, var(--card-bg) 80%, transparent);
+}

@@ -76,9 +76,13 @@ export default function SpotifyCard() {
 
       {caliyor && (
         <div className="flex items-end gap-[3px] h-4 shrink-0" aria-hidden>
-          <span className="w-[3px] h-2 bg-[var(--primary)] animate-music-bar-1 rounded-full" />
-          <span className="w-[3px] h-4 bg-[var(--primary)] animate-music-bar-2 rounded-full" />
-          <span className="w-[3px] h-3 bg-[var(--primary)] animate-music-bar-3 rounded-full" />
+          {[0, 180, 360].map((gecikme) => (
+            <span
+              key={gecikme}
+              className="w-[3px] h-4 rounded-full bg-[var(--primary)] esitleyici-cubuk"
+              style={{ animationDelay: `${gecikme}ms` }}
+            />
+          ))}
         </div>
       )}
     </div>
