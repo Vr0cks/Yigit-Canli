@@ -75,6 +75,51 @@
       "united": "Lüks transfer hizmetleri için uçtan uca rezervasyon sistemi. Telefonla alınan talepleri siteye taşıdım; araç ve sürücü takibi için ayrı bir yönetim paneli yazdım.",
       "karaca": "Güvenlik fileleri ve endüstriyel tekstil için sıfırdan kurduğum B2B e-ticaret platformu. Proforma fatura gibi sektöre özel modülleri hazır çözümlere sıkıştırmak yerine kendi modülleri olarak yazdım.",
       "karaca_erp": "Şirketin günlük operasyonunu dijitalleştiren özel ERP. Sipariş, stok, cari ve faturalamayı tek panelde birleştirdim; mağaza ile ERP arasındaki veri akışını otomatikleştirdim. (NDA sebebiyle kapalı kaynak.)"
+    },
+    "v2": {
+      "tagline": "code, snap, block.",
+      "intro": "Ankara'da yazılım geliştiriyorum. Sahada center oynuyorum — topu ben snap ediyorum, hattı ben okuyorum. İkisinde de uğraştığım şey aynı: işin, kimse fark etmeden yürümesi.",
+      "work_for": "iş için",
+      "photo_caption": "Topun üstündeki benim.",
+      "field_title": "Saha",
+      "position": "Center",
+      "team": "THKÜ ANKA",
+      "season": "26–27 UNILIG",
+      "next_label": "sıradaki",
+      "fixtures": [
+        {
+          "date": "5–6 Ara",
+          "opponent": "Silverbacks"
+        },
+        {
+          "date": "19–20 Ara",
+          "opponent": "Cats"
+        },
+        {
+          "date": "2–3 Oca",
+          "opponent": "Judges"
+        }
+      ],
+      "motto": "Rise from the ashes.",
+      "work_title": "Yaptıklarım",
+      "live": "canlı",
+      "case_study": "vaka çalışması",
+      "closed_source": "kapalı kaynak",
+      "footer_note": "Burası benim çöplüğüm. İş için vr0cks.com.",
+      "projects": {
+        "erp": "Sipariş, stok, cari ve faturalamayı tek panelde toplayan özel ERP. Mağazadan gelen sipariş doğrudan panele düşüyor, fatura oradan kesiliyor. Kırk kişilik bir operasyon her gün kullanıyor.",
+        "peony": "Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri. Doğrulamayı satın alma akışının içine yerleştirdim; alıcıyla satıcıyı aynı anda koruyan ödeme akışını kurdum.",
+        "karaca": "Güvenlik fileleri için sıfırdan kurduğum B2B e-ticaret. Proforma fatura gibi sektöre özel şeyleri hazır çözümlere sıkıştırmak yerine kendi modülleri olarak yazdım.",
+        "jnr": "Lüks transfer için uçtan uca rezervasyon sistemi. Telefonla alınan talepleri siteye taşıdım, araç ve sürücü takibi için ayrı bir panel yazdım."
+      },
+      "now_playing": "şu an çalıyor",
+      "silence": "sessizlik",
+      "silence_note": "Şu an bir şey çalmıyor.",
+      "about_title": "Hakkımda",
+      "back": "geri",
+      "notfound_title": "Burada bir şey yok",
+      "notfound_text": "Yanlış tarafa koştun. Topu geri getirelim.",
+      "notfound_cta": "ana sayfa"
     }
   },
   "Contact": {

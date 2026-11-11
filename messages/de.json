@@ -75,6 +75,51 @@
       "united": "Ein durchgängiges Buchungssystem für Luxus-Transferdienste. Ich habe Anfragen vom Telefon auf die Website verlagert und ein eigenes Dashboard für Flotte und Fahrer gebaut.",
       "karaca": "Eine von Grund auf gebaute B2B-Plattform für Sicherheitsnetze und Industrietextilien. Branchenspezifische Anforderungen wie Proforma-Rechnungen habe ich als eigene Module geschrieben statt in Standardwerkzeuge zu pressen.",
       "karaca_erp": "Ein maßgeschneidertes ERP, das den Betriebsalltag digitalisiert hat. Bestellungen, Bestand, Konten und Rechnungen laufen in einem Panel zusammen, der Datenfluss zwischen Shop und ERP ist automatisiert. (Wegen NDA Closed Source.)"
+    },
+    "v2": {
+      "tagline": "code, snap, block.",
+      "intro": "Ich entwickle Software in Ankara. Auf dem Feld spiele ich Center — ich snappe den Ball und lese die Line. Beides läuft auf dasselbe hinaus: dafür sorgen, dass es läuft, ohne dass es jemand merkt.",
+      "work_for": "für Aufträge",
+      "photo_caption": "Der über dem Ball bin ich.",
+      "field_title": "Feld",
+      "position": "Center",
+      "team": "THKÜ ANKA",
+      "season": "26–27 UNILIG",
+      "next_label": "als Nächstes",
+      "fixtures": [
+        {
+          "date": "5.–6. Dez",
+          "opponent": "Silverbacks"
+        },
+        {
+          "date": "19.–20. Dez",
+          "opponent": "Cats"
+        },
+        {
+          "date": "2.–3. Jan",
+          "opponent": "Judges"
+        }
+      ],
+      "motto": "Rise from the ashes.",
+      "work_title": "Arbeiten",
+      "live": "live",
+      "case_study": "Fallstudie",
+      "closed_source": "Closed Source",
+      "footer_note": "Das hier ist mein eigener Schrottplatz. Für Aufträge: vr0cks.com.",
+      "projects": {
+        "erp": "Ein eigenes ERP, das Bestellungen, Lager, Konten und Rechnungen in einem Panel zusammenführt. Shop-Bestellungen landen direkt darin, Rechnungen gehen von dort raus. Ein Betrieb mit vierzig Leuten arbeitet täglich damit.",
+        "peony": "Der erste Luxus-Resale-Marktplatz der Türkei mit Echtheitsgarantie. Ich habe die Verifizierung in den Kaufprozess eingebaut und einen Zahlungsfluss gebaut, der Käufer und Verkäufer zugleich schützt.",
+        "karaca": "Ein von Grund auf gebauter B2B-Shop für Sicherheitsnetze. Branchenspezifisches wie Proforma-Rechnungen ist ein eigenes Modul, statt in ein Standardtool gequetscht zu werden.",
+        "jnr": "Durchgängiges Buchungssystem für einen Luxus-Transferdienst. Telefonische Anfragen laufen jetzt über die Seite, dazu ein eigenes Panel für Fahrzeug- und Fahrerverfolgung."
+      },
+      "now_playing": "läuft gerade",
+      "silence": "Stille",
+      "silence_note": "Gerade läuft nichts.",
+      "about_title": "Über mich",
+      "back": "zurück",
+      "notfound_title": "Hier ist nichts",
+      "notfound_text": "Falsche Richtung gelaufen. Holen wir den Ball zurück.",
+      "notfound_cta": "Startseite"
     }
   },
   "Contact": {

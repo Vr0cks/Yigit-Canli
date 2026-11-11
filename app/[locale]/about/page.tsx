@@ -1,123 +1,84 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowLeft, BookOpen, Code2, GraduationCap, Target, Shield, Zap, Users } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+
+/** Ana sayfadaki ayraçlı başlıkla aynı dil. */
+function BolumBasligi({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-4 mb-6">
+      <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-[var(--muted)]">
+        {children}
+      </h2>
+      <div className="h-px flex-1 bg-[var(--card-border)]" />
+    </div>
+  );
+}
 
 export default function AboutPage() {
-  const t = useTranslations('AboutPage'); // JSON'dan veri çekecek
+  const t = useTranslations('AboutPage');
+  const v2 = useTranslations('HomePage.v2');
+  const locale = useLocale();
 
   return (
-    <main className="min-h-screen pb-20">
-      
-      {/* GERİ DÖN BUTONU */}
-      <div className="mb-12">
-        <Link href="/" className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors text-sm font-mono group">
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform"/>
-          Back to Home
-        </Link>
-      </div>
+    <main className="pb-24">
 
-      <div className="max-w-3xl mx-auto space-y-16">
-        
-        {/* HEADER */}
-        <section className="space-y-6">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold text-[var(--foreground)] tracking-tight"
-          >
+      <Link
+        href={`/${locale}`}
+        className="inline-flex items-center gap-2 font-mono text-xs text-[var(--muted)] hover:text-[var(--primary)] transition-colors mb-16"
+      >
+        <ArrowLeft size={14} />
+        {v2('back')}
+      </Link>
+
+      <div className="max-w-2xl space-y-16">
+
+        <section className="space-y-5">
+          <h1 className="text-3xl md:text-4xl tracking-tight text-[var(--foreground)]">
             {t('title')}
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-[var(--muted)] leading-relaxed"
-          >
+          </h1>
+          <p className="text-lg leading-relaxed text-[var(--foreground)]/80">
             {t('intro')}
-          </motion.p>
+          </p>
         </section>
 
-        {/* EĞİTİM (MIS) */}
-        <motion.section 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="space-y-4"
-        >
-          <div className="flex items-center gap-3 text-primary">
-            <GraduationCap size={24} />
-            <h2 className="text-xl font-bold uppercase tracking-wider">{t('education.title')}</h2>
-          </div>
-          <div className="bento-card p-8">
-            <h3 className="text-xl font-bold text-[var(--card-fg)] mb-2">Türk Hava Kurumu Üniversitesi</h3>
-            <p className="text-sm font-mono text-[var(--muted)] mb-4">Yönetim Bilişim Sistemleri (MIS) | 2023 - Present</p>
-            <p className="text-[var(--muted)] leading-relaxed">
-              {t('education.desc')}
+        <section>
+          <BolumBasligi>{t('education.title')}</BolumBasligi>
+          <div className="space-y-2">
+            <h3 className="text-[var(--foreground)]">Türk Hava Kurumu Üniversitesi</h3>
+            <p className="font-mono text-xs text-[var(--muted)]">
+              Yönetim Bilişim Sistemleri · 2023 —
             </p>
+            <p className="text-[var(--muted)] leading-relaxed pt-2">{t('education.desc')}</p>
           </div>
-        </motion.section>
+        </section>
 
-        {/* FELSEFE */}
-        <motion.section 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="space-y-4"
-        >
-          <div className="flex items-center gap-3 text-purple-500">
-            <Target size={24} />
-            <h2 className="text-xl font-bold uppercase tracking-wider">{t('vision.title')}</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bento-card p-6">
-              <Code2 className="mb-4 text-[var(--foreground)]" />
-              <h3 className="font-bold mb-2 text-[var(--card-fg)]">Clean Code</h3>
-              <p className="text-sm text-[var(--muted)]">{t('vision.clean_code')}</p>
+        <section>
+          <BolumBasligi>{t('vision.title')}</BolumBasligi>
+          <dl className="divide-y divide-[var(--card-border)] border-y border-[var(--card-border)]">
+            <div className="py-5 grid sm:grid-cols-[160px_1fr] gap-2 sm:gap-6">
+              <dt className="font-mono text-xs text-[var(--muted)] pt-1">Clean code</dt>
+              <dd className="text-[var(--muted)] leading-relaxed">{t('vision.clean_code')}</dd>
             </div>
-            <div className="bento-card p-6">
-              <BookOpen className="mb-4 text-[var(--foreground)]" />
-              <h3 className="font-bold mb-2 text-[var(--card-fg)]">Continuous Learning</h3>
-              <p className="text-sm text-[var(--muted)]">{t('vision.learning')}</p>
+            <div className="py-5 grid sm:grid-cols-[160px_1fr] gap-2 sm:gap-6">
+              <dt className="font-mono text-xs text-[var(--muted)] pt-1">Continuous learning</dt>
+              <dd className="text-[var(--muted)] leading-relaxed">{t('vision.learning')}</dd>
             </div>
+          </dl>
+        </section>
+
+        <section>
+          <BolumBasligi>{t('leadership.title')}</BolumBasligi>
+          <blockquote className="border-l-2 border-[var(--primary)] pl-6 text-[var(--foreground)]/80 leading-relaxed">
+            {t('leadership.desc')}
+          </blockquote>
+          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-6 font-mono text-xs text-[var(--muted)]">
+            <span>{t('leadership.scout_tag')}</span>
+            <span>{t('leadership.igl_tag')}</span>
+            <span>{v2('team')} · {v2('position').toLowerCase()}</span>
           </div>
-        </motion.section>
-
-        {/* LEADERSHIP */}
-        <motion.section 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="space-y-4"
-        >
-          <div className="flex items-center gap-3 text-amber-500">
-            <Shield size={24} />
-            <h2 className="text-xl font-bold uppercase tracking-wider">{t('leadership.title')}</h2>
-          </div>
-
-          <div className="bento-card p-8 relative overflow-hidden">
-            {/* Ambient glow */}
-            <div className="absolute -top-10 -right-10 w-48 h-48 bg-amber-500/10 blur-[70px] rounded-full pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-red-500/10 blur-[60px] rounded-full pointer-events-none" />
-
-            <blockquote className="text-lg text-[var(--card-fg)] leading-relaxed mb-6 relative z-10 italic border-l-2 border-amber-500 pl-6">
-              {t('leadership.desc')}
-            </blockquote>
-
-            <div className="flex flex-wrap gap-3 relative z-10">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-500">
-                <Shield size={14} />
-                <span className="text-xs font-mono font-bold uppercase tracking-wider">{t('leadership.scout_tag')}</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400">
-                <Zap size={14} />
-                <span className="text-xs font-mono font-bold uppercase tracking-wider">{t('leadership.igl_tag')}</span>
-              </div>
-            </div>
-          </div>
-        </motion.section>
+        </section>
 
       </div>
     </main>

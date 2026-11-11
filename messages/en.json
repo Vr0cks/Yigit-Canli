@@ -75,6 +75,51 @@
       "united": "An end-to-end booking system for luxury transfer services. I moved requests off the phone and onto the site, and built a separate dashboard for fleet and driver tracking.",
       "karaca": "A B2B commerce platform I built from scratch for security netting and industrial textiles. Rather than force trade-specific needs like proforma invoicing into off-the-shelf tools, I wrote them as their own modules.",
       "karaca_erp": "A bespoke ERP that digitised the company's daily operation. I unified orders, stock, accounts and invoicing in one panel and automated the data flow between the storefront and the ERP. (Closed source under NDA.)"
+    },
+    "v2": {
+      "tagline": "code, snap, block.",
+      "intro": "I build software in Ankara. I play center — I snap the ball and read the line. Both jobs come down to the same thing: making it work without anyone noticing.",
+      "work_for": "for work",
+      "photo_caption": "I'm the one over the ball.",
+      "field_title": "Field",
+      "position": "Center",
+      "team": "THKÜ ANKA",
+      "season": "26–27 UNILIG",
+      "next_label": "next",
+      "fixtures": [
+        {
+          "date": "Dec 5–6",
+          "opponent": "Silverbacks"
+        },
+        {
+          "date": "Dec 19–20",
+          "opponent": "Cats"
+        },
+        {
+          "date": "Jan 2–3",
+          "opponent": "Judges"
+        }
+      ],
+      "motto": "Rise from the ashes.",
+      "work_title": "Work",
+      "live": "live",
+      "case_study": "case study",
+      "closed_source": "closed source",
+      "footer_note": "This is my own junkyard. For work, vr0cks.com.",
+      "projects": {
+        "erp": "A custom ERP that pulls orders, stock, accounts and invoicing into one panel. Store orders land in it directly and invoices go out from there. A forty-person operation runs on it daily.",
+        "peony": "Turkey's first authenticity-guaranteed luxury resale marketplace. I built verification into the purchase flow and a payment flow that protects buyer and seller at once.",
+        "karaca": "A B2B storefront for safety nets, built from scratch. Industry-specific pieces like proforma invoices are their own modules rather than something bent into an off-the-shelf tool.",
+        "jnr": "End-to-end booking for a luxury transfer service. I moved phone-only requests onto the site and wrote a separate panel for vehicle and driver tracking."
+      },
+      "now_playing": "now playing",
+      "silence": "silence",
+      "silence_note": "Nothing playing right now.",
+      "about_title": "About",
+      "back": "back",
+      "notfound_title": "Nothing here",
+      "notfound_text": "You ran the wrong way. Let's bring the ball back.",
+      "notfound_cta": "home"
     }
   },
   "Contact": {

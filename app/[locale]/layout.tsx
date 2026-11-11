@@ -4,7 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "@/app/globals.css";
 import { Providers } from '../providers';
 import Header from '@/components/Header';
-import SecretHint from '@/components/SecretHint';
+import SnapCadence from '@/components/SnapCadence';
 import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -54,17 +54,11 @@ export default async function LocaleLayout({
 
         <Providers>
 
-          {/* Engineer Grid */}
-          <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none"
-            style={{
-              backgroundImage: `linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }}
-          />
-
           <NextIntlClientProvider messages={messages} locale={locale}>
             <Header />
-            <SecretHint />
+            {/* Eski 5 dakikalık ipucu balonu kaldırıldı; gizli sayfa artık
+                kadansla açılıyor — duyurmadan. */}
+            <SnapCadence />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-24">
               {children}

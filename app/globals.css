@@ -40,37 +40,41 @@
     --selection-text: #1e3a8a;
   }
 
-  /* 🌙 DARK MODE - Deep Contrast */
+  /* 🌙 DARK MODE — kömür + tek kor rengi.
+     Eskiden lacivert zemin + mavi aksandı; her kart kendi rengini
+     taşıyınca göz nereye bakacağını bilemiyordu. Artık zemin nötr,
+     renk yalnızca vurgulanması gereken yerde. */
   .dark {
-    --background: #020617;
-    --foreground: #F8FAFC;
+    --background: #0A0A0B;
+    --foreground: #F2F2F0;
 
-    --card-bg: #0F172A;
-    --card-fg: #F8FAFC;
-    --card-border: #1E293B;
+    --card-bg: #111112;
+    --card-fg: #F2F2F0;
+    --card-border: #1F1F22;
 
-    --muted: #94A3B8;
-    --primary: #3B82F6;
-    --primary-light: #60a5fa;
-    --accent: #3b82f6;
+    --muted: #8A8A90;
+    /* Anka — küllerinden doğan. Kor rengi buradan geliyor. */
+    --primary: #E2552F;
+    --primary-light: #F27A52;
+    --accent: #E2552F;
 
     /* Button gradient colors */
-    --btn-from: #3b82f6;
-    --btn-to: #2563eb;
-    --btn-glow: rgba(59, 130, 246, 0.2);
+    --btn-from: #E2552F;
+    --btn-to: #C8441F;
+    --btn-glow: rgba(226, 85, 47, 0.18);
 
     /* Tag colors */
-    --tag-text: #60a5fa;
-    --tag-bg: rgba(96, 165, 250, 0.1);
-    --tag-border: rgba(96, 165, 250, 0.2);
+    --tag-text: #F27A52;
+    --tag-bg: rgba(226, 85, 47, 0.08);
+    --tag-border: rgba(226, 85, 47, 0.18);
 
     /* Status badge */
-    --status-text: #60a5fa;
-    --status-bg: rgba(96, 165, 250, 0.1);
-    --status-border: rgba(96, 165, 250, 0.2);
-    --status-dot: #60a5fa;
+    --status-text: #F27A52;
+    --status-bg: rgba(226, 85, 47, 0.08);
+    --status-border: rgba(226, 85, 47, 0.18);
+    --status-dot: #E2552F;
 
-    --selection-bg: #3b82f6;
+    --selection-bg: #E2552F;
     --selection-text: #ffffff;
   }
 
@@ -229,10 +233,13 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Theme glow effects on cards */
+/* Parlama yerine yalnızca kenar çizgisi aydınlanıyor — sakin çizgi. */
 .bento-card:hover {
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
-  border-color: var(--primary);
+  border-color: var(--card-border);
+}
+
+.dark .bento-card:hover {
+  border-color: #2E2E33;
 }
 
 .soul-theme .bento-card:hover {
