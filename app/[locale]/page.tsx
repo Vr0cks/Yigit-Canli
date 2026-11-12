@@ -59,10 +59,10 @@ export default function Home() {
           baslasin. Kunye satiri yazilim kimligini soyluyor; sahayi
           fotograf zaten anlatiyor, kelimeye gerek yok. */}
       <section className="tam-genislik -mt-12 md:-mt-24 relative">
-        {/* Telefonda fotograf ilk ekranin tamamini yemiyor: altindan giris
-            metni gorunuyor, kaydirmak gerektigi anlasiliyor. Masaustunde
-            tam ekran kaliyor. */}
-        <div className="relative h-[62svh] min-h-[380px] md:h-[90svh]">
+        {/* Foto artik ekrani devralmiyor, bir kapak bandi: her iki boyutta
+            da altindan giris metni ilk ekranda gorunuyor. Tam genislik
+            hissi duruyor, kaplama derdi gidiyor. */}
+        <div className="relative h-[50svh] min-h-[340px] md:h-[58svh] md:min-h-[440px]">
           <Image
             src="/saha/snap.webp"
             alt={`${t('team')} — ${t('position')}`}
