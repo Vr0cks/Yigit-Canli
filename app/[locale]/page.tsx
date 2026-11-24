@@ -45,7 +45,6 @@ export default function Home() {
 
   const projeler: Project[] = [
     { ad: 'Karaca ERP', yil: '2025', metin: t('projects.erp'), kapali: true },
-    { ad: 'Peony Collective', yil: '2025', metin: t('projects.peony'), site: 'https://www.peonycollective.com', vaka: `/${locale}/work/peony` },
     { ad: 'Karaca File Market', yil: '2024', metin: t('projects.karaca'), site: 'https://karacafilemarket.com', vaka: `/${locale}/work/karaca` },
     { ad: 'JNR VIP Transfer', yil: '2024', metin: t('projects.jnr'), site: 'https://www.jnrviptransfer.com' },
   ];
