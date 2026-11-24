@@ -24,6 +24,11 @@ const nextConfig = {
     ],
   },
   // --- YENİ EKLENEN KISIM BİTİŞİ ---
+
+  // next.config.ts icinde duruyordu ama Next o dosyayi hic okumuyordu
+  // (.mjs varsa .ts yok sayiliyor), yani bu ayar bugune kadar hic
+  // calismamis. Buraya tasindi, .ts silindi.
+  reactCompiler: true,
 };
  
 export default withNextIntl(nextConfig);
