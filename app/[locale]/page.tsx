@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { useState, useEffect } from 'react';
-import { Terminal, ArrowRight, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, Download, GitGraph, ExternalLink, Hash, Users, Shield, ShoppingBag } from 'lucide-react';
+import { Terminal, ArrowRight, Mail, Code2, Cpu, Globe, LayoutTemplate, BookOpen, GitGraph, ExternalLink, Hash, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
 
 import SpotifyCard from '@/components/SpotifyCard';
@@ -119,15 +119,6 @@ export default function Home() {
               {t('hero.cta_projects')} <ArrowRight size={18} />
             </a>
 
-            {/* --- GÜNCELLENEN CV BUTONU --- */}
-            <a
-              href="/cv-en.pdf"
-              download="Ahmet_Yigit_Canli_CV.pdf"
-              className="flex items-center gap-2 px-6 py-3 border border-[var(--card-border)] text-[var(--muted)] font-medium rounded-md hover:border-[var(--foreground)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
-            >
-              <Download size={18} /> {t('hero.cta_resume')}
-            </a>
-
             {/* İLETİŞİM BUTONU */}
             <button
               onClick={() => setIsContactOpen(true)}
@@ -182,7 +173,7 @@ export default function Home() {
                 <span className="text-blue-600 dark:text-blue-800">currently</span>: <span className="text-[var(--card-fg)]">[</span>
               </div>
               <div className="pl-10 text-orange-600 dark:text-orange-700 font-medium">
-                "{t('developer_card.current_1')}",<br />"{t('developer_card.current_2')}"
+                "{t('developer_card.current_1')}"
               </div>
               <div className="pl-6 text-[var(--card-fg)]">],</div>
               <div className="pl-6">
@@ -287,49 +278,6 @@ export default function Home() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* PROJECT 1: PEONY COLLECTIVE */}
-          <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.8}>
-            <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">
-              <ShoppingBag size={180} />
-            </div>
-
-            <div>
-              <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-rose-500/10 rounded-lg text-rose-600 dark:text-rose-400 border border-rose-500/20">
-                  <ShoppingBag size={24} />
-                </div>
-                <div className="flex items-center gap-2 text-[var(--muted)] text-xs font-mono bg-black/5 dark:bg-white/10 px-2 py-1 rounded">
-                  <span>Tech Lead</span>
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                </div>
-              </div>
-
-              <h4 className="text-2xl font-bold mb-2 text-[var(--card-fg)] group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
-                Peony Collective
-              </h4>
-              <p className="text-[var(--muted)] text-sm leading-relaxed mb-6 font-medium">
-                {t('project_desc.peony')}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                {['React', 'Node.js', 'Supabase', 'PayTR', 'App Store'].map((tech) => (
-                  <span key={tech} className="text-[10px] font-mono font-bold text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/10 px-2 py-1 rounded border border-rose-200 dark:border-rose-500/20 uppercase tracking-wider">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3 mt-auto relative z-10">
-              <a href="https://www.peonycollective.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 rounded-lg bg-rose-500 text-white hover:bg-rose-600 hover:scale-[1.02] transition-all text-xs font-bold font-mono shadow-md">
-                <ExternalLink size={14} /> {t('projects.visit')}
-              </a>
-              <Link href={`/${locale}/work/peony`} className="flex items-center justify-center gap-2 py-3 rounded-lg border border-[var(--card-border)] hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all text-xs font-bold font-mono text-[var(--card-fg)] group/btn">
-                <BookOpen size={14} className="text-[var(--muted)] group-hover/btn:text-[var(--background)]" /> {t('projects.case_study')}
-              </Link>
-            </div>
-          </Card>
-
           {/* PROJECT 2 */}
           <Card className="group cursor-pointer min-h-[320px] flex flex-col justify-between relative overflow-hidden" delay={0.9}>
             <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-[0.03] pointer-events-none transition-transform group-hover:scale-110 duration-500">

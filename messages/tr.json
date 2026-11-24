@@ -3,7 +3,7 @@
     "hero": {
       "status": "Teklif Gönder",
       "role": "Tech Lead | Yazılım Geliştiricisi",
-      "education": "Tech Lead @ Peony Collective | YBS @ THK Üniversitesi",
+      "education": "Lead Fullstack Developer @ Karaca File | YBS @ THK Üniversitesi",
       "description": "Ürün odaklı geliştiriciyim. Pazaryerinden kurumsal ERP sistemlerine kadar, gerçekten yayına çıkan full-stack web uygulamaları, güvenli API'lar ve kurumsal entegrasyonlar geliştiriyorum.",
       "cta_projects": "Neler Yaptım?",
       "cta_resume": "CV İndir",
@@ -11,8 +11,7 @@
     },
     "developer_card": {
       "role_val": "Tech Lead & Fullstack Developer",
-      "current_1": "Tech Lead @ Peony Collective",
-      "current_2": "Lead Dev @ Karaca File",
+      "current_1": "Lead Fullstack Developer @ Karaca File",
       "focus_val": "Web'den mobile: React Native 🚀"
     },
     "about": {
@@ -71,7 +70,6 @@
       }
     },
     "project_desc": {
-      "peony": "Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri. Teknoloji tarafını yönetiyorum: doğrulamayı satın alma akışının içine yerleştirdim, alıcı ve satıcıyı aynı anda koruyan ödeme akışını kurdum.",
       "united": "Lüks transfer hizmetleri için uçtan uca rezervasyon sistemi. Telefonla alınan talepleri siteye taşıdım; araç ve sürücü takibi için ayrı bir yönetim paneli yazdım.",
       "karaca": "Güvenlik fileleri ve endüstriyel tekstil için sıfırdan kurduğum B2B e-ticaret platformu. Proforma fatura gibi sektöre özel modülleri hazır çözümlere sıkıştırmak yerine kendi modülleri olarak yazdım.",
       "karaca_erp": "Şirketin günlük operasyonunu dijitalleştiren özel ERP. Sipariş, stok, cari ve faturalamayı tek panelde birleştirdim; mağaza ile ERP arasındaki veri akışını otomatikleştirdim. (NDA sebebiyle kapalı kaynak.)"
@@ -123,7 +121,7 @@
           "hire",
           "fark"
         ],
-        "response": "Farkım şu: Ben sıradan bir 'task bitirici' değilim. Halihazırda Türkiye'nin ilk orijinallik garantili lüks ikinci el pazaryeri Peony Collective'in teknoloji tarafını yönetiyor, eşzamanlı olarak Karaca File'ın e-ticaret platformunu ve Micro ERP sistemini Lead Fullstack Developer olarak geliştiriyorum. MIS eğitimim sayesinde teknik mimariyi doğrudan iş hedefleriyle eşleştiriyorum. Şirketinize sadece kod değil, para kazandıran otomasyonlar ve ROI odaklı çözümler getiririm."
+        "response": "Farkım şu: Ben sıradan bir 'task bitirici' değilim. Karaca File'ın e-ticaret platformunu ve Micro ERP sistemini Lead Fullstack Developer olarak geliştiriyorum. MIS eğitimim sayesinde teknik mimariyi doğrudan iş hedefleriyle eşleştiriyorum. Şirketinize sadece kod değil, para kazandıran otomasyonlar ve ROI odaklı çözümler getiririm."
       },
       {
         "keywords": [
@@ -279,83 +277,5 @@
       "Destek talepleri",
       "Web sipariş akışı"
     ]
-  },
-  "CaseStudyPeony": {
-    "back": "Ana Sayfaya Dön",
-    "eyebrow": "VAKA ÇALIŞMASI",
-    "title": "İkinci el lükste asıl mesele güven",
-    "client": "Peony Collective",
-    "clientNote": "Küratörlü ikinci el lüks moda pazaryeri",
-    "roleLabel": "Rolüm",
-    "roleValue": "Tech Lead",
-    "periodLabel": "Süre",
-    "periodValue": "Ocak 2026 — devam ediyor",
-    "scopeLabel": "Kapsam",
-    "scopeValue": "Pazaryeri platformu ve teknoloji yönetimi",
-    "problemTitle": "Durum",
-    "problem": [
-      "İkinci el lüks alışverişinde iki taraf da aynı anda tedirgindir. Alıcı, on binlerce liralık bir çantanın gerçek olduğundan emin olamaz. Satıcı, ürünü gönderdikten sonra parasını alacağını bilemez.",
-      "Bu tedirginlik yüzünden alışveriş çoğunlukla tanıdık üzerinden, mesajlaşma uygulamalarında ve elden ödemeyle yürür. Ölçeklenemez, kayıt tutulamaz, bir sorun çıktığında tarafların dayanacağı bir şey yoktur.",
-      "Dolayısıyla çözülmesi gereken şey bir \"site yapmak\" değildi. Güveni, alışverişin akışının içine yerleştirmekti."
-    ],
-    "approachTitle": "Yaklaşım",
-    "approach": [
-      {
-        "title": "Doğrulamayı sürecin kenarına değil içine koymak",
-        "body": "Orijinallik kontrolü, alıcının sonradan araştıracağı bir ek hizmet değil; ürünün alıcıya ulaşmadan önce geçtiği zorunlu bir adım. Platform, doğrulanmamış bir ürünün satışını tamamlayamayacak şekilde kurgulandı."
-      },
-      {
-        "title": "Parayı iki tarafı da koruyacak şekilde tutmak",
-        "body": "Ödeme, alıcı ürünü onaylayana kadar bekletiliyor. Alıcı parasını riske atmadan alıyor, satıcı da ürünü gönderdikten sonra ödemesiz kalmıyor. Güven, tarafların iyi niyetine bırakılmıyor."
-      },
-      {
-        "title": "Satıcıyı teknik bilgiye mahkûm etmemek",
-        "body": "Ürününü satmak isteyen kişi bir yazılım kullanıcısı değil. Konsinye süreci, doldurulacak bir form kadar basit tutuldu; arkadaki işi platform üstleniyor."
-      },
-      {
-        "title": "Lüksün hissini teknik kararların önüne geçirmemek",
-        "body": "Bu segmentte deneyimin kendisi ürünün bir parçası. Sayfa hızından görsel kalitesine kadar teknik tarafı, markanın verdiği hissi bozmayacak şekilde kurmak işin görünmeyen ama belirleyici kısmıydı."
-      }
-    ],
-    "resultTitle": "Sonuç",
-    "results": [
-      "Satın alma akışı, orijinallik doğrulaması tamamlanmadan ilerlemiyor.",
-      "Ödeme koruması alıcı ve satıcıyı aynı anda güvenceye alıyor.",
-      "Satıcılar ürünlerini kendileri listeleyebiliyor; süreç teknik bilgi gerektirmiyor.",
-      "Platform canlıda ve markanın satış kanalı olarak çalışıyor."
-    ],
-    "resultNote": "Bu sayfadaki bilgiler Peony Collective’in kendi kamuya açık iletişiminde yer alan hizmetlere dayanır. Platformun işlem hacmi, satış rakamları ve iç sistemleri gizlilik kapsamındadır; burada paylaşılmaz.",
-    "factsTitle": "Rolümün kapsamı",
-    "facts": [
-      {
-        "value": "Tech Lead",
-        "label": "Teknoloji tarafının yönetimi"
-      },
-      {
-        "value": "Uçtan uca",
-        "label": "Pazaryeri, ödeme ve satıcı akışları"
-      },
-      {
-        "value": "Canlı",
-        "label": "peonycollective.com yayında"
-      }
-    ],
-    "modulesTitle": "Dokunduğum alanlar",
-    "modules": [
-      "Pazaryeri akışı",
-      "Orijinallik doğrulama entegrasyonu",
-      "Ödeme ve koruma",
-      "Satıcı / konsinye süreci",
-      "Ürün listeleme",
-      "Mağaza deneyimi",
-      "Mobil uygulama geliştirme",
-      "Mağaza hesap altyapısı"
-    ],
-    "ndaTitle": "Burada ne yok?",
-    "nda": "Peony Collective’in iç sistemleri, satıcı ve müşteri verileri, komisyon yapısı ve işlem hacmi gizlilik sözleşmesi kapsamındadır. Bu sayfa yalnızca platformun kamuya açık olarak sunduğu hizmetleri ve benim rolümün kapsamını anlatır; ekran görüntüsü, kod veya sayısal iş verisi içermez.",
-    "ctaTitle": "Güven gerektiren bir işiniz mi var?",
-    "ctaBody": "Ödeme, doğrulama veya iki taraflı işlem akışı içeren bir platform kuruyorsanız konuşalım.",
-    "ctaButton": "İletişime Geç",
-    "visitSite": "Platformu Gör"
   }
 }

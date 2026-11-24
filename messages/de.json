@@ -3,7 +3,7 @@
     "hero": {
       "status": "Angebot senden",
       "role": "Tech Lead | Softwareentwickler",
-      "education": "Tech Lead @ Peony Collective | Wirtschaftsinformatik @ THK Universität",
+      "education": "Lead Fullstack Developer @ Karaca File | Wirtschaftsinformatik @ THK Universität",
       "description": "Produktorientierter Entwickler. Ich baue Full-Stack-Webanwendungen, sichere APIs und Enterprise-Integrationen, die wirklich live gehen – vom Marktplatz bis zum maßgeschneiderten ERP.",
       "cta_projects": "Meine Projekte",
       "cta_resume": "Lebenslauf laden",
@@ -11,8 +11,7 @@
     },
     "developer_card": {
       "role_val": "Tech Lead & Fullstack Developer",
-      "current_1": "Tech Lead @ Peony Collective",
-      "current_2": "Lead Dev @ Karaca File",
+      "current_1": "Lead Fullstack Developer @ Karaca File",
       "focus_val": "Von Web zu Mobile mit React Native 🚀"
     },
     "about": {
@@ -71,7 +70,6 @@
       }
     },
     "project_desc": {
-      "peony": "Der erste Luxus-Secondhand-Marktplatz der Türkei mit Echtheitsgarantie. Ich verantworte die Technik: Die Prüfung sitzt im Kaufprozess, und der Zahlungsablauf schützt Käufer und Verkäufer zugleich.",
       "united": "Ein durchgängiges Buchungssystem für Luxus-Transferdienste. Ich habe Anfragen vom Telefon auf die Website verlagert und ein eigenes Dashboard für Flotte und Fahrer gebaut.",
       "karaca": "Eine von Grund auf gebaute B2B-Plattform für Sicherheitsnetze und Industrietextilien. Branchenspezifische Anforderungen wie Proforma-Rechnungen habe ich als eigene Module geschrieben statt in Standardwerkzeuge zu pressen.",
       "karaca_erp": "Ein maßgeschneidertes ERP, das den Betriebsalltag digitalisiert hat. Bestellungen, Bestand, Konten und Rechnungen laufen in einem Panel zusammen, der Datenfluss zwischen Shop und ERP ist automatisiert. (Wegen NDA Closed Source.)"
@@ -118,7 +116,7 @@
           "job",
           "unterschied"
         ],
-        "response": "Mein Unterschied: Ich bin kein gewöhnlicher 'Task-Erlediger'. Ich leite derzeit die Technik bei Peony Collective, dem ersten Luxus-Secondhand-Marktplatz der Türkei mit Echtheitsgarantie, und entwickle parallel als Lead Fullstack Developer die E-Commerce-Plattform und das Micro-ERP von Karaca File. Dank meiner MIS-Ausbildung verknüpfe ich die technische Architektur direkt mit den Geschäftszielen. Ich bringe Ihrem Unternehmen nicht nur Code, sondern gewinnbringende Automatisierungen und ROI-orientierte Lösungen."
+        "response": "Mein Unterschied: Ich bin kein gewöhnlicher 'Task-Erlediger'. Ich entwickle als Lead Fullstack Developer die E-Commerce-Plattform und das Micro-ERP von Karaca File. Dank meiner MIS-Ausbildung verknüpfe ich die technische Architektur direkt mit den Geschäftszielen. Ich bringe Ihrem Unternehmen nicht nur Code, sondern gewinnbringende Automatisierungen und ROI-orientierte Lösungen."
       },
       {
         "keywords": [
@@ -271,83 +269,5 @@
       "Support-Tickets",
       "Online-Bestellablauf"
     ]
-  },
-  "CaseStudyPeony": {
-    "back": "Zurück zur Startseite",
-    "eyebrow": "FALLSTUDIE",
-    "title": "Bei Second-Hand-Luxus ist Vertrauen das eigentliche Problem",
-    "client": "Peony Collective",
-    "clientNote": "Kuratierter Marktplatz für Second-Hand-Luxusmode",
-    "roleLabel": "Meine Rolle",
-    "roleValue": "Tech Lead",
-    "periodLabel": "Zeitraum",
-    "periodValue": "Januar 2026 — laufend",
-    "scopeLabel": "Umfang",
-    "scopeValue": "Marktplatz-Plattform und technische Leitung",
-    "problemTitle": "Die Ausgangslage",
-    "problem": [
-      "Beim Second-Hand-Luxus sind beide Seiten gleichzeitig unsicher. Die Käuferin kann nicht wissen, ob eine Tasche im Wert von Zehntausenden echt ist. Die Verkäuferin weiß nicht, ob das Geld kommt, sobald der Artikel weg ist.",
-      "Deshalb laufen solche Geschäfte meist über Bekannte, in Messenger-Apps, mit Bargeld. Das skaliert nicht, nichts wird dokumentiert, und wenn etwas schiefgeht, hat keine Seite eine Grundlage.",
-      "Zu lösen war also nie „eine Website bauen“. Es ging darum, Vertrauen in den Ablauf selbst einzubauen."
-    ],
-    "approachTitle": "Vorgehen",
-    "approach": [
-      {
-        "title": "Prüfung im Prozess, nicht daneben",
-        "body": "Die Echtheitsprüfung ist kein Zusatz, dem die Käuferin hinterherläuft, sondern ein Schritt, den der Artikel vor der Übergabe durchlaufen muss. Ein Verkauf kann bei ungeprüfter Ware nicht abgeschlossen werden."
-      },
-      {
-        "title": "Das Geld so halten, dass es beide schützt",
-        "body": "Die Zahlung wird einbehalten, bis die Käuferin den Artikel bestätigt. Sie riskiert ihr Geld nicht, und die Verkäuferin bleibt nach dem Versand nicht unbezahlt. Vertrauen hängt nicht am guten Willen."
-      },
-      {
-        "title": "Verkäuferinnen müssen keine Software lernen",
-        "body": "Wer eine Handtasche verkauft, ist keine Software-Nutzerin. Der Einlieferungsprozess wurde so einfach gehalten wie das Ausfüllen eines Formulars; die Arbeit dahinter übernimmt die Plattform."
-      },
-      {
-        "title": "Technik darf das Luxusgefühl nie stören",
-        "body": "In diesem Segment ist das Erlebnis Teil des Produkts. Die technische Seite — von der Ladezeit bis zur Bildqualität — so zu bauen, dass sie das Markengefühl nicht bricht, war der unsichtbare, aber entscheidende Teil."
-      }
-    ],
-    "resultTitle": "Ergebnis",
-    "results": [
-      "Der Kaufablauf geht erst weiter, wenn die Echtheitsprüfung abgeschlossen ist.",
-      "Der Zahlungsschutz deckt Käuferin und Verkäuferin zugleich ab.",
-      "Verkäuferinnen stellen ihre Artikel selbst ein; der Ablauf erfordert kein technisches Wissen.",
-      "Die Plattform ist live und dient als Vertriebskanal der Marke."
-    ],
-    "resultNote": "Alle Angaben auf dieser Seite beruhen auf Leistungen, die Peony Collective öffentlich kommuniziert. Transaktionsvolumen, Umsatzzahlen und interne Systeme sind vertraulich und werden hier nicht geteilt.",
-    "factsTitle": "Umfang meiner Rolle",
-    "facts": [
-      {
-        "value": "Tech Lead",
-        "label": "Leitung der technischen Seite"
-      },
-      {
-        "value": "Durchgängig",
-        "label": "Marktplatz-, Zahlungs- und Verkäuferabläufe"
-      },
-      {
-        "value": "Live",
-        "label": "peonycollective.com in Produktion"
-      }
-    ],
-    "modulesTitle": "Bereiche, in denen ich arbeite",
-    "modules": [
-      "Marktplatz-Ablauf",
-      "Integration der Echtheitsprüfung",
-      "Zahlungen und Schutz",
-      "Verkäufer- / Einlieferungsprozess",
-      "Produkteinstellung",
-      "Shop-Erlebnis",
-      "Mobile-App-Entwicklung",
-      "App-Store-Kontoinfrastruktur"
-    ],
-    "ndaTitle": "Was hier nicht steht",
-    "nda": "Die internen Systeme von Peony Collective, Verkäufer- und Kundendaten, Provisionsstruktur und Transaktionsvolumen unterliegen einer Geheimhaltungsvereinbarung. Diese Seite behandelt nur die öffentlich dargestellten Leistungen der Plattform und den Umfang meiner Rolle; sie enthält weder Screenshots noch Code oder Geschäftszahlen.",
-    "ctaTitle": "Bauen Sie etwas, das auf Vertrauen beruht?",
-    "ctaBody": "Wenn Ihre Plattform Zahlungen, Verifizierung oder einen zweiseitigen Ablauf umfasst, sprechen wir darüber.",
-    "ctaButton": "Kontakt aufnehmen",
-    "visitSite": "Zur Plattform"
   }
 }

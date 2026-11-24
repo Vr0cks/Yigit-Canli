@@ -6,6 +6,14 @@ const withNextIntl = createNextIntlPlugin(
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Peony vaka sayfasi kaldirildi; disaridan gelen eski linkler
+  // olu 404 yemesin diye ana sayfaya yonlendiriliyor.
+  async redirects() {
+    return [
+      { source: '/:locale(tr|en|de)/work/peony', destination: '/:locale', permanent: true },
+      { source: '/work/peony', destination: '/', permanent: true },
+    ];
+  },
   // --- YENİ EKLENEN KISIM BAŞLANGICI ---
   images: {
     remotePatterns: [
